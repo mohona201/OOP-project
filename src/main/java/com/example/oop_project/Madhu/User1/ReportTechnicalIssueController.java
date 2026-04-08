@@ -1,35 +1,33 @@
 package com.example.oop_project.Madhu.User1;
 
-import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 
-
-public class LogFlightHourController {
+public class ReportTechnicalIssueController
+{
     @javafx.fxml.FXML
-    private DatePicker datePicker;
+    private TextField helicopterIdTextField;
+    @javafx.fxml.FXML
+    private TextField titleTextField;
+    @javafx.fxml.FXML
+    private ComboBox priorityComboBox;
+    @javafx.fxml.FXML
+    private TableColumn titleTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn statusTableColumn;
+    @javafx.fxml.FXML
+    private TableView issueTableView;
+    @javafx.fxml.FXML
+    private TableColumn helicopterIDTextField;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn routetableColumn;
+    private TableColumn priorityTableColumn;
     @javafx.fxml.FXML
-    private TableView flightTableView;
-    @javafx.fxml.FXML
-    private TableColumn statustableColumn;
-    @javafx.fxml.FXML
-    private TextField flightIdTextField;
-    @javafx.fxml.FXML
-    private TextField flightHoursTextField;
-    @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TextArea descriptionAreaTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void saveLogOnActionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -37,7 +35,11 @@ public class LogFlightHourController {
     }
 
     @javafx.fxml.FXML
-    public void maintenanceHistoryOnActionButton(ActionEvent actionEvent) {
+    public void logFlightHoursOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleNavTechnicalIssues(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -45,15 +47,11 @@ public class LogFlightHourController {
     }
 
     @javafx.fxml.FXML
-    public void logBookOnActionButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void completeFlightOnActionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
+    public void handleNavMaintenanceHistory(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

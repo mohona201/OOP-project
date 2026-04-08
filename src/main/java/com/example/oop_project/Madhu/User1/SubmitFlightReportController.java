@@ -41,42 +41,6 @@ public class SubmitFlightReportController {
     public void handleSubmitReport(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void handleNavSubmitReport(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavTechnicalIssues(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavAssignedFlights(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavUpdateStatus(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavFlightHistory(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavLogFlightHours(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavMaintenanceHistory(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleLogout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavCompleteFlight(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void logoutOnActionButton(ActionEvent actionEvent) {
     }

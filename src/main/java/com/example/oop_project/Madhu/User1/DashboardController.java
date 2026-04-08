@@ -35,29 +35,6 @@ public class DashboardController
     public void searchOnActionButton(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void handleNavSubmitReport(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavTechnicalIssues(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavUpdateStatus(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavFlightHistory(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavLogFlightHours(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavMaintenanceHistory(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
@@ -65,14 +42,6 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void refreshOnActionButton(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleLogout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavCompleteFlight(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
