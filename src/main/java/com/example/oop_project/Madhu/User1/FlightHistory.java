@@ -1,17 +1,17 @@
 package com.example.oop_project.Madhu.User1;
 
-import java.time.LocalDate;
-
-public class MarkFlightAsCompleteModel {
+public class FlightHistory {
     public String flightId;
-    public LocalDate flightCompleteDate;
+    public String flightRoute;
+    public String hours;
     public String flightStatus;
     public String notes;
 
-    public MarkFlightAsCompleteModel(String flightId, LocalDate flightCompleteDate, String flightstatus, String notes) {
+    public FlightHistory(String flightId, String flightRoute, String hours, String flightStatus, String notes) {
         this.flightId = flightId;
-        this.flightCompleteDate = flightCompleteDate;
-        this.flightStatus = flightstatus;
+        this.flightRoute = flightRoute;
+        this.hours = hours;
+        this.flightStatus = flightStatus;
         this.notes = notes;
     }
 
@@ -23,12 +23,20 @@ public class MarkFlightAsCompleteModel {
         this.flightId = flightId;
     }
 
-    public LocalDate getFlightCompleteDate() {
-        return flightCompleteDate;
+    public String getFlightRoute() {
+        return flightRoute;
     }
 
-    public void setFlightCompleteDate(LocalDate flightCompleteDate) {
-        this.flightCompleteDate = flightCompleteDate;
+    public void setFlightRoute(String flightRoute) {
+        this.flightRoute = flightRoute;
+    }
+
+    public String getHours() {
+        return hours;
+    }
+
+    public void setHours(String hours) {
+        this.hours = hours;
     }
 
     public String getFlightStatus() {
@@ -49,9 +57,10 @@ public class MarkFlightAsCompleteModel {
 
     @Override
     public String toString() {
-        return "MarkFlightAsCompleteModel{" +
+        return "FlightHistoryModel{" +
                 "flightId='" + flightId + '\'' +
-                ", flightCompleteDate=" + flightCompleteDate +
+                ", flightRoute='" + flightRoute + '\'' +
+                ", hours='" + hours + '\'' +
                 ", flightStatus='" + flightStatus + '\'' +
                 ", notes='" + notes + '\'' +
                 '}';

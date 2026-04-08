@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User1.LogFlightHourController">
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User1.LogBookController">
 
     <children>
         <VBox layoutX="0" layoutY="0" prefHeight="520" prefWidth="200" spacing="6" style="-fx-background-color: #1E2A3A;">

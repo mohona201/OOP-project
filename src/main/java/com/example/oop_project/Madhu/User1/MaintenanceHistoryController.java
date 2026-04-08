@@ -3,6 +3,8 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class MaintenanceHistoryController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
@@ -20,6 +22,8 @@ public class MaintenanceHistoryController {
     private TableColumn dateTableColumn;
     @javafx.fxml.FXML
     private TableColumn helicopterIdTableColumn;
+
+    ArrayList<MaintenanceHistory>maintenanceHistoryList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

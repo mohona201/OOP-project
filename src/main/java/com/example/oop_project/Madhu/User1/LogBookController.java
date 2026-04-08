@@ -3,8 +3,10 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
 
-public class LogFlightHourController {
+
+public class LogBookController {
     @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
@@ -23,6 +25,8 @@ public class LogFlightHourController {
     private TableColumn dateTableColumn;
     @javafx.fxml.FXML
     private TableColumn flightIdTableColumn;
+
+    ArrayList<LogBook> logBookList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -3,6 +3,8 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class UpdateFlightStatusController {
     @javafx.fxml.FXML
     private ComboBox statusComboBox;
@@ -20,6 +22,8 @@ public class UpdateFlightStatusController {
     private TableColumn flightIdTableColumn;
     @javafx.fxml.FXML
     private TextArea remarksAreaTextField;
+
+    ArrayList<UpdateFlightStatus> updateFlightStatusList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

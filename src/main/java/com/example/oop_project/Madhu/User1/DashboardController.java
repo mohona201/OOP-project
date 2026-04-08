@@ -6,29 +6,36 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 public class DashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn <Dashboard,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableView flightTableView;
+    private TableView <Dashboard>flightTableView;
     @javafx.fxml.FXML
-    private TableColumn departureTimeTableColumn;
+    private TableColumn <Dashboard, LocalTime>departureTimeTableColumn;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private TextField searchTextField;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <Dashboard, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn helicopterIdTableColumn;
+    private TableColumn <Dashboard,Integer>helicopterIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <Dashboard,Integer>flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn routetablecolumn;
+    private TableColumn <Dashboard,String>routetablecolumn;
+
+    ArrayList<Dashboard>dashboardList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

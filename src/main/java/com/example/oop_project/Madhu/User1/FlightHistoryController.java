@@ -6,27 +6,31 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 public class FlightHistoryController {
-    @javafx.fxml.FXML
-    private TableColumn colNotes;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn <FlightHistory,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn routetableColumn;
+    private TableColumn <FlightHistory,String>routetableColumn;
     @javafx.fxml.FXML
-    private TableColumn hourstableColumn;
+    private TableColumn <FlightHistory, LocalTime>hourstableColumn;
     @javafx.fxml.FXML
     private DatePicker fromDatePicker;
     @javafx.fxml.FXML
     private DatePicker toDatePicker;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <FlightHistory, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableView flightHistoryTableView;
+    private TableView <FlightHistory>flightHistoryTableView;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <FlightHistory,String>flightIdTableColumn;
+
+    ArrayList<FlightHistory> flightHistoryList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -2,7 +2,7 @@ package com.example.oop_project.Madhu.User1;
 
 import java.time.LocalDate;
 
-public class SubmitFlightReportModel {
+public class SubmitFlightReport {
     public String flightId;
     public LocalDate flightDate;
     public String flightRoute;
@@ -11,7 +11,7 @@ public class SubmitFlightReportModel {
     public String condition;
     public String flightSummary;
 
-    public SubmitFlightReportModel(String flightId, LocalDate flightDate, String flightRoute, String flightStatus, String reportId, String condition, String flightSummary) {
+    public SubmitFlightReport(String flightId, LocalDate flightDate, String flightRoute, String flightStatus, String reportId, String condition, String flightSummary) {
         this.flightId = flightId;
         this.flightDate = flightDate;
         this.flightRoute = flightRoute;

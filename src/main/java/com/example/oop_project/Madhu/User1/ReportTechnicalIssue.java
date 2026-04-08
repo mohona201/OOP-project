@@ -1,12 +1,12 @@
 package com.example.oop_project.Madhu.User1;
 
-public class ReportTechinicalIssueModel {
+public class ReportTechnicalIssue {
     public String helicopterId;
     public String issueTitle;
     public String priority;
     public String issueStatus;
 
-    public ReportTechinicalIssueModel(String helicopterId, String issueTitle, String priority, String issueStatus) {
+    public ReportTechnicalIssue(String helicopterId, String issueTitle, String priority, String issueStatus) {
         this.helicopterId = helicopterId;
         this.issueTitle = issueTitle;
         this.priority = priority;

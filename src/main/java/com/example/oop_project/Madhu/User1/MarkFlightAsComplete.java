@@ -1,17 +1,17 @@
 package com.example.oop_project.Madhu.User1;
 
-public class FlightHistoryModel {
+import java.time.LocalDate;
+
+public class MarkFlightAsComplete {
     public String flightId;
-    public String flightRoute;
-    public String hours;
+    public LocalDate flightCompleteDate;
     public String flightStatus;
     public String notes;
 
-    public FlightHistoryModel(String flightId, String flightRoute, String hours, String flightStatus, String notes) {
+    public MarkFlightAsComplete(String flightId, LocalDate flightCompleteDate, String flightstatus, String notes) {
         this.flightId = flightId;
-        this.flightRoute = flightRoute;
-        this.hours = hours;
-        this.flightStatus = flightStatus;
+        this.flightCompleteDate = flightCompleteDate;
+        this.flightStatus = flightstatus;
         this.notes = notes;
     }
 
@@ -23,20 +23,12 @@ public class FlightHistoryModel {
         this.flightId = flightId;
     }
 
-    public String getFlightRoute() {
-        return flightRoute;
+    public LocalDate getFlightCompleteDate() {
+        return flightCompleteDate;
     }
 
-    public void setFlightRoute(String flightRoute) {
-        this.flightRoute = flightRoute;
-    }
-
-    public String getHours() {
-        return hours;
-    }
-
-    public void setHours(String hours) {
-        this.hours = hours;
+    public void setFlightCompleteDate(LocalDate flightCompleteDate) {
+        this.flightCompleteDate = flightCompleteDate;
     }
 
     public String getFlightStatus() {
@@ -57,10 +49,9 @@ public class FlightHistoryModel {
 
     @Override
     public String toString() {
-        return "FlightHistoryModel{" +
+        return "MarkFlightAsCompleteModel{" +
                 "flightId='" + flightId + '\'' +
-                ", flightRoute='" + flightRoute + '\'' +
-                ", hours='" + hours + '\'' +
+                ", flightCompleteDate=" + flightCompleteDate +
                 ", flightStatus='" + flightStatus + '\'' +
                 ", notes='" + notes + '\'' +
                 '}';

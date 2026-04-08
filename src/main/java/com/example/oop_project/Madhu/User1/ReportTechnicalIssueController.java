@@ -3,6 +3,8 @@ package com.example.oop_project.Madhu.User1;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.util.ArrayList;
+
 public class ReportTechnicalIssueController
 {
     @javafx.fxml.FXML
@@ -25,6 +27,8 @@ public class ReportTechnicalIssueController
     private TableColumn priorityTableColumn;
     @javafx.fxml.FXML
     private TextArea descriptionAreaTextField;
+
+    ArrayList<ReportTechnicalIssue> reportTechnicalIssueList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

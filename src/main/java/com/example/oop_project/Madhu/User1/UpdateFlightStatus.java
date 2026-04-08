@@ -1,12 +1,12 @@
 package com.example.oop_project.Madhu.User1;
 
-public class UpdateFlightStatusModel {
+public class UpdateFlightStatus {
     public String flightId;
     public String updateDate;
     public String updateRoute;
     public String currentStatus;
 
-    public UpdateFlightStatusModel(String flightId, String updateDate, String updateRoute, String currentStatus) {
+    public UpdateFlightStatus(String flightId, String updateDate, String updateRoute, String currentStatus) {
         this.flightId = flightId;
         this.updateDate = updateDate;
         this.updateRoute = updateRoute;

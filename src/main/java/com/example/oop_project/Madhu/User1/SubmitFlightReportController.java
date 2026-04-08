@@ -3,6 +3,8 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class SubmitFlightReportController {
     @javafx.fxml.FXML
     private TableView reportTable;
@@ -32,6 +34,8 @@ public class SubmitFlightReportController {
     private TextArea summaryAreatextField;
     @javafx.fxml.FXML
     private TextField flightidTextField;
+
+    ArrayList<SubmitFlightReport> submitFlightReportList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
