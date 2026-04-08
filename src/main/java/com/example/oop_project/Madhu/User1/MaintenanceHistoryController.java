@@ -3,25 +3,26 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class MaintenanceHistoryController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn <MaintenanceHistory,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableView maintenanceTableView;
+    private TableView <MaintenanceHistory>maintenanceTableView;
     @javafx.fxml.FXML
-    private TableColumn maintenanceIdTableColumn;
+    private TableColumn <MaintenanceHistory,String>maintenanceIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn issueDescriptionTableColumn;
+    private TableColumn <MaintenanceHistory,String>issueDescriptionTableColumn;
     @javafx.fxml.FXML
     private TextField searchTextField;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <MaintenanceHistory, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn helicopterIdTableColumn;
+    private TableColumn <MaintenanceHistory,String>helicopterIdTableColumn;
 
     ArrayList<MaintenanceHistory>maintenanceHistoryList = new ArrayList<>();
 

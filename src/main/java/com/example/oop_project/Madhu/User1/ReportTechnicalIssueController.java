@@ -12,19 +12,19 @@ public class ReportTechnicalIssueController
     @javafx.fxml.FXML
     private TextField titleTextField;
     @javafx.fxml.FXML
-    private ComboBox priorityComboBox;
+    private ComboBox <String>priorityComboBox;
     @javafx.fxml.FXML
-    private TableColumn titleTableColumn;
+    private TableColumn <ReportTechnicalIssue,String>titleTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn <ReportTechnicalIssue,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableView issueTableView;
+    private TableView <ReportTechnicalIssue>issueTableView;
     @javafx.fxml.FXML
-    private TableColumn helicopterIDTextField;
+    private TableColumn <ReportTechnicalIssue,String>helicopterIDTextField;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn priorityTableColumn;
+    private TableColumn <ReportTechnicalIssue,String>priorityTableColumn;
     @javafx.fxml.FXML
     private TextArea descriptionAreaTextField;
 

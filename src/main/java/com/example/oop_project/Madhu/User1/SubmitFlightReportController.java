@@ -3,33 +3,25 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class SubmitFlightReportController {
     @javafx.fxml.FXML
-    private TableView reportTable;
-    @javafx.fxml.FXML
-    private TableColumn colRptCondition;
-    @javafx.fxml.FXML
-    private TableColumn colRptFlightId;
-    @javafx.fxml.FXML
-    private TableColumn colRptReportId;
-    @javafx.fxml.FXML
+    private TableView <SubmitFlightReport>reportTable;
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn colRptSummary;
+    private ComboBox <String>conditionComboBox;
     @javafx.fxml.FXML
-    private ComboBox conditionComboBox;
+    private TableColumn <SubmitFlightReport,String>routeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn routeTableColumn;
+    private TableColumn <SubmitFlightReport, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <SubmitFlightReport,String>flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <SubmitFlightReport,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
-    @javafx.fxml.FXML
-    private TableView flightTableView;
+    private TableView <SubmitFlightReport>flightTableView;
     @javafx.fxml.FXML
     private TextArea summaryAreatextField;
     @javafx.fxml.FXML

@@ -3,6 +3,7 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 
@@ -12,19 +13,19 @@ public class LogBookController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn routetableColumn;
+    private TableColumn <LogBook,String>routetableColumn;
     @javafx.fxml.FXML
-    private TableView flightTableView;
+    private TableView <LogBook>flightTableView;
     @javafx.fxml.FXML
-    private TableColumn statustableColumn;
+    private TableColumn <LogBook,String>statustableColumn;
     @javafx.fxml.FXML
     private TextField flightIdTextField;
     @javafx.fxml.FXML
     private TextField flightHoursTextField;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <LogBook, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <LogBook,String>flightIdTableColumn;
 
     ArrayList<LogBook> logBookList = new ArrayList<>();
 

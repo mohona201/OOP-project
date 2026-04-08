@@ -3,23 +3,24 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class UpdateFlightStatusController {
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox <String>statusComboBox;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableView flightTableView;
+    private TableView <UpdateFlightStatus>flightTableView;
     @javafx.fxml.FXML
-    private TableColumn routeTablecolumn;
+    private TableColumn <UpdateFlightStatus,String>routeTablecolumn;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn;
+    private TableColumn <UpdateFlightStatus,String>currentStatusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <UpdateFlightStatus, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <UpdateFlightStatus,String>flightIdTableColumn;
     @javafx.fxml.FXML
     private TextArea remarksAreaTextField;
 

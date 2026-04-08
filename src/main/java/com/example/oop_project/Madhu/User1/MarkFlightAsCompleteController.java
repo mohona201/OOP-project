@@ -3,25 +3,26 @@ package com.example.oop_project.Madhu.User1;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class MarkFlightAsCompleteController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn <MarkFlightAsComplete,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableView flightTableView;
+    private TableView<MarkFlightAsComplete> flightTableView;
     @javafx.fxml.FXML
     private TextArea notesTextField;
     @javafx.fxml.FXML
-    private TableColumn routeTableColumn;
+    private TableColumn <MarkFlightAsComplete,String>routeTableColumn;
     @javafx.fxml.FXML
     private TextArea flightIdTextField;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn <MarkFlightAsComplete, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn flightIdTableColumn;
+    private TableColumn <MarkFlightAsComplete,String>flightIdTableColumn;
 
     ArrayList<MarkFlightAsComplete> markFlightAsCompleteList= new ArrayList<>();
 
