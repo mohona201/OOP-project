@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="480.0" prefWidth="620.0" style="-fx-background-color: linear-gradient(to bottom right, #1E2A3A, #2D3F55);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.LoginController">
+
+    <children>
+
+        <VBox alignment="CENTER" layoutX="150.0" layoutY="60.0" prefWidth="320.0" spacing="16" style="-fx-background-color: white;                      -fx-background-radius: 16;                      -fx-border-radius: 16;                      -fx-border-color: #E2E8F0;                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 6);">
+            <padding>
+                <Insets bottom="36" left="32" right="32" top="36" />
+            </padding>
+
+            <VBox alignment="CENTER" spacing="6">
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1E2A3A;" text="AeroManage" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #94A3B8;" text="Helicopter Management System" />
+            </VBox>
+
+            <Separator />
+
+            <Label style="-fx-font-size: 13px; -fx-text-fill: #475569; -fx-font-weight: bold;" text="Sign in to your account" />
+
+            <VBox spacing="4">
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Username or Email" />
+                <TextField fx:id="usernameField" prefWidth="256" promptText="Enter your username or email" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+            </VBox>
+
+            <VBox spacing="4">
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Password" />
+                <PasswordField fx:id="passwordField" prefWidth="256" promptText="Enter your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+            </VBox>
+
+            <VBox spacing="4">
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Role" />
+                <ComboBox fx:id="roleBox" prefWidth="256" promptText="Select your role" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1;" />
+            </VBox>
+
+            <Button onAction="#btnLoginOnAction" prefWidth="256" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 10 0 10 0; -fx-cursor: hand;" text="Login" />
+
+            <Button onAction="#btnCreateAccountOnAction" prefWidth="256" style="-fx-background-color: transparent; -fx-text-fill: #2563EB; -fx-font-size: 13px; -fx-background-radius: 20; -fx-border-color: #2563EB; -fx-border-radius: 20; -fx-padding: 9 0 9 0; -fx-cursor: hand;" text="Create Account" />
+
+        </VBox>
+
+    </children>
+</AnchorPane>

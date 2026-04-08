@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User1.DashboardController">
+
+    <children>
+
+        <!-- Sidebar -->
+        <VBox layoutX="0" layoutY="0" prefHeight="520" prefWidth="200" spacing="6" style="-fx-background-color: #1E2A3A;">
+            <padding>
+                <Insets bottom="15" left="10" right="10" top="20" />
+            </padding>
+
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Pilot Panel" />
+            <Separator />
+
+            <Button onAction="#assignedFlightsOnActionButton" prefWidth="180" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Assigned Flights" />
+            <Button onAction="#handleNavUpdateStatus" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Update Status" />
+            <Button onAction="#handleNavSubmitReport" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Submit Report" />
+            <Button onAction="#handleNavLogFlightHours" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Log Flight Hours" />
+            <Button onAction="#handleNavMaintenanceHistory" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Maintenance History" />
+            <Button onAction="#handleNavTechnicalIssues" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Technical Issues" />
+            <Button onAction="#handleNavFlightHistory" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Flight History" />
+            <Button onAction="#handleNavCompleteFlight" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Complete Flight" />
+
+            <Region VBox.vgrow="ALWAYS" />
+            <Separator />
+
+            <Button onAction="#handleLogout" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
+        </VBox>
+
+        <!-- Main Content wrapped in ScrollPane -->
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="520.0" prefWidth="775.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-125.0" AnchorPane.topAnchor="0.0">
+
+            <VBox spacing="16">
+                <padding>
+                    <Insets bottom="20" left="15" right="20" top="20" />
+                </padding>
+
+                <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Assigned Flights" />
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <TextField fx:id="searchTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                    <Button onAction="#searchOnActionButton" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Search" />
+                    <Button onAction="#refreshOnActionButton" style="-fx-background-color: #64748B; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Refresh" />
+                </HBox>
+
+                <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Flight List" />
+                    <TableView fx:id="flightTableView" prefHeight="380" prefWidth="615.0">
+                        <columns>
+                            <TableColumn fx:id="flightIdTableColumn" prefWidth="90" text="Flight ID" />
+                            <TableColumn fx:id="dateTableColumn" prefWidth="79.0" text="Date" />
+                            <TableColumn fx:id="helicopterIdTableColumn" prefWidth="98.0" text="Helicopter ID" />
+                            <TableColumn fx:id="routetablecolumn" prefWidth="98.0" text="Route" />
+                            <TableColumn fx:id="departureTimeTableColumn" prefWidth="130.0" text="Departure Time" />
+                            <TableColumn fx:id="statusTableColumn" prefWidth="193.33331298828125" text="Status" />
+                        </columns>
+                    </TableView>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+
+    </children>
+</AnchorPane>
