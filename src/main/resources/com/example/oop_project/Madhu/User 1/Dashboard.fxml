@@ -27,18 +27,18 @@
             <Separator />
 
             <Button onAction="#assignedFlightsOnActionButton" prefWidth="180" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Assigned Flights" />
-            <Button onAction="#handleNavUpdateStatus" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Update Status" />
-            <Button onAction="#handleNavSubmitReport" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Submit Report" />
-            <Button onAction="#handleNavLogFlightHours" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Log Flight Hours" />
-            <Button onAction="#handleNavMaintenanceHistory" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Maintenance History" />
-            <Button onAction="#handleNavTechnicalIssues" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Technical Issues" />
-            <Button onAction="#handleNavFlightHistory" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Flight History" />
-            <Button onAction="#handleNavCompleteFlight" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Complete Flight" />
+            <Button onAction="#updateStatusOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Update Status" />
+            <Button onAction="#submitReportOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Submit Report" />
+            <Button onAction="#logbookOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="LogBook" />
+            <Button onAction="#maintenanceHistoryOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Maintenance History" />
+            <Button onAction="#technicalIssuesOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Technical Issues" />
+            <Button onAction="#flightHistoryOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Flight History" />
+            <Button onAction="#completeFlightOnActionButton" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Complete Flight" />
 
             <Region VBox.vgrow="ALWAYS" />
             <Separator />
 
-            <Button onAction="#handleLogout" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
+            <Button onAction="#logoutOnActionButton" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
         </VBox>
 
         <!-- Main Content wrapped in ScrollPane -->

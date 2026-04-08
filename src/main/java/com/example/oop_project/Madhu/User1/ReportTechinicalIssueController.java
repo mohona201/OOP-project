@@ -5,33 +5,31 @@ import javafx.event.ActionEvent;
 
 public class ReportTechinicalIssueController {
     @javafx.fxml.FXML
-    private TextField helicopterField;
-    @javafx.fxml.FXML
-    private TableView issueTable;
-    @javafx.fxml.FXML
-    private ComboBox priorityBox;
-    @javafx.fxml.FXML
-    private TextArea descriptionArea;
-    @javafx.fxml.FXML
-    private TextField titleField;
-    @javafx.fxml.FXML
-    private TableColumn colIssueStatus;
-    @javafx.fxml.FXML
-    private TableColumn colIssuePriority;
-    @javafx.fxml.FXML
-    private TableColumn colIssueId;
-    @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn colIssueTitle;
+    private TextField helicopterIdTextField;
     @javafx.fxml.FXML
-    private TableColumn colIssueHelicopter;
+    private TextField titleTextField;
+    @javafx.fxml.FXML
+    private ComboBox priorityComboBox;
+    @javafx.fxml.FXML
+    private TableColumn titleTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn statusTableColumn;
+    @javafx.fxml.FXML
+    private TableView issueTableView;
+    @javafx.fxml.FXML
+    private TableColumn helicopterIDTextField;
+    @javafx.fxml.FXML
+    private TableColumn priorityTableColumn;
+    @javafx.fxml.FXML
+    private TextArea descriptionAreaTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavSubmitReport(ActionEvent actionEvent) {
     }
 
@@ -39,19 +37,19 @@ public class ReportTechinicalIssueController {
     public void handleNavTechnicalIssues(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavAssignedFlights(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavUpdateStatus(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFlightHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavLogFlightHours(ActionEvent actionEvent) {
     }
 
@@ -59,15 +57,43 @@ public class ReportTechinicalIssueController {
     public void handleNavMaintenanceHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleSubmitIssue(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleLogout(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavCompleteFlight(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logFlightHoursOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void submitReportOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void completeFlightOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void flightHistoryOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void updateStatusOnActionButton(ActionEvent actionEvent) {
     }
 }

@@ -8,31 +8,31 @@ import javafx.scene.control.TableView;
 
 public class FlightHistoryController {
     @javafx.fxml.FXML
-    private DatePicker fromDate;
-    @javafx.fxml.FXML
-    private DatePicker toDate;
-    @javafx.fxml.FXML
-    private TableView flightHistoryTable;
-    @javafx.fxml.FXML
-    private TableColumn colRoute;
-    @javafx.fxml.FXML
-    private TableColumn colDate;
-    @javafx.fxml.FXML
-    private TableColumn colFlightId;
-    @javafx.fxml.FXML
-    private TableColumn colHours;
-    @javafx.fxml.FXML
     private TableColumn colNotes;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn colStatus;
+    private TableColumn statusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn routetableColumn;
+    @javafx.fxml.FXML
+    private TableColumn hourstableColumn;
+    @javafx.fxml.FXML
+    private DatePicker fromDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker toDatePicker;
+    @javafx.fxml.FXML
+    private TableColumn dateTableColumn;
+    @javafx.fxml.FXML
+    private TableView flightHistoryTableView;
+    @javafx.fxml.FXML
+    private TableColumn flightIdTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavSubmitReport(ActionEvent actionEvent) {
     }
 
@@ -40,39 +40,79 @@ public class FlightHistoryController {
     public void handleNavTechnicalIssues(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavAssignedFlights(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavUpdateStatus(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFlightHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavLogFlightHours(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavMaintenanceHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleRefresh(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleLogout(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavCompleteFlight(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleFilter(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void maintenanceHistoryOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void filterOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void submitReportOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logBookOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void completeFlightOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void refreshOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void flightHistoryOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void updateStatusOnActionButton(ActionEvent actionEvent) {
     }
 }
