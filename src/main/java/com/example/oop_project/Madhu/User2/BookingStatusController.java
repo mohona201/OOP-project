@@ -25,50 +25,6 @@ public class BookingStatusController {
     public void initialize() {
     }
 
-    @Deprecated
-    public void handleSearch(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavFlightStatus(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavSearchServices(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavServices(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavBookingHistory(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavPayments(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavBookFlight(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleRefresh(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleLogout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavFeedback(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleNavCancelBooking(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void searchOnAction(ActionEvent actionEvent) {
     }
