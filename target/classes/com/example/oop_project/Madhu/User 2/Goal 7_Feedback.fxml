@@ -18,26 +18,26 @@
             <Label text="Client Panel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
             <Separator/>
 
-            <Button prefWidth="180" text="Services" onAction="#handleNavServices"
+            <Button prefWidth="180" text="Services" onAction="#servicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Search Services" onAction="#handleNavSearchServices"
+            <Button prefWidth="180" text="Search Services" onAction="#searchServicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Book Flight" onAction="#handleNavBookFlight"
+            <Button prefWidth="180" text="Book Flight" onAction="#bookFlightOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Payments" onAction="#handleNavPayments"
+            <Button prefWidth="180" text="Payments" onAction="#paymentsOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Booking History" onAction="#handleNavBookingHistory"
+            <Button prefWidth="180" text="Booking History" onAction="#bookingHistoryOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Flight Status" onAction="#handleNavFlightStatus"
+            <Button prefWidth="180" text="Flight Status" onAction="#flightStatusOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Cancel Booking" onAction="#handleNavCancelBooking"
+            <Button prefWidth="180" text="Cancel Booking" onAction="#cancelBookingOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Feedback" onAction="#handleNavFeedback"
+            <Button prefWidth="180" text="Feedback" onAction="#feedbackOnAction"
                     style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
 
             <Region VBox.vgrow="ALWAYS"/>
             <Separator/>
-            <Button prefWidth="180" text="Logout" onAction="#handleLogout"
+            <Button prefWidth="180" text="Logout" onAction="#logoutOnAction"
                     style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;"/>
         </VBox>
 
@@ -53,10 +53,10 @@
                     <Label text="Select Booking (Optional)" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;"/>
                     <TableView fx:id="bookingTable" prefHeight="120">
                         <columns>
-                            <TableColumn fx:id="colBookingId" prefWidth="100" text="Booking ID"/>
-                            <TableColumn fx:id="colService" prefWidth="150" text="Service"/>
-                            <TableColumn fx:id="colDate" prefWidth="120" text="Date"/>
-                            <TableColumn fx:id="colRoute" prefWidth="200" text="Route"/>
+                            <TableColumn fx:id="bookingIDColumn" prefWidth="100" text="Booking ID"/>
+                            <TableColumn fx:id="serviceColumn" prefWidth="150" text="Service"/>
+                            <TableColumn fx:id="dateColumn" prefWidth="120" text="Date"/>
+                            <TableColumn fx:id="routeColumn" prefWidth="200" text="Route"/>
                         </columns>
                     </TableView>
                 </VBox>
@@ -64,28 +64,28 @@
                     <Label text="Feedback Details" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;"/>
                     <HBox spacing="10">
                         <Label prefWidth="120" text="Booking ID:" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <TextArea fx:id="feedbackArea1" prefHeight="39.0" prefWidth="360"
+                        <TextArea fx:id="feedbackTextArea1" prefHeight="39.0" prefWidth="360"
                                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;"/>
                     </HBox>
                     <HBox spacing="8">
                         <Label prefWidth="120" text="Rating:" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <RadioButton fx:id="rbRating1" mnemonicParsing="false" text="1"/>
-                        <RadioButton fx:id="rbRating2" mnemonicParsing="false" text="2"/>
-                        <RadioButton fx:id="rbRating3" mnemonicParsing="false" text="3"/>
-                        <RadioButton fx:id="rbRating4" mnemonicParsing="false" text="4"/>
-                        <RadioButton fx:id="rbRating5" mnemonicParsing="false" text="5"/>
-                        <RadioButton fx:id="rbRating6" mnemonicParsing="false" text="6"/>
-                        <RadioButton fx:id="rbRating7" mnemonicParsing="false" text="7"/>
-                        <RadioButton fx:id="rbRating8" mnemonicParsing="false" text="8"/>
-                        <RadioButton fx:id="rbRating9" mnemonicParsing="false" text="9"/>
+                        <RadioButton fx:id="rating1RadioButton" mnemonicParsing="false" text="1"/>
+                        <RadioButton fx:id="rating2RadioButton" mnemonicParsing="false" text="2"/>
+                        <RadioButton fx:id="rating3RadioButton" mnemonicParsing="false" text="3"/>
+                        <RadioButton fx:id="rating4RadioButton" mnemonicParsing="false" text="4"/>
+                        <RadioButton fx:id="rating5RadioButton" mnemonicParsing="false" text="5"/>
+                        <RadioButton fx:id="rating6RadioButton" mnemonicParsing="false" text="6"/>
+                        <RadioButton fx:id="rating7RadioButton" mnemonicParsing="false" text="7"/>
+                        <RadioButton fx:id="rating8RadioButton" mnemonicParsing="false" text="8"/>
+                        <RadioButton fx:id="rating9RadioButton" mnemonicParsing="false" text="9"/>
                     </HBox>
                     <HBox alignment="TOP_LEFT" spacing="10">
                         <Label prefWidth="120" text="Comments:" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <TextArea fx:id="feedbackArea" prefHeight="100" prefWidth="360"
+                        <TextArea fx:id="feedbackTextArea" prefHeight="100" prefWidth="360"
                                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;"/>
                     </HBox>
                     <HBox alignment="CENTER_RIGHT">
-                        <Button text="Submit Feedback" onAction="#handleSubmitFeedback"
+                        <Button text="Submit Feedback" onAction="#submitFeedbackOnAction"
                                 style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;"/>
                     </HBox>
                 </VBox>

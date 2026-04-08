@@ -22,7 +22,7 @@
             <Separator />
 
             <Button onAction="#servicesOnAction" prefWidth="180" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Services" />
-            <Button onAction="#searchServiceOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Search Services" />
+            <Button onAction="#searchServicesOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Search Services" />
             <Button onAction="#bookFlightOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Book Flight" />
             <Button onAction="#paymentsOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Payments" />
             <Button onAction="#bookingHistoryOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Booking History" />
@@ -49,12 +49,12 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Services List" />
                     <TableView fx:id="serviceTable" prefHeight="400">
                         <columns>
-                            <TableColumn fx:id="colServiceId" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Service ID" />
-                            <TableColumn fx:id="colServiceName" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service Name" />
-                            <TableColumn fx:id="colHelicopterType" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Helicopter Type" />
-                            <TableColumn fx:id="colCapacity" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Capacity" />
-                            <TableColumn fx:id="colPrice" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Price" />
-                            <TableColumn fx:id="colAvailability" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Availability" />
+                            <TableColumn fx:id="serviceIdColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Service ID" />
+                            <TableColumn fx:id="serviceNameColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service Name" />
+                            <TableColumn fx:id="helicopterTypeColumn" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Helicopter Type" />
+                            <TableColumn fx:id="capacityColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Capacity" />
+                            <TableColumn fx:id="priceColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Price" />
+                            <TableColumn fx:id="availabilityColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Availability" />
                         </columns>
                     </TableView>
                 </VBox>

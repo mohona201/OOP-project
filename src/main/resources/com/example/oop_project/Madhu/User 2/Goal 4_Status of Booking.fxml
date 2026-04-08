@@ -18,26 +18,26 @@
             <Label text="Client Panel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
             <Separator/>
 
-            <Button prefWidth="180" text="Services" onAction="#handleNavServices"
+            <Button prefWidth="180" text="Services" onAction="#servicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Search Services" onAction="#handleNavSearchServices"
+            <Button prefWidth="180" text="Search Services" onAction="#searchServicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Book Flight" onAction="#handleNavBookFlight"
+            <Button prefWidth="180" text="Book Flight" onAction="#bookFlightOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Payments" onAction="#handleNavPayments"
+            <Button prefWidth="180" text="Payments" onAction="#paymentsOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Booking History" onAction="#handleNavBookingHistory"
+            <Button prefWidth="180" text="Booking History" onAction="#bookingHistoryOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Flight Status" onAction="#handleNavFlightStatus"
+            <Button prefWidth="180" text="Flight Status" onAction="#flightStatusOnAction"
                     style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Cancel Booking" onAction="#handleNavCancelBooking"
+            <Button prefWidth="180" text="Cancel Booking" onAction="#cancelBookingOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Feedback" onAction="#handleNavFeedback"
+            <Button prefWidth="180" text="Feedback" onAction="#feedbackOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
 
             <Region VBox.vgrow="ALWAYS"/>
             <Separator/>
-            <Button prefWidth="180" text="Logout" onAction="#handleLogout"
+            <Button prefWidth="180" text="Logout" onAction="#logoutOnAction"
                     style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;"/>
         </VBox>
 
@@ -50,22 +50,22 @@
                 <padding><Insets top="20" right="20" bottom="20" left="15"/></padding>
                 <Label text="Booking Status" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
                 <HBox spacing="10" alignment="CENTER_LEFT">
-                    <TextField fx:id="searchField" promptText="Enter Booking ID..." prefWidth="240"
+                    <TextField fx:id="searchTextField" promptText="Enter Booking ID..." prefWidth="240"
                                style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;"/>
-                    <Button text="Search" onAction="#handleSearch"
+                    <Button text="Search" onAction="#searchOnAction"
                             style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;"/>
-                    <Button text="Refresh" onAction="#handleRefresh"
+                    <Button text="Refresh" onAction="#refreshOnAction"
                             style="-fx-background-color: #64748B; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;"/>
                 </HBox>
                 <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
                     <Label text="Booking Records" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;"/>
                     <TableView fx:id="statusTable" prefHeight="380">
                         <columns>
-                            <TableColumn fx:id="colBookingId" text="Booking ID" prefWidth="100"/>
-                            <TableColumn fx:id="colServiceName" text="Service Name" prefWidth="140"/>
-                            <TableColumn fx:id="colDate" text="Date" prefWidth="120"/>
-                            <TableColumn fx:id="colRoute" text="Route" prefWidth="140"/>
-                            <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+                            <TableColumn fx:id="bookingIDColumn" text="Booking ID" prefWidth="100"/>
+                            <TableColumn fx:id="serviceNameColumn" text="Service Name" prefWidth="140"/>
+                            <TableColumn fx:id="dateColumn" text="Date" prefWidth="120"/>
+                            <TableColumn fx:id="routeColumn" text="Route" prefWidth="140"/>
+                            <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
                         </columns>
                     </TableView>
                 </VBox>

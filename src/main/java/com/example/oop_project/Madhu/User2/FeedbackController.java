@@ -7,79 +7,119 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private TableView bookingTable;
     @javafx.fxml.FXML
-    private TextArea feedbackArea;
-    @javafx.fxml.FXML
-    private TableColumn colRoute;
-    @javafx.fxml.FXML
-    private TableColumn colDate;
-    @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn colService;
+    private RadioButton rating8RadioButton;
     @javafx.fxml.FXML
-    private TextArea feedbackArea1;
+    private TableColumn routeColumn;
     @javafx.fxml.FXML
-    private RadioButton rbRating2;
+    private RadioButton rating5RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating1;
+    private TableColumn serviceColumn;
     @javafx.fxml.FXML
-    private RadioButton rbRating4;
+    private TextArea feedbackTextArea1;
     @javafx.fxml.FXML
-    private RadioButton rbRating3;
+    private RadioButton rating3RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating9;
+    private RadioButton rating1RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating6;
+    private RadioButton rating2RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating5;
+    private RadioButton rating9RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating8;
+    private RadioButton rating7RadioButton;
     @javafx.fxml.FXML
-    private RadioButton rbRating7;
+    private TableColumn bookingIDColumn;
     @javafx.fxml.FXML
-    private TableColumn colBookingId;
+    private TextArea feedbackTextArea;
+    @javafx.fxml.FXML
+    private RadioButton rating6RadioButton;
+    @javafx.fxml.FXML
+    private TableColumn dateColumn;
+    @javafx.fxml.FXML
+    private RadioButton rating4RadioButton;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFlightStatus(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavSearchServices(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavServices(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleSubmitFeedback(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavBookingHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavPayments(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavBookFlight(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleLogout(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFeedback(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavCancelBooking(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void cancelBookingOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void paymentsOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void submitFeedbackOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bookFlightOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bookingHistoryOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void servicesOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void flightStatusOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchServicesOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void feedbackOnAction(ActionEvent actionEvent) {
     }
 }

@@ -5,73 +5,117 @@ import javafx.event.ActionEvent;
 
 public class HelicopterServiceController {
     @javafx.fxml.FXML
-    private TextField capacityField;
-    @javafx.fxml.FXML
-    private TextField serviceNameField;
-    @javafx.fxml.FXML
     private TableView searchTable;
-    @javafx.fxml.FXML
-    private TextField typeField;
-    @javafx.fxml.FXML
-    private TableColumn colServiceId;
-    @javafx.fxml.FXML
-    private TableColumn colCapacity;
-    @javafx.fxml.FXML
-    private TableColumn colHelicopterType;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn colPrice;
+    private TableColumn capacityColumn;
     @javafx.fxml.FXML
-    private TableColumn colServiceName;
+    private TextField typeTextField;
     @javafx.fxml.FXML
-    private TableColumn colAvailability;
+    private TextField capacityTextField;
+    @javafx.fxml.FXML
+    private TableColumn availabilityColumn;
+    @javafx.fxml.FXML
+    private TableColumn serviceNameColumn;
+    @javafx.fxml.FXML
+    private TableColumn helicopterTypeColumn;
+    @javafx.fxml.FXML
+    private TextField serviceNameTextField;
+    @javafx.fxml.FXML
+    private TableColumn serviceIdColumn;
+    @javafx.fxml.FXML
+    private TableColumn priceColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleReset(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleSearch(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFlightStatus(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavSearchServices(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavServices(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavBookingHistory(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavPayments(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavBookFlight(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleLogout(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavFeedback(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNavCancelBooking(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void resetOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void cancelBookingOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void paymentsOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bookFlightOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bookingHistoryOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void servicesOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void flightStatusOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchServicesOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void feedbackOnAction(ActionEvent actionEvent) {
     }
 }

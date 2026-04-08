@@ -18,26 +18,26 @@
             <Label text="Client Panel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
             <Separator/>
 
-            <Button prefWidth="180" text="Services" onAction="#handleNavServices"
+            <Button prefWidth="180" text="Services" onAction="#servicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Search Services" onAction="#handleNavSearchServices"
+            <Button prefWidth="180" text="Search Services" onAction="#searchServicesOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Book Flight" onAction="#handleNavBookFlight"
+            <Button prefWidth="180" text="Book Flight" onAction="#bookFlightOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Payments" onAction="#handleNavPayments"
+            <Button prefWidth="180" text="Payments" onAction="#paymentsOnAction"
                     style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Booking History" onAction="#handleNavBookingHistory"
+            <Button prefWidth="180" text="Booking History" onAction="#bookingHistoryOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Flight Status" onAction="#handleNavFlightStatus"
+            <Button prefWidth="180" text="Flight Status" onAction="#flightStatusOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Cancel Booking" onAction="#handleNavCancelBooking"
+            <Button prefWidth="180" text="Cancel Booking" onAction="#cancelBookingOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
-            <Button prefWidth="180" text="Feedback" onAction="#handleNavFeedback"
+            <Button prefWidth="180" text="Feedback" onAction="#feedbackOnAction"
                     style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;"/>
 
             <Region VBox.vgrow="ALWAYS"/>
             <Separator/>
-            <Button prefWidth="180" text="Logout" onAction="#handleLogout"
+            <Button prefWidth="180" text="Logout" onAction="#logoutOnAction"
                     style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;"/>
         </VBox>
 
@@ -70,16 +70,16 @@
                     <Label text="Payment Details" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;"/>
                     <HBox spacing="10">
                         <Label text="Method:" prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <ComboBox fx:id="paymentMethodBox" prefWidth="220"
+                        <ComboBox fx:id="paymentMethodComboBox" prefWidth="220"
                                   style="-fx-background-radius: 6; -fx-border-radius: 6;"/>
                     </HBox>
                     <HBox spacing="10">
                         <Label text="Amount:" prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <TextField fx:id="amountField" prefWidth="220"
+                        <TextField fx:id="amountTextField" prefWidth="220"
                                    style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;"/>
                     </HBox>
                     <HBox alignment="CENTER_RIGHT">
-                        <Button text="Confirm Payment" onAction="#handleConfirmPayment"
+                        <Button text="Confirm Payment" onAction="#confirmPaymentOnAction"
                                 style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;"/>
                     </HBox>
                 </VBox>
