@@ -78,6 +78,7 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void servicesOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Helicopter Services.fxml");
     }
 
     @javafx.fxml.FXML
