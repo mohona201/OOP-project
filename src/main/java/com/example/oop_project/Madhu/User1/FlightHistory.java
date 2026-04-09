@@ -1,68 +1,83 @@
 package com.example.oop_project.Madhu.User1;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class FlightHistory {
     public String flightId;
-    public String flightRoute;
-    public String hours;
-    public String flightStatus;
+    public String route;
+    public LocalTime hours;
+    public String status;
     public String notes;
+    public LocalDate date;
 
-    public FlightHistory(String flightId, String flightRoute, String hours, String flightStatus, String notes) {
+
+    public FlightHistory(String flightId, String route, LocalTime hours, String status, String notes, LocalDate date) {
         this.flightId = flightId;
-        this.flightRoute = flightRoute;
+        this.route = route;
         this.hours = hours;
-        this.flightStatus = flightStatus;
+        this.status = status;
         this.notes = notes;
+        this.date = date;
     }
 
     public String getFlightId() {
         return flightId;
     }
 
-    public void setFlightId(String flightId) {
-        this.flightId = flightId;
+    public String getRoute() {
+        return route;
     }
 
-    public String getFlightRoute() {
-        return flightRoute;
-    }
-
-    public void setFlightRoute(String flightRoute) {
-        this.flightRoute = flightRoute;
-    }
-
-    public String getHours() {
+    public LocalTime getHours() {
         return hours;
     }
 
-    public void setHours(String hours) {
-        this.hours = hours;
-    }
-
-    public String getFlightStatus() {
-        return flightStatus;
-    }
-
-    public void setFlightStatus(String flightStatus) {
-        this.flightStatus = flightStatus;
+    public String getStatus() {
+        return status;
     }
 
     public String getNotes() {
         return notes;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
+
+    public void setHours(LocalTime hours) {
+        this.hours = hours;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
-        return "FlightHistoryModel{" +
+        return "FlightHistory{" +
                 "flightId='" + flightId + '\'' +
-                ", flightRoute='" + flightRoute + '\'' +
-                ", hours='" + hours + '\'' +
-                ", flightStatus='" + flightStatus + '\'' +
+                ", route='" + route + '\'' +
+                ", hours=" + hours +
+                ", status='" + status + '\'' +
                 ", notes='" + notes + '\'' +
+                ", date=" + date +
                 '}';
     }
 }

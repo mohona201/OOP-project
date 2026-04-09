@@ -49,16 +49,12 @@ public class BookHelicopterController {
         CommonMethod.showTableDataFromBinFile("BookHelicopter.bin",serviceTable);
 
 
-
-
-
-
-
     }
 
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/LogBook.fxml");
     }
 
     @javafx.fxml.FXML

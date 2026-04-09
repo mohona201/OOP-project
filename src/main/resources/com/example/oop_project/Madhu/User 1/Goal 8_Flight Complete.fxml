@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User1.MarkFlightAsCompleteController">
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User1.FlightCompleteController">
 
     <children>
         <VBox layoutX="0" layoutY="0" prefHeight="520" prefWidth="200" spacing="6" style="-fx-background-color: #1E2A3A;">
@@ -36,7 +36,7 @@
             <Button onAction="#logoutOnactionButton" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
         </VBox>
 
-        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="645.0" prefWidth="650.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="-125.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <VBox spacing="16">
                 <padding><Insets bottom="20" left="15" right="20" top="20" /></padding>
 
@@ -65,7 +65,7 @@
                         <TextArea fx:id="notesTextField" prefHeight="80" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
                     </HBox>
                     <HBox alignment="CENTER_RIGHT">
-                        <Button onAction="#handleMarkComplete" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Mark as Completed" />
+                        <Button onAction="#markCompleteOnActionButton" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Mark as Completed" />
                     </HBox>
                 </VBox>
             </VBox>
