@@ -14,17 +14,17 @@ public class BookingStatusController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String>bookingIDColumn;
+    private TableColumn <BookingStatus,String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String>statusColumn;
+    private TableColumn <BookingStatus,String> statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String>serviceNameColumn;
+    private TableColumn <BookingStatus,String> serviceNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String>routeColumn;
+    private TableColumn <BookingStatus,String> routeTableColumn;
     @javafx.fxml.FXML
     private TextField searchTextField;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus, LocalDate>dateColumn;
+    private TableColumn <BookingStatus, LocalDate> dateTableColumn;
 
     ArrayList<BookingStatus> bookingStatusList= new ArrayList<>();
 
@@ -32,11 +32,11 @@ public class BookingStatusController {
     public void initialize() {
 
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingId"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingStatus"));
-        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("serviceName"));
-        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("flightRoute"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, LocalDate>("bookingDate"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingStatus"));
+        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("serviceName"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("flightRoute"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, LocalDate>("bookingDate"));
 
         CommonMethod.showTableDataFromBinFile("BookingStatus.bin", statusTable);
 

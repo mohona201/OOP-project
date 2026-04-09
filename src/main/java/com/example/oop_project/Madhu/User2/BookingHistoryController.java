@@ -16,28 +16,28 @@ public class BookingHistoryController {
     @javafx.fxml.FXML
     private DatePicker fromDatePicker;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String>bookingIDColumn;
+    private TableColumn <BookingHistory,String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String>statusColumn;
+    private TableColumn <BookingHistory,String> statusTableColumn;
     @javafx.fxml.FXML
     private DatePicker toDatePicker;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String>serviceNameColumn;
+    private TableColumn <BookingHistory,String> serviceNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String>routeColumn;
+    private TableColumn <BookingHistory,String> routeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory, LocalDate>dateColumn;
+    private TableColumn <BookingHistory, LocalDate> dateTableColumn;
 
     ArrayList<BookingHistory> bookingHistoryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingId"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("status"));
-        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("serviceName"));
-        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("route"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, LocalDate>("date"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("status"));
+        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("serviceName"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("route"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, LocalDate>("date"));
 
         CommonMethod.showTableDataFromBinFile("BookingHistory.bin", historyTable);
 

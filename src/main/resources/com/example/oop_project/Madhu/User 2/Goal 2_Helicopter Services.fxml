@@ -66,12 +66,12 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Search Results" />
                     <TableView fx:id="searchTable" prefHeight="250">
                         <columns>
-                            <TableColumn fx:id="serviceIdColumn" prefWidth="90" text="Service ID" />
-                            <TableColumn fx:id="serviceNameColumn" prefWidth="140" text="Service Name" />
-                            <TableColumn fx:id="helicopterTypeColumn" prefWidth="130" text="Helicopter Type" />
-                            <TableColumn fx:id="capacityColumn" prefWidth="90" text="Capacity" />
-                            <TableColumn fx:id="priceColumn" prefWidth="90" text="Price" />
-                            <TableColumn fx:id="availabilityColumn" prefWidth="110" text="Availability" />
+                            <TableColumn fx:id="serviceIdTableColumn" prefWidth="90" text="Service ID" />
+                            <TableColumn fx:id="serviceNameTableColumn" prefWidth="140" text="Service Name" />
+                            <TableColumn fx:id="helicopterTypeTableColumn" prefWidth="130" text="Helicopter Type" />
+                            <TableColumn fx:id="capacityTableColumn" prefWidth="90" text="Capacity" />
+                            <TableColumn fx:id="priceTableColumn" prefWidth="90" text="Price" />
+                            <TableColumn fx:id="availabilityTableColumn" prefWidth="110" text="Availability" />
                         </columns>
                     </TableView>
                 </VBox>

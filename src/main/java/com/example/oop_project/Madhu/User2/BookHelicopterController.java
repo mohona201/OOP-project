@@ -15,7 +15,7 @@ public class BookHelicopterController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,Integer>capacityColumn;
+    private TableColumn <BookHelicopter,Integer> capacityTableColumn;
     @javafx.fxml.FXML
     private TextField destinationTextField;
     @javafx.fxml.FXML
@@ -23,28 +23,28 @@ public class BookHelicopterController {
     @javafx.fxml.FXML
     private TextField departureTextField;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String>serviceNameColumn;
+    private TableColumn <BookHelicopter,String> serviceNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String>helicopterTypeColumn;
+    private TableColumn <BookHelicopter,String> helicopterTypeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String>serviceIdColumn;
+    private TableColumn <BookHelicopter,String> serviceIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,Integer>priceColumn;
+    private TableColumn <BookHelicopter,Integer> priceTableColumn;
 
     ArrayList<BookHelicopter>bookHelicopterList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        capacityColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter,Integer>("capacity"));
+        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter,Integer>("capacity"));
 
-        serviceIdColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceId"));
+        serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceId"));
 
-        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceName"));
+        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceName"));
 
-        helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("helicopterType"));
+        helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("helicopterType"));
 
-        priceColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("price"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("price"));
 
         CommonMethod.showTableDataFromBinFile("BookHelicopter.bin",serviceTable);
 

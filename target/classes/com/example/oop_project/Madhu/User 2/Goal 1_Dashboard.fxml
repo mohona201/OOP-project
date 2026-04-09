@@ -49,12 +49,12 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Services List" />
                     <TableView fx:id="serviceTable" prefHeight="400">
                         <columns>
-                            <TableColumn fx:id="serviceIdColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Service ID" />
-                            <TableColumn fx:id="serviceNameColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service Name" />
-                            <TableColumn fx:id="helicopterTypeColumn" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Helicopter Type" />
-                            <TableColumn fx:id="capacityColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Capacity" />
-                            <TableColumn fx:id="priceColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Price" />
-                            <TableColumn fx:id="availabilityColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Availability" />
+                            <TableColumn fx:id="serviceIdTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Service ID" />
+                            <TableColumn fx:id="serviceNameTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service Name" />
+                            <TableColumn fx:id="helicopterTypeTableColumn" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Helicopter Type" />
+                            <TableColumn fx:id="capacityTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Capacity" />
+                            <TableColumn fx:id="priceTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Price" />
+                            <TableColumn fx:id="availabilityTableColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Availability" />
                         </columns>
                     </TableView>
                 </VBox>

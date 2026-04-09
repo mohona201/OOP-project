@@ -12,32 +12,32 @@ import java.util.ArrayList;
 public class DashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,Integer>capacityColumn;
+    private TableColumn <Dashboard,Integer> capacityTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>availabilityColumn;
+    private TableColumn <Dashboard,String> availabilityTableColumn;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>serviceNameColumn;
+    private TableColumn <Dashboard,String> serviceNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>helicopterTypeColumn;
+    private TableColumn <Dashboard,String> helicopterTypeTableColumn;
     @javafx.fxml.FXML
     private TableView <Dashboard>serviceTable;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>serviceIdColumn;
+    private TableColumn <Dashboard,String> serviceIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,Integer>priceColumn;
+    private TableColumn <Dashboard,Integer> priceTableColumn;
 
     ArrayList<Dashboard> dashboards= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-        capacityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
-        availabilityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightAvailability"));
-        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
-        helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
-        serviceIdColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightPrice"));
+        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
+        availabilityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightAvailability"));
+        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
+        helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
+        serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightPrice"));
 
         CommonMethod.showTableDataFromBinFile("Dashboard.bin", serviceTable);
     }

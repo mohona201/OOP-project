@@ -13,23 +13,23 @@ public class HelicopterServiceController {
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,Integer>capacityColumn;
+    private TableColumn <HelicopterService,Integer> capacityTableColumn;
     @javafx.fxml.FXML
     private TextField typeTextField;
     @javafx.fxml.FXML
     private TextField capacityTextField;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,String>availabilityColumn;
+    private TableColumn <HelicopterService,String> availabilityTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,String>serviceNameColumn;
+    private TableColumn <HelicopterService,String> serviceNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,String>helicopterTypeColumn;
+    private TableColumn <HelicopterService,String> helicopterTypeTableColumn;
     @javafx.fxml.FXML
     private TextField serviceNameTextField;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,String>serviceIdColumn;
+    private TableColumn <HelicopterService,String> serviceIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <HelicopterService,Integer>priceColumn;
+    private TableColumn <HelicopterService,Integer> priceTableColumn;
 
 
     ArrayList<HelicopterService>helicopterServiceList = new ArrayList<>();
@@ -37,12 +37,12 @@ public class HelicopterServiceController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        capacityColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("capacity"));
-        availabilityColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("flightAvailability"));
-        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceName"));
-        helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("helicopterType"));
-        serviceIdColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceId"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("servicePrice"));
+        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("capacity"));
+        availabilityTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("flightAvailability"));
+        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceName"));
+        helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("helicopterType"));
+        serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceId"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("servicePrice"));
 
         CommonMethod.showTableDataFromBinFile("HelicopterService.bin", searchTable);
     }

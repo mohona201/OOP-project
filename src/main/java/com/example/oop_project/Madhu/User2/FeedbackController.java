@@ -16,11 +16,11 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating8RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String>routeColumn;
+    private TableColumn <Feedback,String> routeTableColumn;
     @javafx.fxml.FXML
     private RadioButton rating5RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String>serviceColumn;
+    private TableColumn <Feedback,String> serviceTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea1;
     @javafx.fxml.FXML
@@ -34,13 +34,13 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating7RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String>bookingIDColumn;
+    private TableColumn <Feedback,String> bookingIDTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea;
     @javafx.fxml.FXML
     private RadioButton rating6RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback, LocalDate>dateColumn;
+    private TableColumn <Feedback, LocalDate> dateTableColumn;
     @javafx.fxml.FXML
     private RadioButton rating4RadioButton;
 
@@ -49,10 +49,10 @@ public class FeedbackController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingId"));
-        serviceColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
-        routeColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("flightRoute"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("flightDate"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingId"));
+        serviceTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("flightRoute"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("flightDate"));
 
         CommonMethod.showTableDataFromBinFile("Feedback.bin", bookingTable);
 

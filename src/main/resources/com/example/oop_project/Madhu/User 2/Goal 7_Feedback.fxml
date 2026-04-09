@@ -53,10 +53,10 @@
                     <Label text="Select Booking (Optional)" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;"/>
                     <TableView fx:id="bookingTable" prefHeight="120">
                         <columns>
-                            <TableColumn fx:id="bookingIDColumn" prefWidth="100" text="Booking ID"/>
-                            <TableColumn fx:id="serviceColumn" prefWidth="150" text="Service"/>
-                            <TableColumn fx:id="dateColumn" prefWidth="120" text="Date"/>
-                            <TableColumn fx:id="routeColumn" prefWidth="200" text="Route"/>
+                            <TableColumn fx:id="bookingIDTableColumn" prefWidth="100" text="Booking ID"/>
+                            <TableColumn fx:id="serviceTableColumn" prefWidth="150" text="Service"/>
+                            <TableColumn fx:id="dateTableColumn" prefWidth="120" text="Date"/>
+                            <TableColumn fx:id="routeTableColumn" prefWidth="200" text="Route"/>
                         </columns>
                     </TableView>
                 </VBox>

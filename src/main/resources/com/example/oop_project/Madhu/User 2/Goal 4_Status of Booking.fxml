@@ -61,11 +61,11 @@
                     <Label text="Booking Records" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;"/>
                     <TableView fx:id="statusTable" prefHeight="380">
                         <columns>
-                            <TableColumn fx:id="bookingIDColumn" text="Booking ID" prefWidth="100"/>
-                            <TableColumn fx:id="serviceNameColumn" text="Service Name" prefWidth="140"/>
-                            <TableColumn fx:id="dateColumn" text="Date" prefWidth="120"/>
-                            <TableColumn fx:id="routeColumn" text="Route" prefWidth="140"/>
-                            <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+                            <TableColumn fx:id="bookingIDTableColumn" text="Booking ID" prefWidth="100"/>
+                            <TableColumn fx:id="serviceNameTableColumn" text="Service Name" prefWidth="140"/>
+                            <TableColumn fx:id="dateTableColumn" text="Date" prefWidth="120"/>
+                            <TableColumn fx:id="routeTableColumn" text="Route" prefWidth="140"/>
+                            <TableColumn fx:id="statusTableColumn" text="Status" prefWidth="120"/>
                         </columns>
                     </TableView>
                 </VBox>
