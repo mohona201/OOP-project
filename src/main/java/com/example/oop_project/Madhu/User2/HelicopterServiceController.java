@@ -3,29 +3,34 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class HelicopterServiceController {
     @javafx.fxml.FXML
-    private TableView searchTable;
+    private TableView <HelicopterService>searchTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn capacityColumn;
+    private TableColumn <HelicopterService,Integer>capacityColumn;
     @javafx.fxml.FXML
     private TextField typeTextField;
     @javafx.fxml.FXML
     private TextField capacityTextField;
     @javafx.fxml.FXML
-    private TableColumn availabilityColumn;
+    private TableColumn <HelicopterService,String>availabilityColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceNameColumn;
+    private TableColumn <HelicopterService,String>serviceNameColumn;
     @javafx.fxml.FXML
-    private TableColumn helicopterTypeColumn;
+    private TableColumn <HelicopterService,String>helicopterTypeColumn;
     @javafx.fxml.FXML
     private TextField serviceNameTextField;
     @javafx.fxml.FXML
-    private TableColumn serviceIdColumn;
+    private TableColumn <HelicopterService,String>serviceIdColumn;
     @javafx.fxml.FXML
-    private TableColumn priceColumn;
+    private TableColumn <HelicopterService,Integer>priceColumn;
+
+
+    ArrayList<HelicopterService>helicopterServiceList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

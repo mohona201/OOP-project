@@ -1,12 +1,12 @@
 package com.example.oop_project.Madhu.User2;
 
-public class PaymentModel {
+public class Payment {
     public String bookingId;
     public String service;
     public Integer bookingAmount;
     public String paymentMethod;
 
-    public PaymentModel(String bookingId, String service, Integer bookingAmount, String paymentMethod) {
+    public Payment(String bookingId, String service, Integer bookingAmount, String paymentMethod) {
         this.bookingId = bookingId;
         this.service = service;
         this.bookingAmount = bookingAmount;

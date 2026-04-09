@@ -2,14 +2,14 @@ package com.example.oop_project.Madhu.User2;
 
 import java.time.LocalDate;
 
-public class BookingStatusModel {
+public class BookingStatus {
     public String bookingId;
     public String serviceName;
     public LocalDate bookingDate;
     public String flightRoute;
     public String bookingStatus;
 
-    public BookingStatusModel(String bookingId, String serviceName, LocalDate bookingDate, String flightRoute, String bookingStatus) {
+    public BookingStatus(String bookingId, String serviceName, LocalDate bookingDate, String flightRoute, String bookingStatus) {
         this.bookingId = bookingId;
         this.serviceName = serviceName;
         this.bookingDate = bookingDate;

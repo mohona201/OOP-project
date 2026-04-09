@@ -3,25 +3,30 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class BookingHistoryController {
     @javafx.fxml.FXML
-    private TableView historyTable;
+    private TableView <BookingHistory>historyTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private DatePicker fromDatePicker;
     @javafx.fxml.FXML
-    private TableColumn bookingIDColumn;
+    private TableColumn <BookingHistory,String>bookingIDColumn;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <BookingHistory,String>statusColumn;
     @javafx.fxml.FXML
     private DatePicker toDatePicker;
     @javafx.fxml.FXML
-    private TableColumn serviceNameColumn;
+    private TableColumn <BookingHistory,String>serviceNameColumn;
     @javafx.fxml.FXML
-    private TableColumn routeColumn;
+    private TableColumn <BookingHistory,String>routeColumn;
     @javafx.fxml.FXML
-    private TableColumn dateColumn;
+    private TableColumn <BookingHistory, LocalDate>dateColumn;
+
+    ArrayList<BookingHistory> bookingHistoryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -2,7 +2,7 @@ package com.example.oop_project.Madhu.User2;
 
 import java.time.LocalDate;
 
-public class BookingCancelModel {
+public class BookingCancel {
     public String bookingId;
     public String bookingService;
     public LocalDate bookingDate;
@@ -10,7 +10,7 @@ public class BookingCancelModel {
     public String flightStatus;
     public String reason;
 
-    public BookingCancelModel(String bookingId, String bookingService, LocalDate bookingDate, String flightRoute, String flightStatus, String reason) {
+    public BookingCancel(String bookingId, String bookingService, LocalDate bookingDate, String flightRoute, String flightStatus, String reason) {
         this.bookingId = bookingId;
         this.bookingService = bookingService;
         this.bookingDate = bookingDate;

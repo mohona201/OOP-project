@@ -3,25 +3,30 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class BookingCancelController {
     @javafx.fxml.FXML
-    private TableView bookingTable;
+    private TableView <BookingCancel>bookingTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private TextArea reasonTextArea1;
     @javafx.fxml.FXML
-    private TableColumn bookingIDColumn;
+    private TableColumn <BookingCancel,String>bookingIDColumn;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <BookingCancel,String>statusColumn;
     @javafx.fxml.FXML
-    private TableColumn routeColumn;
+    private TableColumn <BookingCancel,String>routeColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceColumn;
+    private TableColumn <BookingCancel,String>serviceColumn;
     @javafx.fxml.FXML
-    private TableColumn dateColumn;
+    private TableColumn <BookingCancel, LocalDate>dateColumn;
     @javafx.fxml.FXML
     private TextArea reasonTextArea;
+
+    ArrayList<BookingCancel> bookingCancelList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

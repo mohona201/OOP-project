@@ -3,6 +3,8 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class PaymentController {
     @javafx.fxml.FXML
     private Label amountLabel;
@@ -15,7 +17,9 @@ public class PaymentController {
     @javafx.fxml.FXML
     private TextField amountTextField;
     @javafx.fxml.FXML
-    private ComboBox paymentMethodComboBox;
+    private ComboBox <String>paymentMethodComboBox;
+
+    ArrayList<Payment>paymentList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

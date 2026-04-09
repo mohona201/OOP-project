@@ -1,19 +1,19 @@
 package com.example.oop_project.Madhu.User2;
 
-public class HelicopterServiceModel {
+public class Dashboard {
     public String serviceId;
     public String serviceName;
     public String helicopterType;
     public Integer capacity;
-    public Integer servicePrice;
+    public Integer flightPrice;
     public String flightAvailability;
 
-    public HelicopterServiceModel(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer servicePrice, String flightAvailability) {
+    public Dashboard(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer flightPrice, String flightAvailability) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.helicopterType = helicopterType;
         this.capacity = capacity;
-        this.servicePrice = servicePrice;
+        this.flightPrice = flightPrice;
         this.flightAvailability = flightAvailability;
     }
 
@@ -49,12 +49,12 @@ public class HelicopterServiceModel {
         this.capacity = capacity;
     }
 
-    public Integer getServicePrice() {
-        return servicePrice;
+    public Integer getFlightPrice() {
+        return flightPrice;
     }
 
-    public void setServicePrice(Integer servicePrice) {
-        this.servicePrice = servicePrice;
+    public void setFlightPrice(Integer flightPrice) {
+        this.flightPrice = flightPrice;
     }
 
     public String getFlightAvailability() {
@@ -67,12 +67,12 @@ public class HelicopterServiceModel {
 
     @Override
     public String toString() {
-        return "HelicopterServiceModel{" +
+        return "DashboardModel{" +
                 "serviceId='" + serviceId + '\'' +
                 ", serviceName='" + serviceName + '\'' +
                 ", helicopterType='" + helicopterType + '\'' +
                 ", capacity=" + capacity +
-                ", servicePrice=" + servicePrice +
+                ", flightPrice=" + flightPrice +
                 ", flightAvailability='" + flightAvailability + '\'' +
                 '}';
     }

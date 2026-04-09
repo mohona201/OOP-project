@@ -3,15 +3,17 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class BookHelicopterController {
     @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
-    private TableView serviceTable;
+    private TableView <BookHelicopter>serviceTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn capacityColumn;
+    private TableColumn <BookHelicopter,Integer>capacityColumn;
     @javafx.fxml.FXML
     private TextField destinationTextField;
     @javafx.fxml.FXML
@@ -19,13 +21,15 @@ public class BookHelicopterController {
     @javafx.fxml.FXML
     private TextField departureTextField;
     @javafx.fxml.FXML
-    private TableColumn serviceNameColumn;
+    private TableColumn <BookHelicopter,String>serviceNameColumn;
     @javafx.fxml.FXML
-    private TableColumn helicopterTypeColumn;
+    private TableColumn <BookHelicopter,String>helicopterTypeColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceIdColumn;
+    private TableColumn <BookHelicopter,String>serviceIdColumn;
     @javafx.fxml.FXML
-    private TableColumn priceColumn;
+    private TableColumn <BookHelicopter,Integer>priceColumn;
+
+    ArrayList<BookHelicopter>bookHelicopterList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

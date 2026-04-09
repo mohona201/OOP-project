@@ -3,19 +3,22 @@ package com.example.oop_project.Madhu.User2;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class FeedbackController {
     @javafx.fxml.FXML
-    private TableView bookingTable;
+    private TableView <Feedback>bookingTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private RadioButton rating8RadioButton;
     @javafx.fxml.FXML
-    private TableColumn routeColumn;
+    private TableColumn <Feedback,String>routeColumn;
     @javafx.fxml.FXML
     private RadioButton rating5RadioButton;
     @javafx.fxml.FXML
-    private TableColumn serviceColumn;
+    private TableColumn <Feedback,String>serviceColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea1;
     @javafx.fxml.FXML
@@ -29,18 +32,20 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating7RadioButton;
     @javafx.fxml.FXML
-    private TableColumn bookingIDColumn;
+    private TableColumn <Feedback,String>bookingIDColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea;
     @javafx.fxml.FXML
     private RadioButton rating6RadioButton;
     @javafx.fxml.FXML
-    private TableColumn dateColumn;
+    private TableColumn <Feedback, LocalDate>dateColumn;
     @javafx.fxml.FXML
     private RadioButton rating4RadioButton;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        ArrayList<Feedback>feedbackList = new ArrayList<>();
     }
 
     @javafx.fxml.FXML

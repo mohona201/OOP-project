@@ -1,25 +1,32 @@
 package com.example.oop_project.Madhu.User2;
 
-import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
-public class DashboardControllerr {
+import java.util.ArrayList;
+
+public class DashboardController
+{
     @javafx.fxml.FXML
-    private TableView serviceTable;
+    private TableColumn <Dashboard,Integer>capacityColumn;
+    @javafx.fxml.FXML
+    private TableColumn <Dashboard,String>availabilityColumn;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn capacityColumn;
+    private TableColumn <Dashboard,String>serviceNameColumn;
     @javafx.fxml.FXML
-    private TableColumn availabilityColumn;
+    private TableColumn <Dashboard,String>helicopterTypeColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceNameColumn;
+    private TableView <Dashboard>serviceTable;
     @javafx.fxml.FXML
-    private TableColumn helicopterTypeColumn;
+    private TableColumn <Dashboard,String>serviceIdColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn priceColumn;
+    private TableColumn <Dashboard,Integer>priceColumn;
+
+    ArrayList<Dashboard> dashboards= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,12 +52,12 @@ public class DashboardControllerr {
     public void servicesOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void searchServiceOnAction(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void flightStatusOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void flightStatusOnAction(ActionEvent actionEvent) {
+    public void searchServicesOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -63,9 +70,5 @@ public class DashboardControllerr {
 
     @javafx.fxml.FXML
     public void feedbackOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void searchServicesOnAction(ActionEvent actionEvent) {
     }
 }

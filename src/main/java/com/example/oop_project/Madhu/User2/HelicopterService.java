@@ -1,19 +1,19 @@
 package com.example.oop_project.Madhu.User2;
 
-public class DashboardModel {
+public class HelicopterService {
     public String serviceId;
     public String serviceName;
     public String helicopterType;
     public Integer capacity;
-    public Integer flightPrice;
+    public Integer servicePrice;
     public String flightAvailability;
 
-    public DashboardModel(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer flightPrice, String flightAvailability) {
+    public HelicopterService(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer servicePrice, String flightAvailability) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.helicopterType = helicopterType;
         this.capacity = capacity;
-        this.flightPrice = flightPrice;
+        this.servicePrice = servicePrice;
         this.flightAvailability = flightAvailability;
     }
 
@@ -49,12 +49,12 @@ public class DashboardModel {
         this.capacity = capacity;
     }
 
-    public Integer getFlightPrice() {
-        return flightPrice;
+    public Integer getServicePrice() {
+        return servicePrice;
     }
 
-    public void setFlightPrice(Integer flightPrice) {
-        this.flightPrice = flightPrice;
+    public void setServicePrice(Integer servicePrice) {
+        this.servicePrice = servicePrice;
     }
 
     public String getFlightAvailability() {
@@ -67,12 +67,12 @@ public class DashboardModel {
 
     @Override
     public String toString() {
-        return "DashboardModel{" +
+        return "HelicopterServiceModel{" +
                 "serviceId='" + serviceId + '\'' +
                 ", serviceName='" + serviceName + '\'' +
                 ", helicopterType='" + helicopterType + '\'' +
                 ", capacity=" + capacity +
-                ", flightPrice=" + flightPrice +
+                ", servicePrice=" + servicePrice +
                 ", flightAvailability='" + flightAvailability + '\'' +
                 '}';
     }

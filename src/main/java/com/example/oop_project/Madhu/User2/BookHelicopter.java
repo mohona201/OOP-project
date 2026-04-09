@@ -2,7 +2,7 @@ package com.example.oop_project.Madhu.User2;
 
 import java.time.LocalDate;
 
-public class BookHelicopterModel {
+public class BookHelicopter {
     public String serviceId;
     public String serviceName;
     public String helicopterType;
@@ -13,7 +13,7 @@ public class BookHelicopterModel {
     public String destination;
     public Integer passengers;
 
-    public BookHelicopterModel(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer servicePrice, LocalDate flightDate, String departure, String destination, Integer passengers) {
+    public BookHelicopter(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer servicePrice, LocalDate flightDate, String departure, String destination, Integer passengers) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.helicopterType = helicopterType;

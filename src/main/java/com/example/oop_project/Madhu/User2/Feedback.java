@@ -2,7 +2,7 @@ package com.example.oop_project.Madhu.User2;
 
 import java.time.LocalDate;
 
-public class FeedbackModel {
+public class Feedback {
     public String bookingId;
     public String service;
     public LocalDate flightDate;
@@ -10,7 +10,7 @@ public class FeedbackModel {
     public String customerFeedback;
     public Integer customerRating;
 
-    public FeedbackModel(String bookingId, String service, LocalDate flightDate, String flightRoute, String customerFeedback, Integer customerRating) {
+    public Feedback(String bookingId, String service, LocalDate flightDate, String flightRoute, String customerFeedback, Integer customerRating) {
         this.bookingId = bookingId;
         this.service = service;
         this.flightDate = flightDate;

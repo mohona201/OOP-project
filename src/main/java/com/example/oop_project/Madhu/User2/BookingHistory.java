@@ -2,7 +2,7 @@ package com.example.oop_project.Madhu.User2;
 
 import java.time.LocalDate;
 
-public class BookingHistoryModel {
+public class BookingHistory {
     public String bookingId;
     public String serviceName;
     public LocalDate date;
