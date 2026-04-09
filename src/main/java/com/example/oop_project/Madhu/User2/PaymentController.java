@@ -62,6 +62,7 @@ public class PaymentController {
 
     @javafx.fxml.FXML
     public void flightStatusOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Booking Status.fxml");
     }
 
     @javafx.fxml.FXML
