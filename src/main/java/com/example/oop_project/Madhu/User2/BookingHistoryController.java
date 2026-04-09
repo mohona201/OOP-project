@@ -51,6 +51,7 @@ public class BookingHistoryController {
 
     @javafx.fxml.FXML
     public void paymentsOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Payment.fxml");
     }
 
     @javafx.fxml.FXML
