@@ -40,7 +40,7 @@ public class CommonMethod {
 
     public static void sceneChange(ActionEvent event, String fxmlFile) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxmlFile));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelicopterServices.class.getResource(fxmlFile));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Helicopter Service Company");

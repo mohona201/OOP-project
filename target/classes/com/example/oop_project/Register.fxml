@@ -20,45 +20,45 @@
             </padding>
 
             <VBox alignment="CENTER" spacing="5">
-                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1E2A3A;" text="AeroManage" />
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #94A3B8;" text="Create a new account" />
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1E2A3A;" text="Helicopter Service" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #94A3B8;" />
             </VBox>
 
             <Separator />
 
             <VBox spacing="4">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Full Name" />
-                <TextField fx:id="nameField" prefWidth="328" promptText="Enter your full name" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <TextField fx:id="nameTextField" prefWidth="328" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
             <VBox spacing="4">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Email Address" />
-                <TextField fx:id="emailField" prefWidth="328" promptText="Enter your email address" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <TextField fx:id="emailTextField" prefWidth="328" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
             <VBox spacing="4">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Username" />
-                <TextField fx:id="usernameField" prefWidth="328" promptText="Choose a username" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="User Id" />
+                <TextField fx:id="userIdTextField" prefWidth="328" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
             <VBox spacing="4">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Role" />
-                <ComboBox fx:id="roleBox" prefWidth="328" promptText="Select your role" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1;" />
+                <ComboBox fx:id="roleComboBox" prefWidth="328" promptText="Select your role" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1;" />
             </VBox>
 
             <VBox spacing="4">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Password" />
-                <PasswordField fx:id="passwordField" prefWidth="328" promptText="Create a password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <PasswordField fx:id="passwordTextField" prefWidth="328" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
             <VBox spacing="4">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Confirm Password" />
-                <PasswordField fx:id="confirmPasswordField" prefWidth="328" promptText="Re-enter your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <PasswordField fx:id="confirmPasswordTextField" prefWidth="328" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
-            <Button onAction="#btnRegisterOnAction" prefWidth="328" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 10 0 10 0; -fx-cursor: hand;" text="Create Account" />
+            <Button onAction="#registerOnAction" prefWidth="328" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 10 0 10 0; -fx-cursor: hand;" text="Create Account" />
 
-            <Button fx:id="btnBackToLogin" onAction="#btnBackToLoginOnAction" prefWidth="328" style="-fx-background-color: transparent; -fx-text-fill: #2563EB; -fx-font-size: 12px; -fx-background-radius: 20; -fx-border-color: #2563EB; -fx-border-radius: 20; -fx-padding: 9 0 9 0; -fx-cursor: hand;" text="Already have an account? Login" />
+            <Button fx:id="btnBackToLogin" onAction="#backToLoginOnAction" prefWidth="328" style="-fx-background-color: transparent; -fx-text-fill: #2563EB; -fx-font-size: 12px; -fx-background-radius: 20; -fx-border-color: #2563EB; -fx-border-radius: 20; -fx-padding: 9 0 9 0; -fx-cursor: hand;" text="Already have an account? Login" />
 
         </VBox>
 
