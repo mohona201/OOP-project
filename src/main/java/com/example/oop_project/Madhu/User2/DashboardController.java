@@ -52,6 +52,7 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Book Helicopter .fxml");
     }
 
     @javafx.fxml.FXML

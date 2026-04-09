@@ -1,5 +1,6 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
@@ -43,6 +44,7 @@ public class CancelBookingController
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Book Helicopter .fxml");
     }
 
     @javafx.fxml.FXML
