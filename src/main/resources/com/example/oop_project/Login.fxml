@@ -28,8 +28,8 @@
             <Label style="-fx-font-size: 13px; -fx-text-fill: #475569; -fx-font-weight: bold;" text="Sign in to your account" />
 
             <VBox spacing="4">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Username or Email" />
-                <TextField fx:id="usernameTextField" prefWidth="256" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="UserId or Email" />
+                <TextField fx:id="userIdTextField" prefWidth="256" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
             <VBox spacing="4">

@@ -90,5 +90,7 @@ public class FlightCompleteController {
 
     @javafx.fxml.FXML
     public void markCompleteOnActionButton(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/ Flight Complete.fxml");
+
     }
 }
