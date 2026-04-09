@@ -54,7 +54,7 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/LogBook.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Cancels .fxml");
     }
 
     @javafx.fxml.FXML
