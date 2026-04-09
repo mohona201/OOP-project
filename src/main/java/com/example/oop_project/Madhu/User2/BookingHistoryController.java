@@ -33,14 +33,10 @@ public class BookingHistoryController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingID"));
-
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingId"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("status"));
-
         serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("serviceName"));
-
         routeColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("route"));
-
         dateColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, LocalDate>("date"));
 
         CommonMethod.showTableDataFromBinFile("BookingHistory.bin", historyTable);

@@ -32,19 +32,12 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
-
-
         capacityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
-
-        availabilityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("availability"));
-
+        availabilityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightAvailability"));
         serviceNameColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
-
         helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
-
         serviceIdColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
-
-        priceColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("price"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightPrice"));
 
         CommonMethod.showTableDataFromBinFile("Dashboard.bin", serviceTable);
     }

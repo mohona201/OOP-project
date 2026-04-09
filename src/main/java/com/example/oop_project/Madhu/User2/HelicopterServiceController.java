@@ -38,16 +38,11 @@ public class HelicopterServiceController {
     public void initialize() {
 
         capacityColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("capacity"));
-
-        availabilityColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("availability"));
-
+        availabilityColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("flightAvailability"));
         serviceNameColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceName"));
-
         helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("helicopterType"));
-
         serviceIdColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, String>("serviceId"));
-
-        priceColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("price"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<HelicopterService, Integer>("servicePrice"));
 
         CommonMethod.showTableDataFromBinFile("HelicopterService.bin", searchTable);
     }

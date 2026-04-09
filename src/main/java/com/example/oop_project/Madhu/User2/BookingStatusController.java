@@ -32,15 +32,11 @@ public class BookingStatusController {
     public void initialize() {
 
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingID"));
-
-        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("status"));
-
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingId"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingStatus"));
         serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("serviceName"));
-
-        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("route"));
-
-        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, LocalDate>("date"));
+        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("flightRoute"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, LocalDate>("bookingDate"));
 
         CommonMethod.showTableDataFromBinFile("BookingStatus.bin", statusTable);
 

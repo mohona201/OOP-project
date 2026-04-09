@@ -37,22 +37,12 @@ public class BookHelicopterController {
     public void initialize() {
 
         capacityColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter,Integer>("capacity"));
-
         serviceIdColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceId"));
-
         serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceName"));
-
         helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("helicopterType"));
-
-        priceColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("price"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("servicePrice"));
 
         CommonMethod.showTableDataFromBinFile("BookHelicopter.bin",serviceTable);
-
-
-
-
-
-
 
     }
 

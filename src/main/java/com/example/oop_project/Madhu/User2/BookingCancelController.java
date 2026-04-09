@@ -33,15 +33,11 @@ public class BookingCancelController {
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("bookingID"));
-
-        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("status"));
-
-        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("route"));
-
-        serviceColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("service"));
-
-        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, LocalDate>("date"));
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("bookingId"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("flightStatus"));
+        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("flightRoute"));
+        serviceColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("bookingService"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, LocalDate>("bookingDate"));
 
         CommonMethod.showTableDataFromBinFile("BookingCancel.bin", bookingTable);
     }
