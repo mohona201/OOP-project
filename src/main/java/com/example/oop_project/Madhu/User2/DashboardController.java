@@ -58,6 +58,7 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void bookingHistoryOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Booking History.fxml");
     }
 
     @javafx.fxml.FXML
