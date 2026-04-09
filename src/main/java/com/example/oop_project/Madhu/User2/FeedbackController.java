@@ -49,14 +49,10 @@ public class FeedbackController {
     @javafx.fxml.FXML
     public void initialize() {
 
-
-        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingID"));
-
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingId"));
         serviceColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
-
-        routeColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("route"));
-
-        dateColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("date"));
+        routeColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("flightRoute"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("flightDate"));
 
         CommonMethod.showTableDataFromBinFile("Feedback.bin", bookingTable);
 
