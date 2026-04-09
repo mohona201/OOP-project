@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User2.CancelBookingController">
+
+    <children>
+        <VBox layoutX="0" layoutY="0" prefHeight="520" prefWidth="200" spacing="6" style="-fx-background-color: #1E2A3A;">
+            <padding><Insets bottom="15" left="10" right="10" top="20" /></padding>
+
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;" text="Client Panel" />
+            <Separator />
+
+            <Button onAction="#servicesOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Services" />
+            <Button onAction="#searchServicesOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Search Services" />
+            <Button onAction="#bookFlightOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Book Flight" />
+            <Button onAction="#paymentsOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Payments" />
+            <Button onAction="#bookingHistoryOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Booking History" />
+            <Button onAction="#flightStatusOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Flight Status" />
+            <Button onAction="#cancelBookingOnAction" prefWidth="180" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Cancel Booking" />
+            <Button onAction="#feedbackOnAction" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: #CBD5E1; -fx-font-size: 13px; -fx-background-radius: 8; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;" text="Feedback" />
+
+            <Region VBox.vgrow="ALWAYS" />
+            <Separator />
+            <Button onAction="#logoutOnAction" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
+        </VBox>
+
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="606.0" prefWidth="650.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="-86.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox spacing="16">
+                <padding><Insets bottom="20" left="15" right="20" top="20" /></padding>
+                <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Cancel Booking" />
+                <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Select Booking to Cancel" />
+                    <TableView fx:id="bookingTable" prefHeight="180">
+                        <columns>
+                            <TableColumn fx:id="bookingIDTableColumn" maxWidth="1000.0" minWidth="30.0" prefWidth="100.0" text="Booking ID" />
+                            <TableColumn fx:id="serviceTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service" />
+                            <TableColumn fx:id="dateTableColumn" maxWidth="1200.0" minWidth="30.0" prefWidth="120.0" text="Date" />
+                            <TableColumn fx:id="routeTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Route" />
+                            <TableColumn fx:id="statusTableColumn" maxWidth="940.0" minWidth="30.0" prefWidth="94.0" text="Status" />
+                        </columns>
+                    </TableView>
+                </VBox>
+                <VBox spacing="12" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;" text="Cancellation Details" />
+                    <HBox alignment="TOP_LEFT" spacing="10">
+                        <Label prefWidth="100" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Booking ID:" />
+                        <TextArea fx:id="reasonTextArea1" prefHeight="39.0" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
+                    </HBox>
+                    <HBox alignment="TOP_LEFT" spacing="10">
+                        <Label prefWidth="100" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Reason:" />
+                        <TextArea fx:id="reasonTextArea" prefHeight="80" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT">
+                        <Button onAction="#cancelBookingOnAction" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Cancel Booking" />
+                    </HBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </children>
+</AnchorPane>

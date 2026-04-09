@@ -5,22 +5,29 @@ import javafx.event.ActionEvent;
 
 public class LoginController
 {
+
     @javafx.fxml.FXML
-    private TextField usernameField;
+    private PasswordField passwordTextFieldField;
     @javafx.fxml.FXML
-    private ComboBox roleBox;
-    @javafx.fxml.FXML
-    private PasswordField passwordField;
+    private TextField usernameTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void btnCreateAccountOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void btnLoginOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void createAccountOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void loginOnAction(ActionEvent actionEvent) {
     }
 }
