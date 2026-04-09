@@ -76,5 +76,6 @@ public class CancelBookingController
 
     @javafx.fxml.FXML
     public void feedbackOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/ Feedback.fxml");
     }
 }
