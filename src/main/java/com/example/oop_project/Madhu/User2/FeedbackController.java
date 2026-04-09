@@ -1,7 +1,9 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -42,10 +44,22 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating4RadioButton;
 
+    ArrayList<Feedback>feedbackList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
 
-        ArrayList<Feedback>feedbackList = new ArrayList<>();
+
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingID"));
+
+        serviceColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
+
+        routeColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("route"));
+
+        dateColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("date"));
+
+        CommonMethod.showTableDataFromBinFile("Feedback.bin", bookingTable);
+
     }
 
     @javafx.fxml.FXML

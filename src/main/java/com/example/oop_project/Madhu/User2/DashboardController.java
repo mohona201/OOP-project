@@ -1,9 +1,11 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,21 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+        capacityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
+
+        availabilityColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("availability"));
+
+        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
+
+        helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
+
+        serviceIdColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
+
+        priceColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("price"));
+
+        CommonMethod.showTableDataFromBinFile("Dashboard.bin", serviceTable);
     }
 
     @javafx.fxml.FXML

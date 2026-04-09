@@ -1,7 +1,9 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -30,6 +32,19 @@ public class BookingHistoryController {
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingID"));
+
+        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("status"));
+
+        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("serviceName"));
+
+        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("route"));
+
+        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, LocalDate>("date"));
+
+        CommonMethod.showTableDataFromBinFile("BookingHistory.bin", historyTable);
+
     }
 
 

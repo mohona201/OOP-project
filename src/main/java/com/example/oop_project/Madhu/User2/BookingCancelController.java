@@ -1,7 +1,9 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -30,6 +32,18 @@ public class BookingCancelController {
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        bookingIDColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("bookingID"));
+
+        statusColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("status"));
+
+        routeColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("route"));
+
+        serviceColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, String>("service"));
+
+        dateColumn.setCellValueFactory(new PropertyValueFactory<BookingCancel, LocalDate>("date"));
+
+        CommonMethod.showTableDataFromBinFile("BookingCancel.bin", bookingTable);
     }
 
     @javafx.fxml.FXML

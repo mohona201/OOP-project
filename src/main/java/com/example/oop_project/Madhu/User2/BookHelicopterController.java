@@ -1,7 +1,9 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,25 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        capacityColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter,Integer>("capacity"));
+
+        serviceIdColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceId"));
+
+        serviceNameColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceName"));
+
+        helicopterTypeColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("helicopterType"));
+
+        priceColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("price"));
+
+        CommonMethod.showTableDataFromBinFile("BookHelicopter.bin",serviceTable);
+
+
+
+
+
+
+
     }
 
 

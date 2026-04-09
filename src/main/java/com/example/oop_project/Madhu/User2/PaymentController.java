@@ -1,5 +1,6 @@
 package com.example.oop_project.Madhu.User2;
 
+import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
@@ -23,6 +24,11 @@ public class PaymentController {
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+        paymentMethodComboBox.getItems().addAll("Cash", "Card", "Bkash", "Nagad", "Rocket");
+
+        CommonMethod.showTableDataFromBinFile("Payment.bin", null);
     }
 
 
