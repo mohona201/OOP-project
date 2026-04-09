@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="520.0" prefWidth="850.0"
             style="-fx-background-color: #EEF2F7;"
             xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+            xmlns:fx="http://javafx.com/fxm"l
             fx:controller="com.example.oop_project.Madhu.User2.BookingHistoryController">
 
     <children>
