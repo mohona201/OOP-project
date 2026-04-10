@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -39,7 +40,7 @@
             <Button onAction="#logoutOnActionButton" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
         </VBox>
 
-        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="520.0" prefWidth="923.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-273.0" AnchorPane.topAnchor="0.0">
             <VBox spacing="16">
                 <padding><Insets bottom="20" left="15" right="20" top="20" /></padding>
 
@@ -53,6 +54,7 @@
                             <TableColumn fx:id="dateTableColumn" prefWidth="120" text="Date" />
                             <TableColumn fx:id="routeTableColumn" prefWidth="200" text="Route" />
                             <TableColumn fx:id="statusTableColumn" prefWidth="180" text="Status" />
+                     <TableColumn fx:id="reportIdTableColumn" prefWidth="180" text="Report Id" />
                         </columns>
                     </TableView>
                 </VBox>
@@ -62,6 +64,8 @@
                     <HBox spacing="10">
                         <Label prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="FlightId" />
                         <TextField fx:id="flightidTextField" prefWidth="270" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                  <TextField fx:id="reportIdTextField" layoutX="140.0" layoutY="10.0" prefWidth="270" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                  <Label layoutX="10.0" layoutY="10.0" prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="ReportId" />
                     </HBox>
                     <HBox spacing="10">
                         <Label prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Condition:" />
@@ -69,7 +73,9 @@
                     </HBox>
                     <HBox alignment="TOP_LEFT" spacing="10">
                         <Label prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Summary:" />
-                        <TextArea fx:id="summaryAreatextField" prefHeight="100" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
+                        <TextArea fx:id="summaryAreaTextField" prefHeight="100" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
+                  <DatePicker fx:id="datePicker" />
+                  <Label text="Date" />
                     </HBox>
                     <HBox alignment="CENTER_RIGHT">
                         <Button onAction="#handleSubmitReport" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Submit Report" />

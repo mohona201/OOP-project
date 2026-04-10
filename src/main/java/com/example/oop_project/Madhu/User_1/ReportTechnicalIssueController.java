@@ -60,7 +60,33 @@ public class ReportTechnicalIssueController
 
     @javafx.fxml.FXML
     public void submitReportOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitsFlightReport.fxml");
+
+        String helicopterId = helicopterIdTextField.getText().trim();
+        String title = titleTextField.getText().trim();
+        String priority = priorityComboBox.getValue();
+        String description = descriptionAreaTextField.getText().trim();
+
+        if (helicopterId.isEmpty() || title.isEmpty() || priority == null || description.isEmpty()) {
+            CommonMethod.showError("Please fill all fields");
+            return;
+        }
+
+
+        ReportTechnicalIssue issue = new ReportTechnicalIssue(helicopterId, title, priority, "Pending");
+
+        reportTechnicalIssueList.add(issue);
+
+        CommonMethod.saveToBinFile("ReportTechnicalIssue.bin", reportTechnicalIssueList);
+
+        issueTableView.getItems().add(issue);
+
+        CommonMethod.showInformation("Success", "Report submitted");
+
+        helicopterIdTextField.clear();
+        titleTextField.clear();
+        descriptionAreaTextField.clear();
+        priorityComboBox.setValue(null);
+
     }
 
     @javafx.fxml.FXML

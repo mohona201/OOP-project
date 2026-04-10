@@ -12,6 +12,14 @@ import java.io.*;
 import java.util.List;
 
 public class CommonMethod {
+    public static void showError(String  errorMessage) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        //alert.setTitle(titleMessage);
+        //alert.setHeaderText(null);
+        alert.setContentText(errorMessage);
+        alert.showAndWait();
+    }
+
     public static void showError(String titleMessage, String errorMessage) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(titleMessage);
@@ -45,7 +53,7 @@ public class CommonMethod {
             stage.setScene(nextScene);
             stage.show();
         } catch (IOException e) {
-            showError("Scene Load Error", "Could not load: " + fxmlFile);
+            showError("Scene Load Error,Could not load: " + fxmlFile);
         }
     }
 
@@ -75,7 +83,7 @@ public class CommonMethod {
             oos.close();
 
         } catch (Exception e) {
-            showError("Save Error", "Could not save data: " + fileName);
+            showError("Save Error ,could not save data: " + fileName);
         }
     }
 

@@ -44,6 +44,7 @@ public class FlightHistoryController {
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<FlightHistory,String>("flightId"));
 
         CommonMethod.showTableDataFromBinFile("FlightHistory.bin", flightHistoryTableView);
+        flightHistoryList.addAll(flightHistoryTableView.getItems());
     }
 
     @javafx.fxml.FXML
@@ -94,6 +95,32 @@ public class FlightHistoryController {
 
     @javafx.fxml.FXML
     public void filterOnActionButton(ActionEvent actionEvent) {
+        LocalDate fromDate = fromDatePicker.getValue();
+        LocalDate toDate = toDatePicker.getValue();
+
+        flightHistoryTableView.getItems().clear();
+
+        if (fromDate == null || toDate == null) {
+            CommonMethod.showError("Please select both dates");
+            return;
+        }
+
+        if (fromDate.isAfter(toDate)) {
+            CommonMethod.showError("From date cannot be after To date");
+            return;
+        }
+
+        for (FlightHistory flightHistory : flightHistoryList) {
+            if ((flightHistory.getDate().isEqual(fromDate) || flightHistory.getDate().isAfter(fromDate))
+                    && (flightHistory.getDate().isEqual(toDate) || flightHistory.getDate().isBefore(toDate))) {
+
+                flightHistoryTableView.getItems().add(flightHistory);
+            }
+        }
+
+        if (flightHistoryTableView.getItems().isEmpty()) {
+            CommonMethod.showInformation("No Data", "No flight history found in this date range");
+        }
     }
 
     @javafx.fxml.FXML

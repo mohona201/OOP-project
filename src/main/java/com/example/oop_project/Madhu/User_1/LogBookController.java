@@ -48,6 +48,38 @@ public class LogBookController {
 
     @javafx.fxml.FXML
     public void saveLogOnActionButton(ActionEvent actionEvent) {
+        String flightId = flightIdTextField.getText().trim();
+        String hoursText = flightHoursTextField.getText().trim();
+        LocalDate date = datePicker.getValue();
+
+        if (flightId.isEmpty() || hoursText.isEmpty() || date == null) {
+            CommonMethod.showError("Please fill all fields");
+            return;
+        }
+
+        if (!hoursText.matches("\\d+(\\.\\d+)?")) {
+            CommonMethod.showError("hours will be number only)");
+            return;
+        }
+
+        if (date.isAfter(LocalDate.now())) {
+            CommonMethod.showError("Future date not allowed");
+            return;
+        }
+
+        LogBook log = new LogBook(flightId, date, "", "", hoursText);
+
+        logBookList.add(log);
+
+        CommonMethod.saveToBinFile("LogBook.bin", logBookList);
+
+        flightTableView.getItems().add(log);
+
+        CommonMethod.showInformation("Success", "Log saved successfully");
+
+        flightIdTextField.clear();
+        flightHoursTextField.clear();
+        datePicker.setValue(null);
     }
 
     @javafx.fxml.FXML

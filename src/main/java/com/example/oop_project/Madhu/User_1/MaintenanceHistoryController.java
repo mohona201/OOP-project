@@ -43,6 +43,8 @@ public class MaintenanceHistoryController {
 
         CommonMethod.showTableDataFromBinFile("MaintenanceHistory.bin", maintenanceTableView);
 
+        maintenanceHistoryList.addAll(maintenanceTableView.getItems());
+
     }
 
     @javafx.fxml.FXML
@@ -57,6 +59,24 @@ public class MaintenanceHistoryController {
 
     @javafx.fxml.FXML
     public void searchOnActionButton(ActionEvent actionEvent) {
+        String searchText = searchTextField.getText().trim();
+
+        maintenanceTableView.getItems().clear();
+
+        if (searchText.isEmpty()) {
+            CommonMethod.showError("Please enter Helicopter ID");
+            return;
+        }
+
+        for (MaintenanceHistory m : maintenanceHistoryList) {
+            if (m.getHelicopterId().equalsIgnoreCase(searchText)) {
+                maintenanceTableView.getItems().add(m);
+            }
+        }
+
+        if (maintenanceTableView.getItems().isEmpty()) {
+            CommonMethod.showInformation("No Data", "No maintenance history found");
+        }
     }
 
     @javafx.fxml.FXML
@@ -81,6 +101,24 @@ public class MaintenanceHistoryController {
 
     @javafx.fxml.FXML
     public void refreshOnActionButton(ActionEvent actionEvent) {
+        String searchText = searchTextField.getText().trim();
+
+        maintenanceTableView.getItems().clear();
+
+        if (searchText.isEmpty()) {
+            CommonMethod.showError("Please enter Helicopter ID");
+            return;
+        }
+
+        for (MaintenanceHistory m : maintenanceHistoryList) {
+            if (m.getHelicopterId().equalsIgnoreCase(searchText)) {
+                maintenanceTableView.getItems().add(m);
+            }
+        }
+
+        if (maintenanceTableView.getItems().isEmpty()) {
+            CommonMethod.showInformation("No Data", "No maintenance history found");
+        }
     }
 
 

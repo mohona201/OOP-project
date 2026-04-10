@@ -73,12 +73,12 @@
                     </HBox>
 
                     <HBox alignment="TOP_LEFT" spacing="10">
-                        <Label prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Remarks:" />
-                        <TextArea fx:id="remarksAreaTextField" prefHeight="80" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
+                        <Label prefWidth="120" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Status" />
+                        <TextArea fx:id="statusTextField" prefHeight="80" prefWidth="360" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1;" />
                     </HBox>
 
                     <HBox alignment="CENTER_RIGHT">
-                        <Button onAction="#updateStatusOnActionButton" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Update Status" />
+                        <Button onAction="#updateStatusOnActionButton1" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Update Status" />
                     </HBox>
                 </VBox>
 

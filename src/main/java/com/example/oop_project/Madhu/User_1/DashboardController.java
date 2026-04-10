@@ -56,6 +56,33 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void searchOnActionButton(ActionEvent actionEvent) {
+
+        String searchText = searchTextField.getText().trim();
+
+        if (searchText.isEmpty()) {
+            CommonMethod.showError("please enter Flight ID or Route");
+            return;
+        }
+
+        ArrayList<Dashboard> dashboardList = new ArrayList<>();
+
+        for (Dashboard a : flightTableView.getItems()) {
+
+            if (a.getFlightId().equalsIgnoreCase(searchText)
+                    || a.getRoute().equalsIgnoreCase(searchText)) {
+
+                dashboardList.add(a);
+            }
+        }
+
+        flightTableView.getItems().clear();
+
+        if (dashboardList.isEmpty()) {
+            CommonMethod.showError("Please fill the field");
+            return;
+        }
+
+        flightTableView.getItems().addAll(dashboardList);
     }
 
 
@@ -67,6 +94,10 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void refreshOnActionButton(ActionEvent actionEvent) {
+
+        searchTextField.clear();
+        flightTableView.getItems().clear();
+        CommonMethod.showTableDataFromBinFile("AssignedFlight.bin", flightTableView);
 
     }
 

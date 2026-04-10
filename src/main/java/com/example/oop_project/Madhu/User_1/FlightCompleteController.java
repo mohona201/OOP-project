@@ -90,7 +90,52 @@ public class FlightCompleteController {
 
     @javafx.fxml.FXML
     public void markCompleteOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightComplete.fxml");
+        String flightId = flightIdTextField.getText().trim();
+        String notes = notesTextField.getText().trim();
+
+        if (flightId.isEmpty()) {
+            CommonMethod.showError("Please enter Flight ID");
+            return;
+        }
+
+        if (notes.isEmpty()) {
+            CommonMethod.showError("Please enter notes");
+            return;
+        }
+
+        MarkFlightAsComplete selectedFlight = null;
+
+        for (MarkFlightAsComplete m : flightTableView.getItems()) {
+            if (m.getFlightId().equalsIgnoreCase(flightId)) {
+                selectedFlight = m;
+                break;
+            }
+        }
+
+        if (selectedFlight == null) {
+            CommonMethod.showError("Flight ID not found");
+            return;
+        }
+
+        if (selectedFlight.getFlightStatus().equalsIgnoreCase("Completed")) {
+            CommonMethod.showInformation("Already Completed", "This flight is already completed");
+            return;
+        }
+
+        selectedFlight.setFlightStatus("Completed");
+
+        markFlightAsCompleteList.clear();
+        markFlightAsCompleteList.addAll(flightTableView.getItems());
+
+        CommonMethod.saveToBinFile("MarkFlightAsComplete.bin", markFlightAsCompleteList);
+
+        flightTableView.refresh();
+
+        CommonMethod.showInformation("Success", "Flight marked as completed");
+
+        flightIdTextField.clear();
+        notesTextField.clear();
+
 
     }
 }

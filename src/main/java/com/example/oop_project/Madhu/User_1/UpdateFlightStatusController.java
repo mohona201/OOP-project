@@ -23,13 +23,14 @@ public class UpdateFlightStatusController {
     private TableColumn <UpdateFlightStatus, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
     private TableColumn <UpdateFlightStatus,String>flightIdTableColumn;
-    @javafx.fxml.FXML
-    private TextArea remarksAreaTextField;
 
+    @javafx.fxml.FXML
+    private TextArea statusTextField;
     ArrayList<UpdateFlightStatus> updateFlightStatusList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusComboBox.getItems().addAll("Pending", "In Progress", "Completed", "Cancelled");
 
         routeTablecolumn.setCellValueFactory(new PropertyValueFactory<UpdateFlightStatus, String>("route"));
 
@@ -39,9 +40,10 @@ public class UpdateFlightStatusController {
 
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UpdateFlightStatus, String>("flightId"));
 
-        statusComboBox.getItems().addAll("Pending", "In Progress", "Completed", "Cancelled");
 
         CommonMethod.showTableDataFromBinFile("UpdateFlightStatus.bin", flightTableView);
+        //CommonMethod.showTableDataFromBinFile("SubmitFlightReport.bin", reportTable);
+
     }
 
 
@@ -89,5 +91,36 @@ public class UpdateFlightStatusController {
     @javafx.fxml.FXML
     public void updateStatusOnActionButton(ActionEvent actionEvent) {
         CommonMethod.sceneChange(actionEvent,"Madhu/User_1/UpdateFlightStatus.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void updateStatusOnActionButton1(ActionEvent actionEvent) {
+        String newStatus = statusComboBox.getValue();
+        String note = statusTextField.getText().trim();
+
+        UpdateFlightStatus selectedFlight = flightTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedFlight == null) {
+            CommonMethod.showError("Please select a flight");
+            return;
+        }
+
+        if (newStatus == null || note.isEmpty()) {
+            CommonMethod.showError("Please fill all fields");
+            return;
+        }
+        selectedFlight.setCurrentStatus(newStatus);
+
+        updateFlightStatusList.clear();
+        updateFlightStatusList.addAll(flightTableView.getItems());
+
+        CommonMethod.saveToBinFile("UpdateFlightStatus.bin", updateFlightStatusList);
+
+        flightTableView.refresh();
+
+        CommonMethod.showInformation("Success", "Status updated");
+
+        statusComboBox.setValue(null);
+        statusTextField.clear();
     }
 }

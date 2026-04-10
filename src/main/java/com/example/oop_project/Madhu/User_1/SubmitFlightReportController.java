@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class SubmitFlightReportController {
     @javafx.fxml.FXML
     private TableView <SubmitFlightReport>reportTable;
+    @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private ComboBox <String>conditionComboBox;
@@ -25,11 +26,25 @@ public class SubmitFlightReportController {
     @javafx.fxml.FXML
     private TableView <SubmitFlightReport>flightTableView;
     @javafx.fxml.FXML
-    private TextArea summaryAreatextField;
-    @javafx.fxml.FXML
     private TextField flightidTextField;
+    @javafx.fxml.FXML
+    private TableColumn reportIdTableColumn;
+    @javafx.fxml.FXML
+    private DatePicker datePicker;
+    @javafx.fxml.FXML
+    private TextField reportIdTextField;
+    @javafx.fxml.FXML
+    private TextArea summaryAreaTextField;
 
     ArrayList<SubmitFlightReport> submitFlightReportList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private TableColumn colRptCondition;
+    @javafx.fxml.FXML
+    private TableColumn colRptFlightId;
+    @javafx.fxml.FXML
+    private TableColumn colRptReportId;
+    @javafx.fxml.FXML
+    private TableColumn colRptSummary;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -49,6 +64,38 @@ public class SubmitFlightReportController {
 
     @javafx.fxml.FXML
     public void handleSubmitReport(ActionEvent actionEvent) {
+
+        String flightId = flightidTextField.getText().trim();
+        String reportId = reportIdTextField.getText().trim();
+        String condition = conditionComboBox.getValue();
+        String summary = summaryAreaTextField.getText().trim();
+        LocalDate date = datePicker.getValue();
+
+        if (flightId.isEmpty() || reportId.isEmpty() || condition == null || summary.isEmpty() || date == null) {
+            CommonMethod.showError("Please fill all fields");
+            return;
+        }
+
+        if (date.isAfter(LocalDate.now())) {
+            CommonMethod.showError("Future date not allowed");
+            return;
+        }
+
+        SubmitFlightReport report = new SubmitFlightReport(flightId, date, "", "", reportId, condition, summary);
+
+        submitFlightReportList.add(report);
+
+        CommonMethod.saveToBinFile("SubmitFlightReport.bin", submitFlightReportList);
+
+        reportTable.getItems().add(report);
+
+        CommonMethod.showInformation("Success", "Report submitted successfully");
+
+        flightidTextField.clear();
+        reportIdTextField.clear();
+        summaryAreaTextField.clear();
+        conditionComboBox.setValue(null);
+        datePicker.setValue(null);
     }
 
     @javafx.fxml.FXML

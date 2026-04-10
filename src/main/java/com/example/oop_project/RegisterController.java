@@ -60,22 +60,22 @@ public class RegisterController
         if (userId.isEmpty() || email.isEmpty() || name.isEmpty()
                 || role == null || role.isEmpty()
                 || password.isEmpty() || confirmPassword.isEmpty()) {
-            CommonMethod.showError("Information Missing", "Please fill in all fields.");
+            CommonMethod.showError("Information Missing. Please fill in all fields.");
             return;
         }
 
         if (!userId.matches("\\d+")) {
-            CommonMethod.showError("Invalid User ID", "User ID must be numeric.");
+            CommonMethod.showError("Invalid User ID. User ID must be numeric.");
             return;
         }
 
         if (!email.contains("@")) {
-            CommonMethod.showError("Invalid Email", "Please enter a valid email.");
+            CommonMethod.showError("Invalid Email. Please enter a valid email.");
             return;
         }
 
         if (!password.equals(confirmPassword)) {
-            CommonMethod.showError("Password Mismatch", "Password and Confirm Password do not match.");
+            CommonMethod.showError("Password Mismatch. Password and Confirm Password do not match.");
             return;
         }
 
