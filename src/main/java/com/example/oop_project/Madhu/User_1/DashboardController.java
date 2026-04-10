@@ -77,12 +77,12 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void maintenanceHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Maintenance History .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/MaintenanceHistory .fxml");
     }
 
     @javafx.fxml.FXML
     public void submitReportOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Submit Flight Report.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitFlightReport.fxml");
     }
 
     @javafx.fxml.FXML
