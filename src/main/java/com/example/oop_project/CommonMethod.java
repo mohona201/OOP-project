@@ -20,7 +20,6 @@ public class CommonMethod {
         alert.showAndWait();
     }
 
-
     public static void showInformation(String titleMessage, String errorMessage) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titleMessage);
@@ -37,7 +36,6 @@ public class CommonMethod {
         alert.showAndWait();
     }
 
-
     public static void sceneChange(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelicopterServices.class.getResource(fxmlFile));
@@ -51,11 +49,11 @@ public class CommonMethod {
         }
     }
 
-
     public static <T> void saveToBinFile(String fileName, List<T> dataList) {
         try {
             File dir = new File("data");
-            if (!dir.exists()) dir.mkdir();
+            if (!dir.exists())
+                dir.mkdir();
 
             File file = new File("data/" + fileName);
 
@@ -85,7 +83,8 @@ public class CommonMethod {
         try {
             File file = new File("data/" + fileName);
 
-            if (!file.exists() || file.length() == 0) return;
+            if (!file.exists() || file.length() == 0)
+                return;
 
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -109,7 +108,8 @@ public class CommonMethod {
         try {
             File file = new File("data/" + fileName);
 
-            if (!file.exists() || file.length() == 0) return false;
+            if (!file.exists() || file.length() == 0)
+                return false;
 
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -117,7 +117,8 @@ public class CommonMethod {
             while (true) {
                 try {
                     T obj = (T) ois.readObject();
-                    if (obj.toString().contains(valueToCheck)) return true;
+                    if (obj.toString().contains(valueToCheck))
+                        return true;
                 } catch (EOFException eof) {
                     break;
                 }
@@ -131,6 +132,7 @@ public class CommonMethod {
 
         return false;
     }
+
     static class AppendableObjectOutputStream extends ObjectOutputStream {
 
         public AppendableObjectOutputStream(OutputStream out) throws IOException {
@@ -141,7 +143,5 @@ public class CommonMethod {
         protected void writeStreamHeader() throws IOException {
         }
     }
-
-
 
 }

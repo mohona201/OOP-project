@@ -61,7 +61,7 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Dashboard .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Dashboard.fxml");
 
     }
 
@@ -72,32 +72,32 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void logoutOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Login .fxml");
+        CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 
     @javafx.fxml.FXML
     public void maintenanceHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/MaintenanceHistory .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/MaintenanceHistory.fxml");
     }
 
     @javafx.fxml.FXML
     public void submitReportOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitFlightReport.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitsFlightReport.fxml");
     }
 
     @javafx.fxml.FXML
     public void completeFlightOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight Complete .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightComplete.fxml");
     }
 
     @javafx.fxml.FXML
     public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Report Technical.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ReportTechnicalIssue.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight History.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightHistory.fxml");
     }
 
     @javafx.fxml.FXML
@@ -107,6 +107,6 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void updateStatusOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Update Flight Status.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/UpdateFlightStatus.fxml");
     }
 }

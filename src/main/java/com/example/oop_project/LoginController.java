@@ -9,8 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
-public class LoginController
-{
+public class LoginController {
     @javafx.fxml.FXML
     private PasswordField passwordTextFieldField;
     @javafx.fxml.FXML
