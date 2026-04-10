@@ -60,12 +60,12 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/ Cancels Booking.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Cancels Booking.fxml");
     }
 
     @javafx.fxml.FXML
     public void paymentsOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Payment.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Payment.fxml");
     }
 
     @javafx.fxml.FXML
@@ -74,36 +74,36 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Book Helicopter .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Book Helicopter .fxml");
     }
 
     @javafx.fxml.FXML
     public void bookingHistoryOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Booking History.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Booking History.fxml");
     }
 
     @javafx.fxml.FXML
     public void servicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Helicopter Services.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Helicopter Services.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightStatusOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Booking Status.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Booking Status.fxml");
     }
 
     @javafx.fxml.FXML
     public void searchServicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/Helicopter Services.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Helicopter Services.fxml");
     }
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/ Login.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Login.fxml");
     }
 
     @javafx.fxml.FXML
     public void feedbackOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User 1/ Feedback.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Feedback.fxml");
     }
 }
