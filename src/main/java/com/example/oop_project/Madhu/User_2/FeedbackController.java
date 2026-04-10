@@ -95,7 +95,7 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void servicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/HelicopterServices.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
