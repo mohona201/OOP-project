@@ -48,9 +48,9 @@ public class RegisterController
 
     @javafx.fxml.FXML
     public void registerOnAction(ActionEvent actionEvent) {
-        String userId = userIdTextField.getText();
-        String email = emailTextField.getText();
-        String name = nameTextField.getText();
+        String userId = userIdTextField.getText().trim();
+        String email = emailTextField.getText().trim();
+        String name = nameTextField.getText().trim();
         String password = passwordTextField.getText();
         String confirmPassword = confirmPasswordTextField.getText();
         String role = roleComboBox.getValue();
@@ -60,31 +60,34 @@ public class RegisterController
         if (userId.isEmpty() || email.isEmpty() || name.isEmpty()
                 || role == null || role.isEmpty()
                 || password.isEmpty() || confirmPassword.isEmpty()) {
+            CommonMethod.showError("Information Missing", "Please fill in all fields.");
+            return;
+        }
 
-            CommonMethod.showError("Information Missing",
-                    "Please fill in all fields.");
+        if (!userId.matches("\\d+")) {
+            CommonMethod.showError("Invalid User ID", "User ID must be numeric.");
             return;
         }
 
         if (!email.contains("@")) {
-            CommonMethod.showError("Invalid Email",
-                    "Please enter a valid email.");
+            CommonMethod.showError("Invalid Email", "Please enter a valid email.");
             return;
         }
 
         if (!password.equals(confirmPassword)) {
-            CommonMethod.showError("Password Mismatch",
-                    "Password and Confirm Password do not match.");
+            CommonMethod.showError("Password Mismatch", "Password and Confirm Password do not match.");
             return;
         }
 
-        int useridTxt = Integer.parseInt(userIdTextField.getText());
+        int userIdTxt = Integer.parseInt(userId);
 
-        registerList.add(new Register(useridTxt, email, name, password, role));
+        registerList.add(new Register(userIdTxt, email, name, password, role));
         CommonMethod.saveToBinFile("Register.bin", registerList);
 
-        CommonMethod.showConfirmation("Success",
-                "User registered successfully!\nPress login and enter your username and password.");
+        CommonMethod.showConfirmation(
+                "Success",
+                "User registered successfully!\nPress login and enter your user ID and password."
+        );
 
         userIdTextField.clear();
         emailTextField.clear();

@@ -1,15 +1,16 @@
 package com.example.oop_project;
 
-import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
 public class LoginController
 {
-
     @javafx.fxml.FXML
     private PasswordField passwordTextFieldField;
     @javafx.fxml.FXML
@@ -26,12 +27,11 @@ public class LoginController
 
     @javafx.fxml.FXML
     public void loginOnAction(ActionEvent actionEvent) {
-
-        String userId = userIdTextField.getText();
-        String password = passwordTextFieldField.getText();
+        String userId = userIdTextField.getText().trim();
+        String password = passwordTextFieldField.getText().trim();
 
         if (userId.isEmpty() || password.isEmpty()) {
-            CommonMethod.showError("Missing Info", "Please enter username and password");
+            CommonMethod.showError("Missing Info", "Please enter userId and password");
             return;
         }
 
@@ -59,10 +59,28 @@ public class LoginController
 
                         switch (user.getRole()) {
                             case "Pilot":
-                                CommonMethod.sceneChange(actionEvent, "Madhu/User 1/Dashboard.fxml");
+                                CommonMethod.sceneChange(actionEvent, "Madhu/User_1/Dashboard.fxml");
                                 break;
                             case "Client":
                                 CommonMethod.sceneChange(actionEvent, "Madhu/User2/Dashboard.fxml");
+                                break;
+                            case "Flight Operation Manager":
+                                CommonMethod.showError("Role Error", "Page not added yet");
+                                break;
+                            case "Booking and Dispatch Officer":
+                                CommonMethod.showError("Role Error", "Page not added yet");
+                                break;
+                            case "Maintenance Engineer":
+                                CommonMethod.showError("Role Error", "Page not added yet");
+                                break;
+                            case "Fleet Manager":
+                                CommonMethod.showError("Role Error", "Page not added yet");
+                                break;
+                            case "Customer support Officer":
+                                CommonMethod.showError("Role Error", "Page not added yet");
+                                break;
+                            case "Scheduler":
+                                CommonMethod.showError("Role Error", "Page not added yet");
                                 break;
                             default:
                                 CommonMethod.showError("Role Error", "Unknown role");
@@ -71,7 +89,7 @@ public class LoginController
                         break;
                     }
 
-                } catch (Exception eof) {
+                } catch (EOFException e) {
                     break;
                 }
             }
@@ -83,8 +101,8 @@ public class LoginController
             }
 
         } catch (Exception e) {
+            e.printStackTrace();
             CommonMethod.showError("Error", "Login error: " + e.getMessage());
         }
-
     }
 }
