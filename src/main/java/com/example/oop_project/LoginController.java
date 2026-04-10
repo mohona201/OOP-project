@@ -62,7 +62,7 @@ public class LoginController
                                 CommonMethod.sceneChange(actionEvent, "Madhu/User_1/Dashboard.fxml");
                                 break;
                             case "Client":
-                                CommonMethod.sceneChange(actionEvent, "Madhu/User2/Dashboard.fxml");
+                                CommonMethod.sceneChange(actionEvent, "Madhu/User_2/Dashboard.fxml");
                                 break;
                             case "Flight Operation Manager":
                                 CommonMethod.showError("Role Error", "Page not added yet");
