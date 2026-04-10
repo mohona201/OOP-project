@@ -48,6 +48,17 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void initialize() {
+        ToggleGroup tg = new ToggleGroup();
+        rating1RadioButton.setToggleGroup(tg);
+        rating2RadioButton.setToggleGroup(tg);
+        rating3RadioButton.setToggleGroup(tg);
+        rating4RadioButton.setToggleGroup(tg);
+        rating5RadioButton.setToggleGroup(tg);
+        rating6RadioButton.setToggleGroup(tg);
+        rating7RadioButton.setToggleGroup(tg);
+        rating8RadioButton.setToggleGroup(tg);
+        rating9RadioButton.setToggleGroup(tg);
+
 
         bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingId"));
         serviceTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
@@ -74,7 +85,7 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter.fxml");
     }
 
     @javafx.fxml.FXML
@@ -99,7 +110,7 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Login.fxml");
+        CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 
     @javafx.fxml.FXML

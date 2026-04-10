@@ -47,12 +47,12 @@ public class MaintenanceHistoryController {
 
     @javafx.fxml.FXML
     public void logoutOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Login .fxml");
+        CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 
     @javafx.fxml.FXML
     public void maintenanceHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/MaintenanceHistory .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/MaintenanceHistory.fxml");
     }
 
     @javafx.fxml.FXML
@@ -61,17 +61,17 @@ public class MaintenanceHistoryController {
 
     @javafx.fxml.FXML
     public void submitReportOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitFlightReport.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/SubmitsFlightReport.fxml");
     }
 
     @javafx.fxml.FXML
     public void completeFlightOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightComplete .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightComplete.fxml");
     }
 
     @javafx.fxml.FXML
     public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ReportTechnical.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ReportTechnicalIssue.fxml");
     }
 
     @javafx.fxml.FXML

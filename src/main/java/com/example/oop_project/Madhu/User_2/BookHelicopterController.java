@@ -69,7 +69,7 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter.fxml");
     }
 
     @javafx.fxml.FXML
@@ -94,7 +94,7 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Login.fxml");
+        CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 
     @javafx.fxml.FXML

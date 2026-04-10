@@ -87,17 +87,17 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void completeFlightOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightComplete .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight Complete .fxml");
     }
 
     @javafx.fxml.FXML
     public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ReportTechnical.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Report Technical.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/FlightHistory.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight History.fxml");
     }
 
     @javafx.fxml.FXML
@@ -107,6 +107,6 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void updateStatusOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/UpdateFlightStatus.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Update Flight Status.fxml");
     }
 }
