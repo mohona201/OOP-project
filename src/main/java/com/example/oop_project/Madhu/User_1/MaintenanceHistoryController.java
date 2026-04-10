@@ -46,11 +46,6 @@ public class MaintenanceHistoryController {
     }
 
     @javafx.fxml.FXML
-    public void flightHistoryOnActionbutton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Flight History.fxml");
-    }
-
-    @javafx.fxml.FXML
     public void logoutOnActionButton(ActionEvent actionEvent) {
         CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Login .fxml");
     }
@@ -76,25 +71,31 @@ public class MaintenanceHistoryController {
 
     @javafx.fxml.FXML
     public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Report Technical.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Report Technical.fxml");
     }
 
     @javafx.fxml.FXML
     public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Dashboard.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
     public void refreshOnActionButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void updateStatusOnActionbutton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Update Flight Status.fxml");
-    }
 
     @javafx.fxml.FXML
     public void logBookOnActionButton(ActionEvent actionEvent) {
         CommonMethod.sceneChange(actionEvent,"Madhu/User_1/LogBook.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void updateStatusOnActionButton(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Update Flight Status.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void flightHistoryOnActionButton(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight History.fxml");
     }
 }

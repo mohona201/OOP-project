@@ -37,9 +37,7 @@
                 <PasswordField fx:id="passwordTextFieldField" prefWidth="256" promptText="Enter your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #CBD5E1; -fx-padding: 9 12 9 12; -fx-font-size: 13px;" />
             </VBox>
 
-            <VBox spacing="4">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Role" />
-            </VBox>
+            <VBox spacing="4" />
 
             <Button onAction="#loginOnAction" prefWidth="256" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 10 0 10 0; -fx-cursor: hand;" text="Login" />
 

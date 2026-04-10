@@ -48,7 +48,7 @@ public class RegisterController
 
     @javafx.fxml.FXML
     public void registerOnAction(ActionEvent actionEvent) {
-        String id = userIdTextField.getText();
+        String userId = userIdTextField.getText();
         String email = emailTextField.getText();
         String name = nameTextField.getText();
         String password = passwordTextField.getText();
@@ -57,7 +57,7 @@ public class RegisterController
 
         registerList = new ArrayList<>();
 
-        if (id.isEmpty() || email.isEmpty() || name.isEmpty()
+        if (userId.isEmpty() || email.isEmpty() || name.isEmpty()
                 || role == null || role.isEmpty()
                 || password.isEmpty() || confirmPassword.isEmpty()) {
 
@@ -78,9 +78,9 @@ public class RegisterController
             return;
         }
 
-        int idTxt = Integer.parseInt(userIdTextField.getText());
+        int useridTxt = Integer.parseInt(userIdTextField.getText());
 
-        registerList.add(new Register(idTxt, email, name, password, role));
+        registerList.add(new Register(useridTxt, email, name, password, role));
         CommonMethod.saveToBinFile("Register.bin", registerList);
 
         CommonMethod.showConfirmation("Success",

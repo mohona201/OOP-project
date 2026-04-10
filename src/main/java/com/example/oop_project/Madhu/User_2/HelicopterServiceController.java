@@ -57,7 +57,7 @@ public class HelicopterServiceController {
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Cancels Booking.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Cancels Booking.fxml");
     }
 
     @javafx.fxml.FXML
@@ -92,11 +92,11 @@ public class HelicopterServiceController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Login.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Login.fxml");
     }
 
     @javafx.fxml.FXML
     public void feedbackOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Feedback.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Feedback.fxml");
     }
 }

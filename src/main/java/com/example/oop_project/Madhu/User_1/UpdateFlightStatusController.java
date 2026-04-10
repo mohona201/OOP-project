@@ -73,21 +73,21 @@ public class UpdateFlightStatusController {
 
     @javafx.fxml.FXML
     public void technicalIssuesOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Report Technical.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Report Technical.fxml");
     }
 
     @javafx.fxml.FXML
     public void assignedFlightsOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Dashboard.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightHistoryOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Flight History.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Flight History.fxml");
     }
 
     @javafx.fxml.FXML
     public void updateStatusOnActionButton(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/ Update Flight Status.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_1/Update Flight Status.fxml");
     }
 }

@@ -52,7 +52,7 @@ public class LoginController
                 try {
                     Register user = (Register) ois.readObject();
 
-                    if (String.valueOf(user.getId()).equals(userId)
+                    if (String.valueOf(user.getUserId()).equals(userId)
                             && user.getPassword().equals(password)) {
 
                         found = true;
@@ -79,7 +79,7 @@ public class LoginController
             ois.close();
 
             if (!found) {
-                CommonMethod.showError("Login Failed", "Invalid username or password");
+                CommonMethod.showError("Login Failed", "Invalid userId or password");
             }
 
         } catch (Exception e) {

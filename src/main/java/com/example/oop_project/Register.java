@@ -2,23 +2,24 @@ package com.example.oop_project;
 
 import java.io.Serializable;
 
-public class Register implements Serializable { ;
-    public  Integer id;
+public class Register implements Serializable {
+    ;
+    public Integer userId;
     public String email;
-    public  String name;
-    public  String password ;
+    public String name;
+    public String password;
     public String role;
 
-    public Register(Integer id, String email, String name, String password, String role) {
-        this.id = id;
+    public Register(Integer userId, String email, String name, String password, String role) {
+        this.userId = userId;
         this.email = email;
         this.name = name;
         this.password = password;
         this.role = role;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
     public String getEmail() {
@@ -37,8 +38,8 @@ public class Register implements Serializable { ;
         return role;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public void setEmail(String email) {
@@ -60,7 +61,7 @@ public class Register implements Serializable { ;
     @Override
     public String toString() {
         return "Register{" +
-                "id=" + id +
+                "userId=" + userId +
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +

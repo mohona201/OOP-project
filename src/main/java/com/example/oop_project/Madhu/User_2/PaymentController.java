@@ -73,7 +73,7 @@ public class PaymentController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/ Login.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Login.fxml");
     }
 
     @javafx.fxml.FXML
