@@ -74,27 +74,27 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Book Helicopter .fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter .fxml");
     }
 
     @javafx.fxml.FXML
     public void bookingHistoryOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Booking History.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookingHistory.fxml");
     }
 
     @javafx.fxml.FXML
     public void servicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Helicopter Services.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/HelicopterServices.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightStatusOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Booking Status.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookingStatus.fxml");
     }
 
     @javafx.fxml.FXML
     public void searchServicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Helicopter Services.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/HelicopterServices.fxml");
     }
 
     @javafx.fxml.FXML
