@@ -44,7 +44,7 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Cancels Booking.fxml");
+        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/CancelsBooking.fxml");
     }
 
     @javafx.fxml.FXML
