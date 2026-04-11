@@ -83,7 +83,7 @@ public class DashboardClientController
     @javafx.fxml.FXML
     public void refreshOnAction(ActionEvent actionEvent) {
         serviceTable.getItems().clear();
-        CommonMethod.saveToBinFile("DashBoard.bin", dashboardList);
+        CommonMethod.showTableDataFromBinFile("DashBoard.bin", serviceTable);
 
         dashboardList.clear();
         dashboardList.addAll(serviceTable.getItems());
