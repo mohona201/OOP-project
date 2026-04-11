@@ -69,7 +69,6 @@ public class BookHelicopterController {
         String departure = departureTextField.getText();
         String destination = destinationTextField.getText();
         Integer passInt = 1;
-        try { passInt = Integer.parseInt(passengerTextField.getText()); } catch (Exception e) {}
 
         UserBooking newBooking = new UserBooking(
                 "123",
