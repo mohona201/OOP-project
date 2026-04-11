@@ -32,6 +32,8 @@ public class DashboardController
     private TableColumn <Dashboard,Integer>flightIdTableColumn;
     @javafx.fxml.FXML
     private TableColumn <Dashboard,String>routetablecolumn;
+    @javafx.fxml.FXML
+    private TableColumn <Dashboard,String>serviceTableColumn1;
 
     ArrayList<Dashboard>dashboardList = new ArrayList<>();
 
@@ -49,8 +51,9 @@ public class DashboardController
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightId"));
 
         routetablecolumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("route"));
+        serviceTableColumn1.setCellValueFactory(new PropertyValueFactory<Dashboard,String>("service"));
 
-        CommonMethod.showTableDataFromBinFile("Dashboard.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("DashboardClient.bin", flightTableView);
 
     }
 

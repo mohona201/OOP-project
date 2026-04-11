@@ -10,9 +10,10 @@ public class Dashboard {
     public String flightRoute;
     public LocalTime departureTime;
     public String flightStatus;
+    public  String serviceId;
 
 
-    public Dashboard(String flightId, String route, LocalDate flightDate, String helicopterId, String flightRoute, LocalTime departureTime, String flightStatus) {
+    public Dashboard(String flightId, String route, LocalDate flightDate, String helicopterId, String flightRoute, LocalTime departureTime, String flightStatus, String serviceId) {
         this.flightId = flightId;
         this.route = route;
         this.flightDate = flightDate;
@@ -20,6 +21,7 @@ public class Dashboard {
         this.flightRoute = flightRoute;
         this.departureTime = departureTime;
         this.flightStatus = flightStatus;
+        this.serviceId = serviceId;
     }
 
     public String getFlightId() {
@@ -50,6 +52,10 @@ public class Dashboard {
         return flightStatus;
     }
 
+    public String getServiceId() {
+        return serviceId;
+    }
+
     public void setFlightId(String flightId) {
         this.flightId = flightId;
     }
@@ -78,6 +84,10 @@ public class Dashboard {
         this.flightStatus = flightStatus;
     }
 
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+    }
+
     @Override
     public String toString() {
         return "Dashboard{" +
@@ -88,6 +98,7 @@ public class Dashboard {
                 ", flightRoute='" + flightRoute + '\'' +
                 ", departureTime=" + departureTime +
                 ", flightStatus='" + flightStatus + '\'' +
+                ", serviceId='" + serviceId + '\'' +
                 '}';
     }
 }

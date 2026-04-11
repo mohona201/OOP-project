@@ -7,9 +7,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class DashboardController
+public class DashboardClientController
 {
     @javafx.fxml.FXML
     private TableColumn <Dashboard,Integer> capacityTableColumn;
@@ -18,15 +19,15 @@ public class DashboardController
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String> serviceNameTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn <Dashboard,String> helicopterTypeTableColumn;
-    @javafx.fxml.FXML
     private TableView <Dashboard>serviceTable;
     @javafx.fxml.FXML
     private TableColumn <Dashboard,String> serviceIdTableColumn;
     @javafx.fxml.FXML
     private TableColumn <Dashboard,Integer> priceTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn <Dashboard, LocalDate>dateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn <Dashboard,Integer>flightIdTableColumn;
 
     ArrayList<Dashboard> dashboards= new ArrayList<>();
 
@@ -34,10 +35,12 @@ public class DashboardController
     public void initialize() {
         capacityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
         availabilityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightAvailability"));
-        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
-        helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
+       // serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
+      //  helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
         serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
         priceTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightPrice"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard,LocalDate>("date"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard,Integer>("flightId"));
 
         CommonMethod.showTableDataFromBinFile("Dashboard.bin", serviceTable);
     }
