@@ -39,11 +39,7 @@ public class CancelBookingController
 
         CommonMethod.showTableDataFromBinFile("Booking.bin", bookingTable);
         
-        bookingTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-            if (newVal != null) {
-                reasonTextArea1.setText(newVal.getBookingId());
-            }
-        });
+
     }
 
     @javafx.fxml.FXML

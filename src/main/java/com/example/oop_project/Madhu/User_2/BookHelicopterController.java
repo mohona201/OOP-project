@@ -62,18 +62,34 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void confirmBookingOnAction(ActionEvent actionEvent) {
-        String flightId = FlightIDTextField.getText();
-        
-        String departure = departureTextField.getText();
-        String destination = destinationTextField.getText();
-        Integer passInt = 1;
+        String flightId = FlightIDTextField.getText().trim();
+        String departure = departureTextField.getText().trim();
+        String destination = destinationTextField.getText().trim();
+        String passengerText = passengerTextField.getText().trim();
 
-        DashBoard newBooking = new DashBoard("123", flightId, departure + " to " + destination, "Pending", departure, destination, passInt, 5000 * passInt);
-        
-        ArrayList<DashBoard> tempList = new ArrayList<>();
-        tempList.add(newBooking);
-        CommonMethod.saveToBinFile("Booking.bin", tempList);
-        CommonMethod.showInformation("Success", "Booking Registered!");
+        bookingList = new ArrayList<>();
+
+        if (flightId.isEmpty() || departure.isEmpty() || destination.isEmpty() || passengerText.isEmpty()) {
+            CommonMethod.showError("Information Missing", "Please fill in all fields.");
+            return;
+        }
+
+        if (!passengerText.matches("\\d+")) {
+            CommonMethod.showError("invalid Passenger", "Passenger must be a number.");
+            return;
+        }
+
+        int passengers = Integer.parseInt(passengerText);
+        String route = departure + " to " + destination;
+        int amount = passengers * 5000;
+        LocalDate date = LocalDate.now();
+
+        DashBoard newBooking = new DashBoard("B001", flightId, route, "Pending", departure, destination, passengers, amount);
+
+        bookingList.add(newBooking);
+        CommonMethod.saveToBinFile("Booking.bin", bookingList);
+
+        CommonMethod.showConfirmation("Success", "Booking confirmed successfully.");
 
         FlightIDTextField.clear();
         departureTextField.clear();

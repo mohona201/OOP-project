@@ -1,14 +1,16 @@
 package com.example.oop_project.Madhu.User_2;
 
 public class Payment {
-    public String bookingId;
-    public String service;
+    public String bookingId,flightId;
+    public String status;
     public Integer bookingAmount;
     public String paymentMethod;
 
-    public Payment(String bookingId, String service, Integer bookingAmount, String paymentMethod) {
+
+    public Payment(String bookingId, String flightId, String status, Integer bookingAmount, String paymentMethod) {
         this.bookingId = bookingId;
-        this.service = service;
+        this.flightId = flightId;
+        this.status = status;
         this.bookingAmount = bookingAmount;
         this.paymentMethod = paymentMethod;
     }
@@ -17,28 +19,36 @@ public class Payment {
         return bookingId;
     }
 
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
+    public String getFlightId() {
+        return flightId;
     }
 
-    public String getService() {
-        return service;
-    }
-
-    public void setService(String service) {
-        this.service = service;
+    public String getStatus() {
+        return status;
     }
 
     public Integer getBookingAmount() {
         return bookingAmount;
     }
 
-    public void setBookingAmount(Integer bookingAmount) {
-        this.bookingAmount = bookingAmount;
-    }
-
     public String getPaymentMethod() {
         return paymentMethod;
+    }
+
+    public void setBookingId(String bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setBookingAmount(Integer bookingAmount) {
+        this.bookingAmount = bookingAmount;
     }
 
     public void setPaymentMethod(String paymentMethod) {
@@ -47,9 +57,10 @@ public class Payment {
 
     @Override
     public String toString() {
-        return "PaymentModel{" +
+        return "Payment{" +
                 "bookingId='" + bookingId + '\'' +
-                ", service='" + service + '\'' +
+                ", flightId='" + flightId + '\'' +
+                ", status='" + status + '\'' +
                 ", bookingAmount=" + bookingAmount +
                 ", paymentMethod='" + paymentMethod + '\'' +
                 '}';

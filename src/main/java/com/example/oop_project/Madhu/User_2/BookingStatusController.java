@@ -1,94 +1,114 @@
 package com.example.oop_project.Madhu.User_2;
 
 import com.example.oop_project.CommonMethod;
-import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
 
 public class BookingStatusController {
     @javafx.fxml.FXML
-    private TableView <DashBoard>statusTable;
+    private TableView<DashBoard> statusTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <DashBoard,String> bookingIDTableColumn;
+    private TableColumn<DashBoard, String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <DashBoard,String> statusTableColumn;
+    private TableColumn<DashBoard, String> statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <DashBoard,String> flightIdTableColumn;
+    private TableColumn<DashBoard, String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <DashBoard,String> routeTableColumn;
+    private TableColumn<DashBoard, String> routeTableColumn;
     @javafx.fxml.FXML
     private TextField searchTextField;
 
-    ArrayList<DashBoard> bookingStatusList= new ArrayList<>();
+    ArrayList<DashBoard> bookingStatusList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<>("route"));
 
-
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("bookingId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("status"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("route"));
-
+        statusTable.getItems().clear();
         CommonMethod.showTableDataFromBinFile("Booking.bin", statusTable);
 
+        bookingStatusList.clear();
+        bookingStatusList.addAll(statusTable.getItems());
     }
 
     @javafx.fxml.FXML
     public void searchOnAction(ActionEvent actionEvent) {
+        String searchValue = searchTextField.getText().trim().toLowerCase();
+
+        statusTable.getItems().clear();
+
+        if (searchValue.isEmpty()) {
+            statusTable.getItems().addAll(bookingStatusList);
+            return;
+        }
+
+        for (DashBoard b : bookingStatusList) {
+            if (b.getBookingId().toLowerCase().contains(searchValue)) {
+                statusTable.getItems().add(b);
+            }
+        }
     }
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/CancelsBooking.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/CancelsBooking.fxml");
     }
 
     @javafx.fxml.FXML
     public void paymentsOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Payment.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/Payment.fxml");
     }
 
     @javafx.fxml.FXML
     public void bookFlightOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookHelicopter.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/BookHelicopter.fxml");
     }
 
     @javafx.fxml.FXML
     public void bookingHistoryOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookingHistory.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/BookingHistory.fxml");
     }
 
     @javafx.fxml.FXML
     public void servicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Dashboard.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/Dashboard.fxml");
     }
 
     @javafx.fxml.FXML
     public void flightStatusOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/BookingStatus.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/BookingStatus.fxml");
     }
 
     @javafx.fxml.FXML
     public void searchServicesOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/HelicopterServices.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/HelicopterServices.fxml");
     }
 
     @javafx.fxml.FXML
     public void refreshOnAction(ActionEvent actionEvent) {
+        searchTextField.clear();
+        statusTable.getItems().clear();
+        CommonMethod.showTableDataFromBinFile("Booking.bin", statusTable);
+
+        bookingStatusList.clear();
+        bookingStatusList.addAll(statusTable.getItems());
     }
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-
-        CommonMethod.sceneChange(actionEvent,"Login.fxml");
+        CommonMethod.sceneChange(actionEvent, "Login.fxml");
     }
 
     @javafx.fxml.FXML
     public void feedbackOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Madhu/User_2/Feedback.fxml");
+        CommonMethod.sceneChange(actionEvent, "Madhu/User_2/Feedback.fxml");
     }
 }

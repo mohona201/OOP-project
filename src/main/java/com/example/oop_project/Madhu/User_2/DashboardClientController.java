@@ -38,8 +38,8 @@ public class DashboardClientController
         routeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightRoute"));
         departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("departureTime"));
 
-        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", serviceTable);
         serviceTable.getItems().clear();
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", serviceTable);
 
         dashboardList.clear();
         dashboardList.addAll(serviceTable.getItems());
@@ -83,7 +83,7 @@ public class DashboardClientController
     @javafx.fxml.FXML
     public void refreshOnAction(ActionEvent actionEvent) {
         serviceTable.getItems().clear();
-        CommonMethod.showTableDataFromBinFile("DashBoard.bin", serviceTable);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", serviceTable);
 
         dashboardList.clear();
         dashboardList.addAll(serviceTable.getItems());

@@ -1,79 +1,82 @@
 package com.example.oop_project.Madhu.User_2;
 
+import java.time.LocalDate;
+
 public class HelicopterService {
-    public String serviceId;
-    public String serviceName;
+    public String flightId;
+    public String helicopterId;
     public String helicopterType;
-    public Integer capacity;
-    public Integer servicePrice;
-    public String flightAvailability;
+    public LocalDate date;
+    public String route;
+    public  String time;
 
-    public HelicopterService(String serviceId, String serviceName, String helicopterType, Integer capacity, Integer servicePrice, String flightAvailability) {
-        this.serviceId = serviceId;
-        this.serviceName = serviceName;
+
+    public HelicopterService(String flightId, String helicopterId, String helicopterType, LocalDate date, String route, String time) {
+        this.flightId = flightId;
+        this.helicopterId = helicopterId;
         this.helicopterType = helicopterType;
-        this.capacity = capacity;
-        this.servicePrice = servicePrice;
-        this.flightAvailability = flightAvailability;
+        this.date = date;
+        this.route = route;
+        this.time = time;
     }
 
-    public String getServiceId() {
-        return serviceId;
+    public String getFlightId() {
+        return flightId;
     }
 
-    public void setServiceId(String serviceId) {
-        this.serviceId = serviceId;
-    }
-
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+    public String getHelicopterId() {
+        return helicopterId;
     }
 
     public String getHelicopterType() {
         return helicopterType;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public String getRoute() {
+        return route;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public void setHelicopterId(String helicopterId) {
+        this.helicopterId = helicopterId;
+    }
+
     public void setHelicopterType(String helicopterType) {
         this.helicopterType = helicopterType;
     }
 
-    public Integer getCapacity() {
-        return capacity;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
+    public void setRoute(String route) {
+        this.route = route;
     }
 
-    public Integer getServicePrice() {
-        return servicePrice;
-    }
-
-    public void setServicePrice(Integer servicePrice) {
-        this.servicePrice = servicePrice;
-    }
-
-    public String getFlightAvailability() {
-        return flightAvailability;
-    }
-
-    public void setFlightAvailability(String flightAvailability) {
-        this.flightAvailability = flightAvailability;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     @Override
     public String toString() {
-        return "HelicopterServiceModel{" +
-                "serviceId='" + serviceId + '\'' +
-                ", serviceName='" + serviceName + '\'' +
+        return "HelicopterService{" +
+                "flightId='" + flightId + '\'' +
+                ", helicopterId='" + helicopterId + '\'' +
                 ", helicopterType='" + helicopterType + '\'' +
-                ", capacity=" + capacity +
-                ", servicePrice=" + servicePrice +
-                ", flightAvailability='" + flightAvailability + '\'' +
+                ", date=" + date +
+                ", route='" + route + '\'' +
+                ", time='" + time + '\'' +
                 '}';
     }
 }

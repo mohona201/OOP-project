@@ -30,8 +30,11 @@ public class BookingHistoryController {
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("status"));
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
         routeTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("route"));
-
+        historyTable.getItems().clear();
         CommonMethod.showTableDataFromBinFile("Booking.bin", historyTable);
+
+        bookingHistoryList.clear();
+        bookingHistoryList.addAll(historyTable.getItems());
 
     }
 
@@ -74,6 +77,11 @@ public class BookingHistoryController {
 
     @javafx.fxml.FXML
     public void refreshOnAction(ActionEvent actionEvent) {
+        historyTable.getItems().clear();
+        CommonMethod.showTableDataFromBinFile("Booking.bin", historyTable);
+
+        bookingHistoryList.clear();
+        bookingHistoryList.addAll(historyTable.getItems());
     }
 
     @javafx.fxml.FXML
