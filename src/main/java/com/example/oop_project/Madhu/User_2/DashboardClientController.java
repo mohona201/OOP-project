@@ -28,7 +28,7 @@ public class DashboardClientController
     @javafx.fxml.FXML
     private TableColumn<Dashboard, String> departureTimeTableColumn;
 
-    ArrayList<Dashboard> dashboards= new ArrayList<>();
+    ArrayList<Dashboard> dashboardList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,8 +41,8 @@ public class DashboardClientController
         CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", serviceTable);
         serviceTable.getItems().clear();
 
-        dashboards.clear();
-        dashboards.addAll(serviceTable.getItems());
+        dashboardList.clear();
+        dashboardList.addAll(serviceTable.getItems());
     }
 
     @javafx.fxml.FXML
@@ -83,10 +83,10 @@ public class DashboardClientController
     @javafx.fxml.FXML
     public void refreshOnAction(ActionEvent actionEvent) {
         serviceTable.getItems().clear();
-        CommonMethod.showTableDataFromBinFile("DashBoard.bin", serviceTable);
+        CommonMethod.saveToBinFile("DashBoard.bin", dashboardList);
 
-        dashboards.clear();
-        dashboards.addAll(serviceTable.getItems());
+        dashboardList.clear();
+        dashboardList.addAll(serviceTable.getItems());
     }
 
     @javafx.fxml.FXML
