@@ -47,11 +47,11 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Select Service" />
                     <TableView fx:id="serviceTable" prefHeight="150">
                         <columns>
-                            <TableColumn fx:id="serviceIdTableColumn" prefWidth="90" text="Service ID" />
-                            <TableColumn fx:id="serviceNameTableColumn" prefWidth="140" text="Service Name" />
-                            <TableColumn fx:id="helicopterTypeTableColumn" prefWidth="130" text="Helicopter Type" />
-                            <TableColumn fx:id="capacityTableColumn" prefWidth="90" text="Capacity" />
-                            <TableColumn fx:id="priceTableColumn" prefWidth="90" text="Price" />
+                            <TableColumn fx:id="flightIdTableColumn" prefWidth="100.0" text="Flight ID" />
+                            <TableColumn fx:id="dateTableColumn" prefWidth="130.0" text="Date" />
+                            <TableColumn fx:id="helicopterIdTableColumn" prefWidth="110.0" text="Helicopter ID" />
+                            <TableColumn fx:id="routeTableColumn" prefWidth="200.0" text="Route" />
+                            <TableColumn fx:id="departureTimeTableColumn" prefWidth="120.0" text="Departure Time" />
                         </columns>
                     </TableView>
                 </VBox>
@@ -59,8 +59,8 @@
                 <VBox spacing="12" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;" text="Booking Details" />
                     <HBox spacing="10">
-                        <Label prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Date:" />
-                        <DatePicker fx:id="datePicker" prefWidth="220" style="-fx-background-radius: 6; -fx-border-radius: 6;" />
+                        <Label prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Flight ID:" />
+                        <TextField fx:id="FlightIDTextField" prefWidth="220" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
                     </HBox>
                     <HBox spacing="10">
                         <Label prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Departure:" />

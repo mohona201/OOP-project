@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 public class FeedbackController {
     @javafx.fxml.FXML
-    private TableView <Feedback>bookingTable;
+    private TableView <UserBooking>bookingTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private RadioButton rating8RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String> routeTableColumn;
+    private TableColumn <UserBooking,String> routeTableColumn;
     @javafx.fxml.FXML
     private RadioButton rating5RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String> serviceTableColumn;
+    private TableColumn <UserBooking,String> flightIdTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea1;
     @javafx.fxml.FXML
@@ -34,21 +34,19 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating7RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback,String> bookingIDTableColumn;
+    private TableColumn <UserBooking,String> bookingIDTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea;
     @javafx.fxml.FXML
     private RadioButton rating6RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <Feedback, LocalDate> dateTableColumn;
-    @javafx.fxml.FXML
     private RadioButton rating4RadioButton;
 
-    ArrayList<Feedback>feedbackList = new ArrayList<>();
+    ToggleGroup tg;
 
     @javafx.fxml.FXML
     public void initialize() {
-        ToggleGroup tg = new ToggleGroup();
+        tg = new ToggleGroup();
         rating1RadioButton.setToggleGroup(tg);
         rating2RadioButton.setToggleGroup(tg);
         rating3RadioButton.setToggleGroup(tg);
@@ -60,13 +58,17 @@ public class FeedbackController {
         rating9RadioButton.setToggleGroup(tg);
 
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("bookingId"));
-        serviceTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("service"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, String>("flightRoute"));
-        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Feedback, LocalDate>("flightDate"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
 
-        CommonMethod.showTableDataFromBinFile("Feedback.bin", bookingTable);
+        CommonMethod.showTableDataFromBinFile("Booking.bin", bookingTable);
 
+        bookingTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                feedbackTextArea1.setText(newVal.getBookingId());
+            }
+        });
     }
 
     @javafx.fxml.FXML
@@ -81,6 +83,39 @@ public class FeedbackController {
 
     @javafx.fxml.FXML
     public void submitFeedbackOnAction(ActionEvent actionEvent) {
+        String bookingId = feedbackTextArea1.getText().trim();
+        String comments = feedbackTextArea.getText().trim();
+        RadioButton selectedRating = (RadioButton) tg.getSelectedToggle();
+
+        if (comments.isEmpty()) {
+            CommonMethod.showError("Please enter your feedback comments.");
+            return;
+        }
+
+        Integer rating = 0;
+        if (selectedRating != null) {
+            rating = Integer.parseInt(selectedRating.getText());
+        } else {
+            CommonMethod.showError("Please select a rating.");
+            return;
+        }
+
+        UserBooking selectedBooking = bookingTable.getSelectionModel().getSelectedItem();
+        String flightId = selectedBooking != null ? selectedBooking.getFlightId() : "N/A";
+        String route = selectedBooking != null ? selectedBooking.getRoute() : "N/A";
+        LocalDate date = LocalDate.now();
+
+        Feedback fb = new Feedback(bookingId.isEmpty() ? "N/A" : bookingId, flightId, date, route, comments, rating);
+
+        ArrayList<Feedback> fbList = new ArrayList<>();
+        fbList.add(fb);
+        CommonMethod.saveToBinFile("Feedback.bin", fbList);
+
+        CommonMethod.showInformation("Success", "Feedback submitted successfully.");
+
+        feedbackTextArea.clear();
+        feedbackTextArea1.clear();
+        tg.selectToggle(null);
     }
 
     @javafx.fxml.FXML

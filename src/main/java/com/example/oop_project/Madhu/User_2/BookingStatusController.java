@@ -10,35 +10,32 @@ import java.util.ArrayList;
 
 public class BookingStatusController {
     @javafx.fxml.FXML
-    private TableView <BookingStatus>statusTable;
+    private TableView <UserBooking>statusTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String> bookingIDTableColumn;
+    private TableColumn <UserBooking,String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String> statusTableColumn;
+    private TableColumn <UserBooking,String> statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String> serviceNameTableColumn;
+    private TableColumn <UserBooking,String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingStatus,String> routeTableColumn;
+    private TableColumn <UserBooking,String> routeTableColumn;
     @javafx.fxml.FXML
     private TextField searchTextField;
-    @javafx.fxml.FXML
-    private TableColumn <BookingStatus, LocalDate> dateTableColumn;
 
-    ArrayList<BookingStatus> bookingStatusList= new ArrayList<>();
+    ArrayList<UserBooking> bookingStatusList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("bookingStatus"));
-        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("serviceName"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, String>("flightRoute"));
-        dateTableColumn.setCellValueFactory(new PropertyValueFactory<BookingStatus, LocalDate>("bookingDate"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
 
-        CommonMethod.showTableDataFromBinFile("BookingStatus.bin", statusTable);
+        CommonMethod.showTableDataFromBinFile("Booking.bin", statusTable);
 
     }
 
@@ -87,6 +84,7 @@ public class BookingStatusController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
+
         CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 

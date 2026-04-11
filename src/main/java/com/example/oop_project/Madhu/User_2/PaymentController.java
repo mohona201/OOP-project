@@ -4,6 +4,10 @@ import com.example.oop_project.CommonMethod;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 public class PaymentController {
@@ -19,16 +23,57 @@ public class PaymentController {
     private TextField amountTextField;
     @javafx.fxml.FXML
     private ComboBox <String>paymentMethodComboBox;
+    @javafx.fxml.FXML
+    private TableView<UserBooking> pendingBookingsTable;
+    @javafx.fxml.FXML
+    private TableColumn<UserBooking, String> bookingIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<UserBooking, String> flightIdTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<UserBooking, String> statusTableColumn;
 
-    ArrayList<Payment>paymentList = new ArrayList<>();
+    ArrayList<UserBooking> allBookings = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-
-
         paymentMethodComboBox.getItems().addAll("Cash", "Card", "Bkash", "Nagad", "Rocket");
 
-        CommonMethod.showTableDataFromBinFile("Payment.bin", null);
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
+
+        loadAllBookings();
+
+        pendingBookingsTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                bookingIdLabel.setText(newVal.getBookingId());
+                serviceLabel.setText(newVal.getFlightId());
+                amountLabel.setText(String.valueOf(newVal.getAmount()) + " BDT");
+            }
+        });
+    }
+
+    private void loadAllBookings() {
+        allBookings.clear();
+        pendingBookingsTable.getItems().clear();
+        ObjectInputStream ois = null;
+        try {
+            File file = new File("data/Booking.bin");
+            if (file.exists() && file.length() > 0) {
+                ois = new ObjectInputStream(new FileInputStream(file));
+                while (true) {
+                    UserBooking b = (UserBooking) ois.readObject();
+                    allBookings.add(b);
+                    if ("Pending".equals(b.getStatus())) {
+                        pendingBookingsTable.getItems().add(b);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // EOFException expected
+        } finally {
+            try { if (ois != null) ois.close(); } catch (Exception e) {}
+        }
     }
 
 
@@ -59,6 +104,53 @@ public class PaymentController {
 
     @javafx.fxml.FXML
     public void confirmPaymentOnAction(ActionEvent actionEvent) {
+        UserBooking selectedBooking = pendingBookingsTable.getSelectionModel().getSelectedItem();
+        String method = paymentMethodComboBox.getValue();
+        String amountText = amountTextField.getText().trim();
+
+        if (selectedBooking == null) {
+            CommonMethod.showError("Please select a pending booking from the table.");
+            return;
+        }
+
+        if (method == null || method.isEmpty() || amountText.isEmpty()) {
+            CommonMethod.showError("Please provide payment method and amount.");
+            return;
+        }
+
+        try {
+            int enteredAmount = Integer.parseInt(amountText);
+            if (enteredAmount < selectedBooking.getAmount()) {
+                CommonMethod.showError("Amount must be at least " + selectedBooking.getAmount() + " BDT.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            CommonMethod.showError("Amount must be a valid number.");
+            return;
+        }
+
+        // Update status in the main list
+        for (UserBooking b : allBookings) {
+            if (b.getBookingId().equals(selectedBooking.getBookingId())) {
+                b.setStatus("Confirmed"); // Paid
+                break;
+            }
+        }
+
+        // Rewrite entire Booking.bin
+        File file = new File("data/Booking.bin");
+        if (file.exists()) file.delete();
+        CommonMethod.saveToBinFile("Booking.bin", allBookings);
+
+        CommonMethod.showInformation("Success", "Payment confirmed. Booking status updated.");
+        
+        amountTextField.clear();
+        paymentMethodComboBox.setValue(null);
+        bookingIdLabel.setText("N/A");
+        serviceLabel.setText("N/A");
+        amountLabel.setText("N/A");
+
+        loadAllBookings(); // refresh table
     }
 
     @javafx.fxml.FXML

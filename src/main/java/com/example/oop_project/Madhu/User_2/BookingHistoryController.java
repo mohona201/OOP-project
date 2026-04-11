@@ -10,36 +10,29 @@ import java.util.ArrayList;
 
 public class BookingHistoryController {
     @javafx.fxml.FXML
-    private TableView <BookingHistory>historyTable;
+    private TableView <UserBooking>historyTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private DatePicker fromDatePicker;
+    private TableColumn <UserBooking,String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String> bookingIDTableColumn;
+    private TableColumn <UserBooking,String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String> statusTableColumn;
+    private TableColumn <UserBooking,String> statusTableColumn;
     @javafx.fxml.FXML
-    private DatePicker toDatePicker;
-    @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String> serviceNameTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn <BookingHistory,String> routeTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn <BookingHistory, LocalDate> dateTableColumn;
+    private TableColumn <UserBooking,String> routeTableColumn;
 
-    ArrayList<BookingHistory> bookingHistoryList= new ArrayList<>();
+    ArrayList<UserBooking> bookingHistoryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("bookingId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("status"));
-        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("serviceName"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, String>("route"));
-        dateTableColumn.setCellValueFactory(new PropertyValueFactory<BookingHistory, LocalDate>("date"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
 
-        CommonMethod.showTableDataFromBinFile("BookingHistory.bin", historyTable);
+        CommonMethod.showTableDataFromBinFile("Booking.bin", historyTable);
 
     }
 

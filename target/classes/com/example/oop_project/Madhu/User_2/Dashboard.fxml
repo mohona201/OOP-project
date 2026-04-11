@@ -49,12 +49,11 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Services List" />
                     <TableView fx:id="serviceTable" prefHeight="128.0" prefWidth="612.0">
                         <columns>
-                            <TableColumn fx:id="serviceIdTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Service ID" />
-                            <TableColumn fx:id="flightIdTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Flight Id" />
+                            <TableColumn fx:id="flightIdTableColumn" maxWidth="1000.0" minWidth="30.0" prefWidth="100.0" text="Flight ID" />
                             <TableColumn fx:id="dateTableColumn" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Date" />
-                            <TableColumn fx:id="capacityTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="Capacity" />
-                            <TableColumn fx:id="priceTableColumn" maxWidth="900.0" minWidth="30.0" prefWidth="200.00003051757812" text="Price" />
-                            <TableColumn fx:id="availabilityTableColumn" maxWidth="1100.0" minWidth="0.0" prefWidth="0.0" />
+                            <TableColumn fx:id="helicopterIdTableColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Helicopter ID" />
+                            <TableColumn fx:id="routeTableColumn" maxWidth="2000.0" minWidth="30.0" prefWidth="200.0" text="Route" />
+                            <TableColumn fx:id="departureTimeTableColumn" maxWidth="1200.0" minWidth="30.0" prefWidth="120.0" text="Departure Time" />
                         </columns>
                     </TableView>
                 </VBox>

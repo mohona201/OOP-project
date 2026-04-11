@@ -5,17 +5,22 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import javafx.scene.control.cell.PropertyValueFactory;
+import com.example.oop_project.Madhu.User_1.Dashboard;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class BookHelicopterController {
     @javafx.fxml.FXML
-    private DatePicker datePicker;
-    @javafx.fxml.FXML
-    private TableView <BookHelicopter>serviceTable;
+    private TableView <Dashboard>serviceTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,Integer> capacityTableColumn;
+    private TableColumn <Dashboard,String> helicopterIdTableColumn;
+    @javafx.fxml.FXML
+    private TextField FlightIDTextField;
     @javafx.fxml.FXML
     private TextField destinationTextField;
     @javafx.fxml.FXML
@@ -23,32 +28,26 @@ public class BookHelicopterController {
     @javafx.fxml.FXML
     private TextField departureTextField;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String> serviceNameTableColumn;
+    private TableColumn <Dashboard,String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String> helicopterTypeTableColumn;
+    private TableColumn <Dashboard,String> routeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,String> serviceIdTableColumn;
+    private TableColumn <Dashboard,String> departureTimeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <BookHelicopter,Integer> priceTableColumn;
+    private TableColumn <Dashboard, LocalDate> dateTableColumn;
 
-    ArrayList<BookHelicopter>bookHelicopterList= new ArrayList<>();
+    ArrayList<UserBooking> bookingList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter,Integer>("capacity"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightId"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, LocalDate>("flightDate"));
+        helicopterIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightRoute"));
+        departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("departureTime"));
 
-        serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceId"));
-
-        serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("serviceName"));
-
-        helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, String>("helicopterType"));
-
-        priceTableColumn.setCellValueFactory(new PropertyValueFactory<BookHelicopter, Integer>("price"));
-
-        CommonMethod.showTableDataFromBinFile("BookHelicopter.bin",serviceTable);
-
-
+        CommonMethod.showTableDataFromBinFile("AssignedFlightPiolt.bin",serviceTable);
     }
 
 
@@ -65,6 +64,33 @@ public class BookHelicopterController {
 
     @javafx.fxml.FXML
     public void confirmBookingOnAction(ActionEvent actionEvent) {
+        String flightId = FlightIDTextField.getText();
+        
+        String departure = departureTextField.getText();
+        String destination = destinationTextField.getText();
+        Integer passInt = 1;
+        try { passInt = Integer.parseInt(passengerTextField.getText()); } catch (Exception e) {}
+
+        UserBooking newBooking = new UserBooking(
+                "123",
+                flightId,
+                departure + " to " + destination,
+                "Pending",
+                departure,
+                destination,
+                passInt,
+                5000 * passInt
+        );
+        
+        ArrayList<UserBooking> tempList = new ArrayList<>();
+        tempList.add(newBooking);
+        CommonMethod.saveToBinFile("Booking.bin", tempList);
+        CommonMethod.showInformation("Success", "Booking Registered!");
+
+        FlightIDTextField.clear();
+        departureTextField.clear();
+        destinationTextField.clear();
+        passengerTextField.clear();
     }
 
     @javafx.fxml.FXML

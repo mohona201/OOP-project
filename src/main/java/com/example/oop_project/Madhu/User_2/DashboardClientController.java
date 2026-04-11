@@ -6,6 +6,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import com.example.oop_project.Madhu.User_1.Dashboard;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,36 +14,31 @@ import java.util.ArrayList;
 public class DashboardClientController
 {
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,Integer> capacityTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn <Dashboard,String> availabilityTableColumn;
+    private TableView<Dashboard> serviceTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableView <Dashboard>serviceTable;
+    private TableColumn<Dashboard, String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String> serviceIdTableColumn;
+    private TableColumn<Dashboard, LocalDate> dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,Integer> priceTableColumn;
+    private TableColumn<Dashboard, String> helicopterIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard, LocalDate>dateTableColumn;
+    private TableColumn<Dashboard, String> routeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,Integer>flightIdTableColumn;
+    private TableColumn<Dashboard, String> departureTimeTableColumn;
 
     ArrayList<Dashboard> dashboards= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("capacity"));
-        availabilityTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightAvailability"));
-       // serviceNameTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceName"));
-      //  helicopterTypeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterType"));
-        serviceIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("serviceId"));
-        priceTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightPrice"));
-        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard,LocalDate>("date"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard,Integer>("flightId"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightId"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, LocalDate>("flightDate"));
+        helicopterIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("helicopterId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightRoute"));
+        departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("departureTime"));
 
-        CommonMethod.showTableDataFromBinFile("Dashboard.bin", serviceTable);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightPiolt.bin", serviceTable);
     }
 
     @javafx.fxml.FXML

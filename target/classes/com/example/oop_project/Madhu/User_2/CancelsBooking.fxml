@@ -45,8 +45,7 @@
                     <TableView fx:id="bookingTable" prefHeight="180">
                         <columns>
                             <TableColumn fx:id="bookingIDTableColumn" maxWidth="1000.0" minWidth="30.0" prefWidth="100.0" text="Booking ID" />
-                            <TableColumn fx:id="serviceTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Service" />
-                            <TableColumn fx:id="dateTableColumn" maxWidth="1200.0" minWidth="30.0" prefWidth="120.0" text="Date" />
+                            <TableColumn fx:id="flightIdTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Flight ID" />
                             <TableColumn fx:id="routeTableColumn" maxWidth="1400.0" minWidth="30.0" prefWidth="140.0" text="Route" />
                             <TableColumn fx:id="statusTableColumn" maxWidth="940.0" minWidth="30.0" prefWidth="94.0" text="Status" />
                         </columns>

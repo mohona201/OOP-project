@@ -62,8 +62,7 @@
                     <TableView fx:id="statusTable" prefHeight="380">
                         <columns>
                             <TableColumn fx:id="bookingIDTableColumn" text="Booking ID" prefWidth="100"/>
-                            <TableColumn fx:id="serviceNameTableColumn" text="Service Name" prefWidth="140"/>
-                            <TableColumn fx:id="dateTableColumn" text="Date" prefWidth="120"/>
+                            <TableColumn fx:id="flightIdTableColumn" text="Flight ID" prefWidth="140"/>
                             <TableColumn fx:id="routeTableColumn" text="Route" prefWidth="140"/>
                             <TableColumn fx:id="statusTableColumn" text="Status" prefWidth="120"/>
                         </columns>

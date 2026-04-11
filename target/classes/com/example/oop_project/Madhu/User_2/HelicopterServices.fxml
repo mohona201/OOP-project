@@ -45,16 +45,16 @@
                 <VBox spacing="12" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;" text="Search Filters" />
                     <HBox spacing="10">
-                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Service Name:" />
-                        <TextField fx:id="serviceNameTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Flight ID:" />
+                        <TextField fx:id="flightIdTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
                     </HBox>
                     <HBox spacing="10">
-                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Helicopter Type:" />
+                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Helicopter ID:" />
                         <TextField fx:id="typeTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
                     </HBox>
                     <HBox spacing="10">
-                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Capacity:" />
-                        <TextField fx:id="capacityTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                        <Label prefWidth="130" style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="Route:" />
+                        <TextField fx:id="routeTextField" prefWidth="240" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
                     </HBox>
                     <HBox alignment="CENTER_RIGHT" spacing="10">
                         <Button onAction="#searchOnAction" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Search" />
@@ -64,14 +64,13 @@
 
                 <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Search Results" />
-                    <TableView fx:id="searchTable" prefHeight="250">
+                    <TableView fx:id="searchTable" prefHeight="250" prefWidth="612.0">
                         <columns>
-                            <TableColumn fx:id="serviceIdTableColumn" prefWidth="90" text="Service ID" />
-                            <TableColumn fx:id="serviceNameTableColumn" prefWidth="140" text="Service Name" />
-                            <TableColumn fx:id="helicopterTypeTableColumn" prefWidth="130" text="Helicopter Type" />
-                            <TableColumn fx:id="capacityTableColumn" prefWidth="90" text="Capacity" />
-                            <TableColumn fx:id="priceTableColumn" prefWidth="90" text="Price" />
-                            <TableColumn fx:id="availabilityTableColumn" prefWidth="110" text="Availability" />
+                            <TableColumn fx:id="flightIdTableColumn" maxWidth="1000.0" minWidth="30.0" prefWidth="100.0" text="Flight ID" />
+                            <TableColumn fx:id="dateTableColumn" maxWidth="1300.0" minWidth="30.0" prefWidth="130.0" text="Date" />
+                            <TableColumn fx:id="helicopterIdTableColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Helicopter ID" />
+                            <TableColumn fx:id="routeTableColumn" maxWidth="2000.0" minWidth="30.0" prefWidth="200.0" text="Route" />
+                            <TableColumn fx:id="departureTimeTableColumn" maxWidth="1200.0" minWidth="30.0" prefWidth="120.0" text="Departure Time" />
                         </columns>
                     </TableView>
                 </VBox>

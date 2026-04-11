@@ -1,18 +1,19 @@
 package com.example.oop_project.Madhu.User_2;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Feedback {
+public class Feedback implements Serializable {
     public String bookingId;
-    public String service;
+    public String flightId;
     public LocalDate flightDate;
     public String flightRoute;
     public String customerFeedback;
     public Integer customerRating;
 
-    public Feedback(String bookingId, String service, LocalDate flightDate, String flightRoute, String customerFeedback, Integer customerRating) {
+    public Feedback(String bookingId, String flightId, LocalDate flightDate, String flightRoute, String customerFeedback, Integer customerRating) {
         this.bookingId = bookingId;
-        this.service = service;
+        this.flightId = flightId;
         this.flightDate = flightDate;
         this.flightRoute = flightRoute;
         this.customerFeedback = customerFeedback;
@@ -27,12 +28,12 @@ public class Feedback {
         this.bookingId = bookingId;
     }
 
-    public String getService() {
-        return service;
+    public String getFlightId() {
+        return flightId;
     }
 
-    public void setService(String service) {
-        this.service = service;
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
     }
 
     public LocalDate getFlightDate() {
@@ -71,7 +72,7 @@ public class Feedback {
     public String toString() {
         return "FeedbackModel{" +
                 "bookingId='" + bookingId + '\'' +
-                ", service='" + service + '\'' +
+                ", flightId='" + flightId + '\'' +
                 ", flightDate=" + flightDate +
                 ", flightRoute='" + flightRoute + '\'' +
                 ", customerFeedback='" + customerFeedback + '\'' +

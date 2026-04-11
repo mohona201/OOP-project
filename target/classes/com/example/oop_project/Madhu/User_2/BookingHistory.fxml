@@ -41,11 +41,6 @@
                 <padding><Insets bottom="20" left="15" right="20" top="20" /></padding>
                 <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Booking History" />
                 <HBox alignment="CENTER_LEFT" spacing="10">
-                    <Label style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="From:" />
-                    <DatePicker fx:id="fromDatePicker" style="-fx-background-radius: 6; -fx-border-radius: 6;" />
-                    <Label style="-fx-text-fill: #475569; -fx-font-size: 13px;" text="To:" />
-                    <DatePicker fx:id="toDatePicker" prefHeight="26.0" prefWidth="151.0" style="-fx-background-radius: 6; -fx-border-radius: 6;" />
-                    <Button onAction="#filterOnAction" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Filter" />
                     <Button onAction="#refreshOnAction" style="-fx-background-color: #64748B; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Refresh" />
                 </HBox>
                 <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
@@ -53,8 +48,7 @@
                     <TableView fx:id="historyTable" prefHeight="380">
                         <columns>
                             <TableColumn fx:id="bookingIDTableColumn" prefWidth="100" text="Booking ID" />
-                            <TableColumn fx:id="serviceNameTableColumn" prefWidth="140" text="Service Name" />
-                            <TableColumn fx:id="dateTableColumn" prefWidth="120" text="Date" />
+                            <TableColumn fx:id="flightIdTableColumn" prefWidth="140" text="Flight ID" />
                             <TableColumn fx:id="routeTableColumn" prefWidth="140" text="Route" />
                             <TableColumn fx:id="statusTableColumn" prefWidth="120" text="Status" />
                         </columns>

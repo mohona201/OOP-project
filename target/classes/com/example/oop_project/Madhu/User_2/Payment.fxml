@@ -50,20 +50,15 @@
                 <padding><Insets top="20" right="20" bottom="20" left="15"/></padding>
                 <Label text="Make Payment" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
 
-                <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
-                    <Label text="Booking Summary" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 4 0;"/>
-                    <HBox spacing="10">
-                        <Label text="Booking ID:" prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <Label fx:id="bookingIdLabel" text="B-001" style="-fx-text-fill: #1E293B; -fx-font-size: 13px; -fx-font-weight: bold;"/>
-                    </HBox>
-                    <HBox spacing="10">
-                        <Label text="Service:" prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <Label fx:id="serviceLabel" text="Helicopter Service A" style="-fx-text-fill: #1E293B; -fx-font-size: 13px;"/>
-                    </HBox>
-                    <HBox spacing="10">
-                        <Label text="Amount:" prefWidth="150" style="-fx-text-fill: #475569; -fx-font-size: 13px;"/>
-                        <Label fx:id="amountLabel" text="5000 BDT" style="-fx-text-fill: #1E293B; -fx-font-size: 13px; -fx-font-weight: bold;"/>
-                    </HBox>
+                <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
+                    <Label text="Select Pending Booking" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;"/>
+                    <TableView fx:id="pendingBookingsTable" prefHeight="150">
+                        <columns>
+                            <TableColumn fx:id="bookingIDTableColumn" text="Booking ID" prefWidth="120"/>
+                            <TableColumn fx:id="flightIdTableColumn" text="Flight ID" prefWidth="120"/>
+                            <TableColumn fx:id="statusTableColumn" text="Status" prefWidth="120"/>
+                        </columns>
+                    </TableView>
                 </VBox>
 
                 <VBox spacing="12" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
