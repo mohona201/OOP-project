@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" style="-fx-padding: 25;"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.helicopter_service.Erin.fom.FlightLogsController">
+
+    <Label text="Archived Flight Logs" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="logTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+            <TableColumn fx:id="colPassenger" text="Passenger" prefWidth="150"/>
+            <TableColumn fx:id="colDest" text="Destination" prefWidth="120"/>
+            <TableColumn fx:id="colHeli" text="Helicopter" prefWidth="100"/>
+            <TableColumn fx:id="colStatus" text="Final Status" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <Button text="Refresh Logs" onAction="#refreshLogs" style="-fx-background-color: #64748b; -fx-text-fill: white;"/>
+</VBox>
