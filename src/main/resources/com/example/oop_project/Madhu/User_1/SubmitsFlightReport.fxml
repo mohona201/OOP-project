@@ -40,7 +40,7 @@
             <Button onAction="#logoutOnActionButton" prefWidth="180" style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 8 12 8 12;" text="Logout" />
         </VBox>
 
-        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="627.0" prefWidth="1119.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="-107.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-469.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="627.0" prefWidth="1119.0" style="-fx-background-color: #EEF2F7; -fx-background: #EEF2F7; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <VBox spacing="16">
                 <padding><Insets bottom="20" left="15" right="20" top="20" /></padding>
 
@@ -54,7 +54,7 @@
                             <TableColumn fx:id="dateTableColumn" prefWidth="120" text="Date" />
                             <TableColumn fx:id="routeTableColumn" prefWidth="200" text="Route" />
                             <TableColumn fx:id="statusTableColumn" prefWidth="180" text="Status" />
-                     <TableColumn fx:id="reportIdTableColumn" prefWidth="180" text="Report Id" />
+                            <TableColumn fx:id="reportIdTableColumn" prefWidth="180" text="Report Id" />
                         </columns>
                     </TableView>
                 </VBox>
