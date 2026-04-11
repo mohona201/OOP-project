@@ -86,10 +86,10 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Previous Reports" />
                     <TableView fx:id="reportTable" prefHeight="150">
                         <columns>
-                            <TableColumn fx:id="colRptReportId" prefWidth="100" text="Report ID" />
-                            <TableColumn fx:id="colRptFlightId" prefWidth="100" text="Flight ID" />
-                            <TableColumn fx:id="colRptCondition" prefWidth="120" text="Condition" />
-                            <TableColumn fx:id="colRptSummary" prefWidth="200" text="Summary" />
+                            <TableColumn fx:id="reportIDtableColumn" prefWidth="100" text="Report ID" />
+                            <TableColumn fx:id="FlightIDTableColumn" prefWidth="100" text="Flight ID" />
+                            <TableColumn fx:id="conditionTableColumn" prefWidth="120" text="Condition" />
+                            <TableColumn fx:id="summaryTableColumn" prefWidth="200" text="Summary" />
                         </columns>
                     </TableView>
                 </VBox>

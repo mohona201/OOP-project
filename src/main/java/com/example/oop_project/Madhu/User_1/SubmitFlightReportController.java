@@ -28,7 +28,7 @@ public class SubmitFlightReportController {
     @javafx.fxml.FXML
     private TextField flightidTextField;
     @javafx.fxml.FXML
-    private TableColumn reportIdTableColumn;
+    private TableColumn<SubmitFlightReport, String> reportIdTableColumn;
     @javafx.fxml.FXML
     private DatePicker datePicker;
     @javafx.fxml.FXML
@@ -38,13 +38,13 @@ public class SubmitFlightReportController {
 
     ArrayList<SubmitFlightReport> submitFlightReportList = new ArrayList<>();
     @javafx.fxml.FXML
-    private TableColumn colRptCondition;
+    private TableColumn<SubmitFlightReport, String> reportIDtableColumn;
     @javafx.fxml.FXML
-    private TableColumn colRptFlightId;
+    private TableColumn<SubmitFlightReport, String> summaryTableColumn;
     @javafx.fxml.FXML
-    private TableColumn colRptReportId;
+    private TableColumn<SubmitFlightReport, String> conditionTableColumn;
     @javafx.fxml.FXML
-    private TableColumn colRptSummary;
+    private TableColumn<SubmitFlightReport, String> FlightIDTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -57,9 +57,19 @@ public class SubmitFlightReportController {
 
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<SubmitFlightReport, String>("status"));
 
+        FlightIDTableColumn.setCellValueFactory(new PropertyValueFactory<SubmitFlightReport, String>("FlightID"));
+
+        conditionTableColumn.setCellValueFactory(new PropertyValueFactory<SubmitFlightReport, String >("condition"));
+
+        summaryTableColumn.setCellValueFactory(new PropertyValueFactory<SubmitFlightReport, String>("summary"));
+
+        reportIdTableColumn.setCellValueFactory(new PropertyValueFactory<SubmitFlightReport, String>("reportId"));
+        
+
         conditionComboBox.getItems().addAll("Good", "Average", "Poor");
 
-        CommonMethod.showTableDataFromBinFile("SubmitFlightReport.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("SubmitFlightReport.bin", reportTable);
     }
 
     @javafx.fxml.FXML

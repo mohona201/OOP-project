@@ -27,6 +27,16 @@ public class FlightCompleteController {
     private TableColumn <MarkFlightAsComplete,String>flightIdTableColumn;
 
     ArrayList<MarkFlightAsComplete> markFlightAsCompleteList= new ArrayList<>();
+    @javafx.fxml.FXML
+    private TableColumn completedFlight;
+    @javafx.fxml.FXML
+    private TableView<MarkFlightAsComplete> flightTableView1;
+    @javafx.fxml.FXML
+    private TableColumn completedFLightStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn notesTableColumn;
+    @javafx.fxml.FXML
+    private ChoiceBox statusComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -40,7 +50,8 @@ public class FlightCompleteController {
 
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<MarkFlightAsComplete, String>("flightId"));
 
-        CommonMethod.showTableDataFromBinFile("MarkFlightAsComplete.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("MarkFlightAsComplete.bin", flightTableView1);
     }
 
     @javafx.fxml.FXML

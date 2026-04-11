@@ -41,7 +41,7 @@ public class UpdateFlightStatusController {
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UpdateFlightStatus, String>("flightId"));
 
 
-        CommonMethod.showTableDataFromBinFile("UpdateFlightStatus.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
         //CommonMethod.showTableDataFromBinFile("SubmitFlightReport.bin", reportTable);
 
     }

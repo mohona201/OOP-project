@@ -55,7 +55,7 @@ public class LogBookController {
         logDateTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, LocalDate>("flightDate"));
         logHoursTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, String>("hours"));
 
-        CommonMethod.showTableDataFromBinFile("LogBook.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
         CommonMethod.showTableDataFromBinFile("LogBook.bin", logRecordsTableView);
     }
 

@@ -75,8 +75,8 @@
                     <HBox alignment="CENTER_RIGHT">
                   <TableView fx:id="flightTableView1" prefHeight="180" prefWidth="531.0">
                      <columns>
-                        <TableColumn fx:id="flightIdTableColumn1" prefWidth="100" text="Flight ID" />
-                        <TableColumn fx:id="statusTableColumn" prefWidth="120" text="Status" />
+                        <TableColumn fx:id="completedFlight" prefWidth="100" text="Flight ID" />
+                        <TableColumn fx:id="completedFLightStatusTableColumn" prefWidth="120" text="Status" />
                         <TableColumn fx:id="notesTableColumn" prefWidth="120" text="Notes" />
                      </columns>
                   </TableView>

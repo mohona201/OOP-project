@@ -64,11 +64,7 @@ public class CancelBookingController
 
         selectedBooking.setStatus("Cancelled");
 
-        // Rewrite the file
         File file = new File("data/Booking.bin");
-        if (file.exists()) {
-            file.delete();
-        }
 
         ArrayList<DashBoard> allBookings = new ArrayList<>(bookingTable.getItems());
         CommonMethod.saveToBinFile("Booking.bin", allBookings);
