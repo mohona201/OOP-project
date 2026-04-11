@@ -3,57 +3,56 @@ package com.example.oop_project.Madhu.User_1;
 import java.time.LocalDate;
 
 public class MarkFlightAsComplete {
-    public String flightId;
+    public String flightId,helicopterId;
     public LocalDate flightCompleteDate;
-    public String flightStatus;
-    public String notes;
+    public String route;
 
-    public MarkFlightAsComplete(String flightId, LocalDate flightCompleteDate, String flightstatus, String notes) {
+    public MarkFlightAsComplete(String flightId, String helicopterId, LocalDate flightCompleteDate, String route) {
         this.flightId = flightId;
+        this.helicopterId = helicopterId;
         this.flightCompleteDate = flightCompleteDate;
-        this.flightStatus = flightstatus;
-        this.notes = notes;
+        this.route = route;
     }
 
     public String getFlightId() {
         return flightId;
     }
 
-    public void setFlightId(String flightId) {
-        this.flightId = flightId;
+    public String getHelicopterId() {
+        return helicopterId;
     }
 
     public LocalDate getFlightCompleteDate() {
         return flightCompleteDate;
     }
 
+    public String getRoute() {
+        return route;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public void setHelicopterId(String helicopterId) {
+        this.helicopterId = helicopterId;
+    }
+
     public void setFlightCompleteDate(LocalDate flightCompleteDate) {
         this.flightCompleteDate = flightCompleteDate;
     }
 
-    public String getFlightStatus() {
-        return flightStatus;
-    }
-
-    public void setFlightStatus(String flightStatus) {
-        this.flightStatus = flightStatus;
-    }
-
-    public String getNotes() {
-        return notes;
-    }
-
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setRoute(String route) {
+        this.route = route;
     }
 
     @Override
     public String toString() {
-        return "MarkFlightAsCompleteModel{" +
+        return "MarkFlightAsComplete{" +
                 "flightId='" + flightId + '\'' +
+                ", helicopterId='" + helicopterId + '\'' +
                 ", flightCompleteDate=" + flightCompleteDate +
-                ", flightStatus='" + flightStatus + '\'' +
-                ", notes='" + notes + '\'' +
+                ", route='" + route + '\'' +
                 '}';
     }
 }

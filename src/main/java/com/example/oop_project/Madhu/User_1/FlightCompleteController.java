@@ -117,12 +117,6 @@ public class FlightCompleteController {
             return;
         }
 
-        if (selectedFlight.getFlightStatus().equalsIgnoreCase("Completed")) {
-            CommonMethod.showInformation("Already Completed", "This flight is already completed");
-            return;
-        }
-
-        selectedFlight.setFlightStatus("Completed");
 
         markFlightAsCompleteList.clear();
         markFlightAsCompleteList.addAll(flightTableView.getItems());

@@ -49,23 +49,14 @@ public class AssignedFlightManagerController
         routetablecolumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, String>("route"));
 
         flightTableView.getItems().clear();
-        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
 
         assignedFlightManagerList.clear();
         assignedFlightManagerList.addAll(flightTableView.getItems());
     }
+
+
     @javafx.fxml.FXML
-    public void refreshOnActionButton(ActionEvent actionEvent) {
-        flightIDTextField.clear();
-        datePicker.clear();
-        helicopterTextField.clear();
-        routeTextField.clear();
-        departureTimeTextField.clear();
+    public void saveOnActionButton(ActionEvent actionEvent) {
 
-        flightTableView.getItems().clear();
-        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
-
-        assignedFlightManagerList.clear();
-        assignedFlightManagerList.addAll(flightTableView.getItems());
     }
 }
