@@ -15,8 +15,6 @@ import java.util.ArrayList;
 public class DashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>statusTableColumn;
-    @javafx.fxml.FXML
     private TableView <Dashboard>flightTableView;
     @javafx.fxml.FXML
     private TableColumn <Dashboard, LocalTime>departureTimeTableColumn;
@@ -32,28 +30,19 @@ public class DashboardController
     private TableColumn <Dashboard,Integer>flightIdTableColumn;
     @javafx.fxml.FXML
     private TableColumn <Dashboard,String>routetablecolumn;
-    @javafx.fxml.FXML
-    private TableColumn <Dashboard,String>serviceTableColumn1;
 
     ArrayList<Dashboard>dashboardList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("status"));
-
-        departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, LocalTime>("departureTime"));
 
         dateTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, LocalDate>("date"));
-
         helicopterIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("helicopterId"));
-
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightId"));
-
         routetablecolumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("route"));
-        serviceTableColumn1.setCellValueFactory(new PropertyValueFactory<Dashboard,String>("service"));
 
-        CommonMethod.showTableDataFromBinFile("DashboardClient.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightPiolt.bin", flightTableView);
 
     }
 
@@ -72,7 +61,7 @@ public class DashboardController
         for (Dashboard a : flightTableView.getItems()) {
 
             if (a.getFlightId().equalsIgnoreCase(searchText)
-                    || a.getRoute().equalsIgnoreCase(searchText)) {
+                    || a.getFlightRoute().equalsIgnoreCase(searchText)) {
 
                 dashboardList.add(a);
             }
