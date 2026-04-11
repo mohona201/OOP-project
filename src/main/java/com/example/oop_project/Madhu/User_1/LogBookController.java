@@ -28,6 +28,14 @@ public class LogBookController {
     private TableColumn <LogBook, LocalDate>dateTableColumn;
     @javafx.fxml.FXML
     private TableColumn <LogBook,String>flightIdTableColumn;
+    @javafx.fxml.FXML
+    private TableView<LogBook> logRecordsTableView;
+    @javafx.fxml.FXML
+    private TableColumn<LogBook, String> logFlightIdTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<LogBook, LocalDate> logDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<LogBook, String> logHoursTableColumn;
 
     ArrayList<LogBook> logBookList = new ArrayList<>();
 
@@ -43,7 +51,12 @@ public class LogBookController {
 
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, String>("flightId"));
 
+        logFlightIdTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, String>("flightId"));
+        logDateTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, LocalDate>("flightDate"));
+        logHoursTableColumn.setCellValueFactory(new PropertyValueFactory<LogBook, String>("hours"));
+
         CommonMethod.showTableDataFromBinFile("LogBook.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("LogBook.bin", logRecordsTableView);
     }
 
     @javafx.fxml.FXML
@@ -74,6 +87,7 @@ public class LogBookController {
         CommonMethod.saveToBinFile("LogBook.bin", logBookList);
 
         flightTableView.getItems().add(log);
+        logRecordsTableView.getItems().add(log);
 
         CommonMethod.showInformation("Success", "Log saved successfully");
 

@@ -73,6 +73,17 @@
                         <Button onAction="#saveLogOnActionButton" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Save Log" />
                     </HBox>
                 </VBox>
+
+                <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #E2E8F0; -fx-border-radius: 10;">
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Saved Log Records" />
+                    <TableView fx:id="logRecordsTableView" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="logFlightIdTableColumn" prefWidth="150" text="Flight ID" />
+                            <TableColumn fx:id="logDateTableColumn" prefWidth="200" text="Date" />
+                            <TableColumn fx:id="logHoursTableColumn" prefWidth="200" text="Hours" />
+                        </columns>
+                    </TableView>
+                </VBox>
             </VBox>
         </ScrollPane>
     </children>
