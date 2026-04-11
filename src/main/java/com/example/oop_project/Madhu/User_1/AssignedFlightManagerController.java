@@ -22,9 +22,9 @@ public class AssignedFlightManagerController
     @javafx.fxml.FXML
     private TableColumn<AssignedFlightManager, LocalDate> dateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<AssignedFlightManager, Integer> helicopterIdTableColumn;
+    private TableColumn<AssignedFlightManager, String> helicopterIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<AssignedFlightManager, Integer> flightIdTableColumn;
+    private TableColumn<AssignedFlightManager, String> flightIdTableColumn;
     @javafx.fxml.FXML
     private TableColumn<AssignedFlightManager, String> routetablecolumn;
     @javafx.fxml.FXML
@@ -42,21 +42,57 @@ public class AssignedFlightManagerController
 
     @javafx.fxml.FXML
     public void initialize() {
-        departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, String>("departureTime"));
-        dateTableColumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, LocalDate>("date"));
-        helicopterIdTableColumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, Integer>("helicopterId"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, Integer>("flightId"));
-        routetablecolumn.setCellValueFactory(new PropertyValueFactory<AssignedFlightManager, String>("route"));
+        departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<>("departureTime"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        helicopterIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("helicopterID"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("flightID"));
+        routetablecolumn.setCellValueFactory(new PropertyValueFactory<>("flightRoute"));
 
         flightTableView.getItems().clear();
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
 
         assignedFlightManagerList.clear();
         assignedFlightManagerList.addAll(flightTableView.getItems());
     }
 
-
     @javafx.fxml.FXML
     public void saveOnActionButton(ActionEvent actionEvent) {
+
+        String flightId = flightIDTextField.getText().trim();
+        String helicopterId = helicopterTextField.getText().trim();
+        String dateText = datePicker.getText().trim();
+        String route = routeTextField.getText().trim();
+        String departureTime = departureTimeTextField.getText().trim();
+
+        if (flightId.isEmpty() || helicopterId.isEmpty() || dateText.isEmpty()
+                || route.isEmpty() || departureTime.isEmpty()) {
+            CommonMethod.showError("Missing Info", "Please fill all fields");
+            return;
+        }
+
+        if (!flightId.matches("\\d+") || !helicopterId.matches("\\d+")) {
+            CommonMethod.showError("Invalid Input", "Flight ID and Helicopter ID must be numeric.");
+            return;
+        }
+
+        LocalDate date = LocalDate.parse(dateText);
+
+        AssignedFlightManager assignedFlight = new AssignedFlightManager(flightId, helicopterId, date, route, departureTime);
+
+        assignedFlightManagerList = new ArrayList<>();
+        assignedFlightManagerList.add(assignedFlight);
+
+        CommonMethod.saveToBinFile("AssignedFlightManager.bin", assignedFlightManagerList);
+
+        flightTableView.getItems().add(assignedFlight);
+        CommonMethod.showConfirmation("Success", "Saved Successfully");
+
+        flightIDTextField.clear();
+        helicopterTextField.clear();
+        datePicker.clear();
+        routeTextField.clear();
+        departureTimeTextField.clear();
+
 
     }
 }

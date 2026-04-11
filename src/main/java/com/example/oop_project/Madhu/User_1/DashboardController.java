@@ -58,12 +58,10 @@ public class DashboardController
 
         ArrayList<Dashboard> dashboardList = new ArrayList<>();
 
-        for (Dashboard a : flightTableView.getItems()) {
+        for (Dashboard dashboard : flightTableView.getItems()) {
 
-            if (a.getFlightId().equalsIgnoreCase(searchText)
-                    || a.getFlightRoute().equalsIgnoreCase(searchText)) {
-
-                dashboardList.add(a);
+            if (dashboard.getFlightId().equalsIgnoreCase(searchText) || dashboard.getFlightRoute().equalsIgnoreCase(searchText)) {
+                dashboardList.add(dashboard);
             }
         }
 
