@@ -5,32 +5,31 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class BookingHistoryController {
     @javafx.fxml.FXML
-    private TableView <UserBooking>historyTable;
+    private TableView <DashBoard>historyTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> flightIdTableColumn;
+    private TableColumn <DashBoard,String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> bookingIDTableColumn;
+    private TableColumn <DashBoard,String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> statusTableColumn;
+    private TableColumn <DashBoard,String> statusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> routeTableColumn;
+    private TableColumn <DashBoard,String> routeTableColumn;
 
-    ArrayList<UserBooking> bookingHistoryList= new ArrayList<>();
+    ArrayList<DashBoard> bookingHistoryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("status"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("route"));
 
         CommonMethod.showTableDataFromBinFile("Booking.bin", historyTable);
 
@@ -79,11 +78,8 @@ public class BookingHistoryController {
 
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
-        CommonMethod.sceneChange(actionEvent,"Login.fxml");
-    }
 
-    @javafx.fxml.FXML
-    public void filterOnAction(ActionEvent actionEvent) {
+        CommonMethod.sceneChange(actionEvent,"Login.fxml");
     }
 
     @javafx.fxml.FXML

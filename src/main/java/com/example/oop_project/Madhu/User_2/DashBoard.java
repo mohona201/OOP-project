@@ -1,9 +1,8 @@
 package com.example.oop_project.Madhu.User_2;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
-public class UserBooking implements Serializable {
+public class DashBoard implements Serializable {
     public String bookingId;
     public String flightId;
     public String route;
@@ -13,7 +12,7 @@ public class UserBooking implements Serializable {
     public Integer passengers;
     public Integer amount;
 
-    public UserBooking(String bookingId, String flightId, String route, String status, String departure, String destination, Integer passengers, Integer amount) {
+    public DashBoard(String bookingId, String flightId, String route, String status, String departure, String destination, Integer passengers, Integer amount) {
         this.bookingId = bookingId;
         this.flightId = flightId;
         this.route = route;

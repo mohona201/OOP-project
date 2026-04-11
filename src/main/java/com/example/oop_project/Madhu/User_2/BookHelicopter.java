@@ -1,8 +1,9 @@
 package com.example.oop_project.Madhu.User_2;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class BookHelicopter {
+public class BookHelicopter implements Serializable {
     public String serviceId;
     public String serviceName;
     public String helicopterType;

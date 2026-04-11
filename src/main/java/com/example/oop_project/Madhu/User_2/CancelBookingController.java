@@ -9,34 +9,33 @@ import javafx.scene.control.TextArea;
 
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.File;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class CancelBookingController
 {
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String>statusTableColumn;
+    private TableColumn <DashBoard,String>statusTableColumn;
     @javafx.fxml.FXML
     private TextArea reasonTextArea1;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String>bookingIDTableColumn;
+    private TableColumn <DashBoard,String>bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableView <UserBooking>bookingTable;
+    private TableView <DashBoard>bookingTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String>flightIdTableColumn;
+    private TableColumn <DashBoard,String>flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String>routeTableColumn;
+    private TableColumn <DashBoard,String>routeTableColumn;
     @javafx.fxml.FXML
     private TextArea reasonTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("bookingId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("status"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("route"));
 
         CommonMethod.showTableDataFromBinFile("Booking.bin", bookingTable);
         
@@ -49,7 +48,7 @@ public class CancelBookingController
 
     @javafx.fxml.FXML
     public void cancelBookingOnAction(ActionEvent actionEvent) {
-        UserBooking selectedBooking = bookingTable.getSelectionModel().getSelectedItem();
+        DashBoard selectedBooking = bookingTable.getSelectionModel().getSelectedItem();
         String reason = reasonTextArea.getText().trim();
 
         if (selectedBooking == null) {
@@ -75,7 +74,7 @@ public class CancelBookingController
             file.delete();
         }
 
-        ArrayList<UserBooking> allBookings = new ArrayList<>(bookingTable.getItems());
+        ArrayList<DashBoard> allBookings = new ArrayList<>(bookingTable.getItems());
         CommonMethod.saveToBinFile("Booking.bin", allBookings);
 
         CommonMethod.showInformation("Success", "Booking cancelled successfully.");

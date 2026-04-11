@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 public class FeedbackController {
     @javafx.fxml.FXML
-    private TableView <UserBooking>bookingTable;
+    private TableView <DashBoard>bookingTable;
     @javafx.fxml.FXML
     private ScrollPane mainScrollPane;
     @javafx.fxml.FXML
     private RadioButton rating8RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> routeTableColumn;
+    private TableColumn <DashBoard,String> routeTableColumn;
     @javafx.fxml.FXML
     private RadioButton rating5RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> flightIdTableColumn;
+    private TableColumn <DashBoard,String> flightIdTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea1;
     @javafx.fxml.FXML
@@ -34,7 +34,7 @@ public class FeedbackController {
     @javafx.fxml.FXML
     private RadioButton rating7RadioButton;
     @javafx.fxml.FXML
-    private TableColumn <UserBooking,String> bookingIDTableColumn;
+    private TableColumn <DashBoard,String> bookingIDTableColumn;
     @javafx.fxml.FXML
     private TextArea feedbackTextArea;
     @javafx.fxml.FXML
@@ -58,9 +58,9 @@ public class FeedbackController {
         rating9RadioButton.setToggleGroup(tg);
 
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
-        routeTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("route"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("bookingId"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
+        routeTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("route"));
 
         CommonMethod.showTableDataFromBinFile("Booking.bin", bookingTable);
 
@@ -100,7 +100,7 @@ public class FeedbackController {
             return;
         }
 
-        UserBooking selectedBooking = bookingTable.getSelectionModel().getSelectedItem();
+        DashBoard selectedBooking = bookingTable.getSelectionModel().getSelectedItem();
         String flightId = selectedBooking != null ? selectedBooking.getFlightId() : "N/A";
         String route = selectedBooking != null ? selectedBooking.getRoute() : "N/A";
         LocalDate date = LocalDate.now();

@@ -24,23 +24,23 @@ public class PaymentController {
     @javafx.fxml.FXML
     private ComboBox <String>paymentMethodComboBox;
     @javafx.fxml.FXML
-    private TableView<UserBooking> pendingBookingsTable;
+    private TableView<DashBoard> pendingBookingsTable;
     @javafx.fxml.FXML
-    private TableColumn<UserBooking, String> bookingIDTableColumn;
+    private TableColumn<DashBoard, String> bookingIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<UserBooking, String> flightIdTableColumn;
+    private TableColumn<DashBoard, String> flightIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<UserBooking, String> statusTableColumn;
+    private TableColumn<DashBoard, String> statusTableColumn;
 
-    ArrayList<UserBooking> allBookings = new ArrayList<>();
+    ArrayList<DashBoard> allBookings = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
         paymentMethodComboBox.getItems().addAll("Cash", "Card", "Bkash", "Nagad", "Rocket");
 
-        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("bookingId"));
-        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("flightId"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<UserBooking, String>("status"));
+        bookingIDTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("bookingId"));
+        flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("flightId"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<DashBoard, String>("status"));
 
         loadAllBookings();
 
@@ -62,7 +62,7 @@ public class PaymentController {
             if (file.exists() && file.length() > 0) {
                 ois = new ObjectInputStream(new FileInputStream(file));
                 while (true) {
-                    UserBooking b = (UserBooking) ois.readObject();
+                    DashBoard b = (DashBoard) ois.readObject();
                     allBookings.add(b);
                     if ("Pending".equals(b.getStatus())) {
                         pendingBookingsTable.getItems().add(b);
@@ -104,7 +104,7 @@ public class PaymentController {
 
     @javafx.fxml.FXML
     public void confirmPaymentOnAction(ActionEvent actionEvent) {
-        UserBooking selectedBooking = pendingBookingsTable.getSelectionModel().getSelectedItem();
+        DashBoard selectedBooking = pendingBookingsTable.getSelectionModel().getSelectedItem();
         String method = paymentMethodComboBox.getValue();
         String amountText = amountTextField.getText().trim();
 
@@ -130,7 +130,7 @@ public class PaymentController {
         }
 
         // Update status in the main list
-        for (UserBooking b : allBookings) {
+        for (DashBoard b : allBookings) {
             if (b.getBookingId().equals(selectedBooking.getBookingId())) {
                 b.setStatus("Confirmed"); // Paid
                 break;

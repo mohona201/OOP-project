@@ -42,7 +42,7 @@ public class DashboardController
         flightIdTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, Integer>("flightId"));
         routetablecolumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("route"));
 
-        CommonMethod.showTableDataFromBinFile("AssignedFlightPiolt.bin", flightTableView);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
 
     }
 

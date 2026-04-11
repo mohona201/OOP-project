@@ -5,12 +5,10 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import javafx.scene.control.cell.PropertyValueFactory;
 import com.example.oop_project.Madhu.User_1.Dashboard;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class BookHelicopterController {
     @javafx.fxml.FXML
@@ -36,7 +34,7 @@ public class BookHelicopterController {
     @javafx.fxml.FXML
     private TableColumn <Dashboard, LocalDate> dateTableColumn;
 
-    ArrayList<UserBooking> bookingList = new ArrayList<>();
+    ArrayList<DashBoard> bookingList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -47,7 +45,7 @@ public class BookHelicopterController {
         routeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("flightRoute"));
         departureTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Dashboard, String>("departureTime"));
 
-        CommonMethod.showTableDataFromBinFile("AssignedFlightPiolt.bin",serviceTable);
+        CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin",serviceTable);
     }
 
 
@@ -70,18 +68,9 @@ public class BookHelicopterController {
         String destination = destinationTextField.getText();
         Integer passInt = 1;
 
-        UserBooking newBooking = new UserBooking(
-                "123",
-                flightId,
-                departure + " to " + destination,
-                "Pending",
-                departure,
-                destination,
-                passInt,
-                5000 * passInt
-        );
+        DashBoard newBooking = new DashBoard("123", flightId, departure + " to " + destination, "Pending", departure, destination, passInt, 5000 * passInt);
         
-        ArrayList<UserBooking> tempList = new ArrayList<>();
+        ArrayList<DashBoard> tempList = new ArrayList<>();
         tempList.add(newBooking);
         CommonMethod.saveToBinFile("Booking.bin", tempList);
         CommonMethod.showInformation("Success", "Booking Registered!");
