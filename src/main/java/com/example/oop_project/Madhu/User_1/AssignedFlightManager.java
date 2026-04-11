@@ -2,14 +2,14 @@ package com.example.oop_project.Madhu.User_1;
 
 import java.time.LocalDate;
 
-public class assignedFlightManager {
+public class AssignedFlightManager {
     String flightID;
     String helicopterID;
     LocalDate date;
     String flightRoute;
     String departureTime;
 
-    public assignedFlightManager(String flightID, String helicopterID, LocalDate date, String flightRoute, String departureTime) {
+    public AssignedFlightManager(String flightID, String helicopterID, LocalDate date, String flightRoute, String departureTime) {
         this.flightID = flightID;
         this.helicopterID = helicopterID;
         this.date = date;

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User_1.AssignedFlghtManagerController">
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #EEF2F7;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project.Madhu.User_1.AssignedFlightManagerController">
 
     <children>
 
@@ -33,7 +33,6 @@
                 <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Assigned Flights" />
 
                 <HBox alignment="CENTER_LEFT" spacing="10">
-                    <Button onAction="#saveButtonOnActions" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Search" />
                     <Button onAction="#refreshOnActionButton" style="-fx-background-color: #64748B; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 18 8 18; -fx-cursor: hand;" text="Refresh" />
                 </HBox>
 
@@ -41,11 +40,11 @@
                     <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #1E293B; -fx-padding: 0 0 8 0;" text="Flight List" />
                <VBox prefHeight="200.0" prefWidth="100.0">
                   <children>
-                     <TextField fx:id="flightID" prefHeight="31.0" prefWidth="392.0" promptText="flightID" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
-                          <TextField fx:id="date" prefWidth="240" promptText="date" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
-                     <TextField fx:id="helicopter" prefWidth="240" promptText="helicopterID" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
-                     <TextField fx:id="routee" prefWidth="240" promptText="Route" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
-                     <TextField fx:id="departureTime" prefWidth="240" promptText="Departure Time" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                     <TextField fx:id="flightIDTextField" prefHeight="31.0" prefWidth="392.0" promptText="flightID" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                          <TextField fx:id="datePicker" prefWidth="240" promptText="date" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                     <TextField fx:id="helicopterTextField" prefWidth="240" promptText="helicopterID" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                     <TextField fx:id="routeTextField" prefWidth="240" promptText="Route" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
+                     <TextField fx:id="departureTimeTextField" prefWidth="240" promptText="Departure Time" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #CBD5E1; -fx-padding: 6 10 6 10;" />
                   </children>
                </VBox>
                 </VBox>
