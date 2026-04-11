@@ -1,6 +1,8 @@
 package com.example.oop_project.Madhu.User_2;
 
-public class Payment {
+import java.io.Serializable;
+
+public class Payment implements Serializable {
     public String bookingId,flightId;
     public String status;
     public Integer bookingAmount;

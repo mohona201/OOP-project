@@ -1,8 +1,9 @@
 package com.example.oop_project.Madhu.User_2;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class BookingStatus {
+public class BookingStatus implements Serializable {
     public String bookingId;
     public LocalDate bookingDate;
     public String flightRoute;

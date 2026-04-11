@@ -1,6 +1,8 @@
 package com.example.oop_project.Madhu.User_1;
 
-public class ReportTechnicalIssue {
+import java.io.Serializable;
+
+public class ReportTechnicalIssue implements Serializable {
     public String helicopterId;
     public String issueTitle;
     public String priority;

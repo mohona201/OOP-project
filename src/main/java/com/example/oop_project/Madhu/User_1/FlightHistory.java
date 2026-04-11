@@ -1,9 +1,10 @@
 package com.example.oop_project.Madhu.User_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class FlightHistory {
+public class FlightHistory implements Serializable {
     public String flightId;
     public String route;
     public LocalTime hours;

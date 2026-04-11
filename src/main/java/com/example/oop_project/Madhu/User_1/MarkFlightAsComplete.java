@@ -1,8 +1,9 @@
 package com.example.oop_project.Madhu.User_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class MarkFlightAsComplete {
+public class MarkFlightAsComplete implements Serializable {
     public String flightId,helicopterId;
     public LocalDate flightCompleteDate;
     public String route;

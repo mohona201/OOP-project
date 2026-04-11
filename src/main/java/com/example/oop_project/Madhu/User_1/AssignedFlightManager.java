@@ -1,8 +1,9 @@
 package com.example.oop_project.Madhu.User_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class AssignedFlightManager {
+public class AssignedFlightManager implements Serializable {
     String flightID;
     String helicopterID;
     LocalDate date;

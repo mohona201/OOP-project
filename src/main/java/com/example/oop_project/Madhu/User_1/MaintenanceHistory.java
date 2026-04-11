@@ -1,8 +1,9 @@
 package com.example.oop_project.Madhu.User_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class MaintenanceHistory {
+public class MaintenanceHistory implements Serializable {
     public String maintenanceId;
     public String helicopterId;
     public LocalDate maintenanceDate;
