@@ -44,6 +44,8 @@ public class DashboardController
 
         CommonMethod.showTableDataFromBinFile("AssignedFlightManager.bin", flightTableView);
 
+        flightTableView.getItems().add(new Dashboard("101", LocalDate.now(), "H-01", "Dhaka to Chittagong", "10:00 AM"));
+        flightTableView.getItems().add(new Dashboard("102", LocalDate.now(), "H-02", "Chittagong to Dhaka", "02:00 PM"));
     }
 
     @javafx.fxml.FXML
